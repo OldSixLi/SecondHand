@@ -1,0 +1,48 @@
+Curl error: name lookup timed out
+	var hz6d_guest_id = "";
+	var hz6d_get_guest_id_over = 0;
+	var hz6d_get_guest_id_num = 5;
+	var hz6d_get_guest_id_timer = 0;
+	var hz6d_cus_web_msg_gids = "1234277531,1234326408,1234375895";
+
+	var hz6d_flash_html='<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" width="1" height="1" align="middle" id="mainserverim"><param name="allowScriptAccess" value="always" /><param name="movie" value="http://kefu1.tten.cn/flash/hz6d_53kf_kf_gid.swf"/><param name="quality" value="high" /><param name="wmode" value="transparent"><param name="bgcolor" value="#ffffff" /><embed name="mainserverim" src="http://kefu1.tten.cn/flash/hz6d_53kf_kf_gid.swf" quality="high" wmode="transparent" bgcolor="#ffffff" width="1" height="1" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" swLiveConnect="true"/></object>';
+	document.write(hz6d_flash_html);
+
+	function returnGid(args){
+		hz6d_guest_id = args;
+		hz6d_get_guest_id_over = 1;
+	}
+
+	function hz6d_get_guest_id(){
+		if(hz6d_get_guest_id_over==0 && hz6d_get_guest_id_num>0){
+			hz6d_get_guest_id_num--;
+			setTimeout("hz6d_get_guest_id()", 500);
+		}else{
+			clearTimeout(hz6d_get_guest_id_timer);
+			if(hz6d_guest_id!="" && hz6d_guest_id>0){
+				if(hz6d_cus_web_msg_gids.indexOf(hz6d_guest_id)>=0){
+					var url = "http://kefu2.tten.cn/lword_reply.php?company_id=70722660&guest_id="+hz6d_guest_id;
+					hz6d_createScript("hz6d_lword_reply", url);
+				}
+			}
+		}
+	}
+
+	function hz6d_createScript(id, url){
+		var oldS=document.getElementById(id);
+		if(oldS!=null) oldS.parentNode.removeChild(oldS);
+		var t=document.createElement('script');
+		t.src = url;
+		t.type = 'text/javascript';
+		t.id = id;
+		document.getElementsByTagName('head')[0].appendChild(t);
+	}
+
+	function hz6d_cus_web_msg_open(){
+		var openurl = "http://kefu2.tten.cn/new/client.php?arg=tjkf099f6118-bdba-488f-9b64-1f50ee13522d&style=1&language=zh-cn&charset=GBK&username=&userinfo=&introurl=&lyurl=&lytype=0&copartner=&referer=http%3A%2F%2Fwww.tten.cn%2F&keyword=&brief=&logo=&question=";
+		try{
+			window.open(openurl,"_blank","height=573,width=803,top=80,left=300,status=yes,toolbar=no,menubar=no,resizable=yes,scrollbars=no,location=no,titlebar=no");
+		}catch(e){}
+	}
+
+	hz6d_get_guest_id_timer = setTimeout("hz6d_get_guest_id()", 500);

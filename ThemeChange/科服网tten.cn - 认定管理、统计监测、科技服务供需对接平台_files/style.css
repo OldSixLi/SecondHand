@@ -1,0 +1,67 @@
+﻿/*首页公共样式*/
+body{ margin:0; padding:0; font-family:"Arial, Helvetica, sans-serif";font-size: 14px; }
+p {padding:0; margin:0;}
+ul, li {padding:0; margin:0; list-style:none;}
+img {border:none;}
+a{text-decoration:none; color:#0a142f;}
+a:hover{text-decoration:underline; color:#1585bd;}
+h1, h2, h3, h4, h5 {padding:0; margin:0;}
+.clear{clear:both;}
+
+.module{border:1px #c0c0c0 solid; overflow:hidden;}
+
+/*模块头*/
+.module_head{height:32px; background:url(../images/module_head_bg.png) repeat-x; line-height:30px; padding-left:5px;}
+.module_head .icon_div{width: 10px;height: 10px;margin-top: 10px;margin-right: 5px; float: left; }
+.module_head .icon{background:url(../images/module_head_icon.png) no-repeat;}
+
+/*标题*/
+.module_head .title{ float: left; font-family:"Microsoft YaHei"; color:#1576c9; font-weight:bold;}
+.module_head .title a{font-family:"Microsoft YaHei"; color:#1576c9; font-weight:bold;}
+
+/*模块头扩展信息*/
+.module_head .head_ex{ float: left;margin-left: 10px;}
+
+/*更多*/
+.module_head .more_span{display:block; width:60px; height:40px; line-height:30px; float:right;}
+.module_head .more{font-family:"Microsoft YaHei"; color:#3a79af; font-weight:normal; }
+.module_head .more:hover{text-decoration:none; color:#F00;}
+.module_head .head_ex{font-size:12px; color:#F00;font-weight: bold;}
+
+/*模块头 体 横线*/
+.module_head_body_center_hr{ width: 95%;margin: 0 auto; height: 1px;background-color: #c0c0c0; }
+
+/*模块体*/
+.module_body {clear:both; padding-left:10px; padding-right:10px; overflow:hidden;}
+
+/*ul*/
+.module_ul {padding-bottom:3px; overflow:hidden;}
+.module_ul li {font-family:"Microsoft YaHei"; font-size:12px; display:block; width:224px; height:22px;line-height:22px; border-bottom:1px #ddd solid; background:url(../images/icon01.gif) left center no-repeat; padding-left:14px; }
+.module_ul li a{font-family:"Microsoft YaHei"; color:#06C;font-size:12px;}
+
+/*table*/
+.module_table{width: 100%;height: 100%;overflow:hidden; text-align:center;}
+.module_table tr th{ height: 30px;}
+.module_table tr td{font-family:"Arial, Helvetica, sans-serif";height: 28px;line-height: 28px; font-size:12px;}
+
+/*tab*/
+.module_tab{height: 35px;margin: 0 auto; background: url(../images/module_tab_bg.png) repeat-x;padding-left: 10px;border:1px solid #b1c9f3;position:relative;}
+.module_tab ul{position:absolute;top: 5px;}
+.module_tab ul li{float:left;list-style:none;text-align:center;min-width: 80px; height: 25px; line-height:25px;cursor:pointer;font-size:12px;font-family:"Microsoft YaHei";}
+.module_tab ul li:hover{ }
+.cst-tab-curr { color: red;}
+.module_tab_body{border: 1px solid #B1C9F3;padding: 0 5px 0 5px; border-top: none;}
+
+
+.module_table tr th:first-child {
+	width: 35%;
+}
+.module_table tr th:nth-child(2) {
+	width: 35%;
+}
+.module_table tr th:nth-child(3) {
+	width: 15%;
+}
+.module_table tr th:nth-child(4) {
+	width: 15%;
+}

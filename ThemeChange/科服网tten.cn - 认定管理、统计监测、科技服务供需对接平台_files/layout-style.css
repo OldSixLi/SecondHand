@@ -1,0 +1,6 @@
+﻿.clear{clear: both;}
+/*布局相关*/
+.layout_item_base .layout_item_module_container{float: left;min-height: 1px;}
+.layout_item_base .layout_item_module_container_border-right{margin-right: 10px;}
+.layout_item_base .layout_item_module_containers{margin: 0 auto;}
+.layout_item_module_container .module_item{margin: 10px auto;margin-bottom:0px; overflow: hidden;}

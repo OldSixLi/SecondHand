@@ -1,0 +1,690 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="SecondHand.Web.Site1" %>
+ <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="style/bootstrap.css" rel="stylesheet" />
+    <link href="style/highlight.css" rel="stylesheet" />
+    <link href="style/bootstrap-switch.min.css" rel="stylesheet" />
+    <link href="style/main.css" rel="stylesheet" />
+    <link href="style/master.css" rel="stylesheet" />
+    <script src="Scripts/jquery-1.11.1.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/highlight.js"></script>
+    <script src="Scripts/bootstrap-switch.min.js"></script>
+    <script src="Scripts/main.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <%--样式表，后期移出--%>
+    <style>
+        .helped {
+            background-image: url("Images/helped.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 166px;
+            margin: 30px 0 0 -3px;
+            text-align: center;
+            width: 120%;
+        }
+         .navbar-default {
+            border-color: transparent;
+        }
+    </style>
+    <%--  JS判断，后期移出--%>
+    <script>
+        ////回车事件
+        //$(function () {
+        //    $("#myModal").keydown(function (event) {
+        //        //alert("你们");
+        //        if (event.keyCode == 13) {
+        //            $("#btnLogin").focus();
+        //            $("#btnLogin").click();
+        //        }
+        //    });
+        //});
+        ////判断字符串长度
+        //function getByteLen(val) {    //传入一个字符串
+        //    var len = 0;
+        //    for (var i = 0; i < val.length; i++) {
+        //        if (val[i].match(/[^\x00-\xff]/ig) != null) //全角 
+        //            len += 2; //如果是全角，占用两个字节
+        //        else
+        //            len += 1; //半角占用一个字节
+        //    }
+        //    return len;
+        //}
+        // //前台校验
+        //$(document).ready(function () {
+        //     //用户名
+        //    $("#username").blur(function () {
+        //        var username = $("#username");
+        //        if (username.val() == '') {
+        //            //alert('用户名不得为空!');
+        //            $("#lblusernameno").removeClass("hidden");
+        //            $("#lblusernameyes").addClass("hidden");
+        //            //$("#username").focus();
+        //            //$(".username").addClass("has-warning");
+        //            return false;
+        //        }
+        //        else if (getByteLen(username.val()) > 12 || getByteLen(username.val()) < 1) {
+        //            //alert('用户名长度不合法');
+        //            $("#lblusernameno").removeClass("hidden");
+        //            $("#lblusernameyes").addClass("hidden");
+        //            return false;
+        //        }
+        //        else {
+        //            $("#lblusernameyes").removeClass("hidden");
+        //            $("#lblusernameno").addClass("hidden");
+        //        }
+        //    });
+        //    //邮箱
+        //    $("#useremail").blur(function () {
+        //        var mailtest = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})$/;
+        //        var emailtxt = $("#useremail");
+        //        if (emailtxt.val() == '') {
+        //            //alert('邮箱不能为空');
+        //            $("#lbluseremailno").removeClass("hidden");
+        //            $("#lbluseremailyes").addClass("hidden");
+        //            return false;
+        //        }
+        //        else if (!mailtest.test(emailtxt.val())) {
+        //            $("#lbluseremailno").removeClass("hidden");
+        //            $("#lbluseremailyes").addClass("hidden");
+        //            //alert('请输入正确的邮箱格式！');
+        //            return false;
+        //        }
+        //        else {
+        //            $("#lbluseremailyes").removeClass("hidden");
+        //            $("#lbluseremailno").addClass("hidden");
+        //        }
+        //    });
+        //    //密码
+        //    $("#registpassword").blur(function () {
+        //        var txtpwd = $("#registpassword").val();
+        //        if (txtpwd == '') {
+        //            $("#lblregistpasswordno").removeClass("hidden");
+        //            $("#lblregistpasswordyes").addClass("hidden");
+        //            //alert('密码不能为空！');
+        //            return false;
+        //        } else {
+        //            $("#lblregistpasswordyes").removeClass("hidden");
+        //            $("#lblregistpasswordno").addClass("hidden");
+        //        }
+        //    });
+        //    //确认密码
+        //    $("#repeatpassword").blur(function () {
+        //        var repeattxt = $("#repeatpassword").val();
+        //        var pwdtxt = $("#registpassword").val();
+        //        if (repeattxt != pwdtxt || repeattxt == "") {
+        //            $("#lblrepeatpasswordno").removeClass("hidden");
+        //            $("#lblrepeatpasswordyes").addClass("hidden");
+        //        } else {
+        //            $("#lblrepeatpasswordyes").removeClass("hidden");
+        //            $("#lblrepeatpasswordno").addClass("hidden");
+        //        }
+        //    });
+        //    //提交按钮
+        //    $("#btnRegist").click(function () {
+        //        var a = $("#username").val();
+        //        var b = $("#useremail").val();
+        //        var c = $("#registpassword").val();
+        //        var d = $("#registpassword").val();
+        //        if (a == '' || b == '' || c == '' || d == '') {
+        //            alert('请完善注册必填项相关信息！');
+        //            return false;
+        //        } else if (c != d) {
+        //            alert('两次密码不一致，请核实后再进行注册');
+        //            return false;
+        //        }
+        //    });
+        //    //退出系统
+        //    $("#exit").click(function () {
+        //        var a = confirm("确认退出系统吗？");
+        //        if (a) {
+        //            return true;
+        //        } else {
+        //            return false;
+        //        }
+        //    });
+        //    $("#managerexit").click(function () {
+        //        var a = confirm("确认退出系统吗？");
+        //        if (a) {
+        //            return true;
+        //        } else {
+        //            return false;
+        //        }
+        //    });
+        //});
+        //精简后的代码
+        $(function () { $("#myModal").keydown(function (event) { if (event.keyCode == 13) { $("#btnLogin").focus(); $("#btnLogin").click() } }) }); function getByteLen(val) { var len = 0; for (var i = 0; i < val.length; i++) { if (val[i].match(/[^\x00-\xff]/ig) != null) len += 2; else len += 1 } return len } $(document).ready(function () { $("#username").blur(function () { var username = $("#username"); if (username.val() == '') { $("#lblusernameno").removeClass("hidden"); $("#lblusernameyes").addClass("hidden"); return false } else if (getByteLen(username.val()) > 12 || getByteLen(username.val()) < 1) { $("#lblusernameno").removeClass("hidden"); $("#lblusernameyes").addClass("hidden"); return false } else { $("#lblusernameyes").removeClass("hidden"); $("#lblusernameno").addClass("hidden") } }); $("#useremail").blur(function () { var mailtest = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})$/; var emailtxt = $("#useremail"); if (emailtxt.val() == '') { $("#lbluseremailno").removeClass("hidden"); $("#lbluseremailyes").addClass("hidden"); return false } else if (!mailtest.test(emailtxt.val())) { $("#lbluseremailno").removeClass("hidden"); $("#lbluseremailyes").addClass("hidden"); return false } else { $("#lbluseremailyes").removeClass("hidden"); $("#lbluseremailno").addClass("hidden") } }); $("#registpassword").blur(function () { var txtpwd = $("#registpassword").val(); if (txtpwd == '') { $("#lblregistpasswordno").removeClass("hidden"); $("#lblregistpasswordyes").addClass("hidden"); return false } else { $("#lblregistpasswordyes").removeClass("hidden"); $("#lblregistpasswordno").addClass("hidden") } }); $("#repeatpassword").blur(function () { var repeattxt = $("#repeatpassword").val(); var pwdtxt = $("#registpassword").val(); if (repeattxt != pwdtxt || repeattxt == "") { $("#lblrepeatpasswordno").removeClass("hidden"); $("#lblrepeatpasswordyes").addClass("hidden") } else { $("#lblrepeatpasswordyes").removeClass("hidden"); $("#lblrepeatpasswordno").addClass("hidden") } }); $("#btnRegist").click(function () { var a = $("#username").val(); var b = $("#useremail").val(); var c = $("#registpassword").val(); var d = $("#registpassword").val(); if (a == '' || b == '' || c == '' || d == '') { alert('请完善注册必填项相关信息！'); return false } else if (c != d) { alert('两次密码不一致，请核实后再进行注册'); return false } }); $("#exit").click(function () { var a = confirm("确认退出系统吗？"); if (a) { return true } else { return false } }); $("#managerexit").click(function () { var a = confirm("确认退出系统吗？"); if (a) { return true } else { return false } }) });
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <%--顶部菜单栏--%>
+        <%-- <nav class="navbar  navbar-inverse navbar-fixed-top transparent">--%>
+        <nav class="navbar  navbar-default navbar-fixed-top  transparent">
+            <div class="col-lg-9 col-lg-offset-2">
+                <div class="container-fluid">
+                    <%--网站名字--%>
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" style="font-size: 25px; font-family: Microsoft YaHei; color: #777"
+                            href="UserLogin.aspx">校园二手网 </a>
+                    </div>
+                    <%--折叠部分--%>
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <%--<ul class="nav navbar-nav">
+                    <li class="active"><a href="#">发布商品<span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">Link</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">One more separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>--%>
+                        <%--未注册显示内容--%>
+                        <asp:Panel ID="panelunregist" runat="server">
+                            <div style="">
+                                <ul class="nav navbar-nav " style="float: right;">
+                                    <li style="padding-right: -10px; margin-right: -10px;">
+                                        <p class="navbar-text">
+                                            <a href="#" data-toggle="modal" data-target="#myModal">登录</a>
+                                        </p>
+                                        <li />
+                                    <li style="padding-left: -10px; margin-left: -10px;">
+                                        <p class="navbar-text">
+                                            <a href="#RegistModal" data-toggle="modal" data-traget="#RegistModal">注册</a>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </asp:Panel>
+                        <%--已注册显示内容--%>
+                        <asp:Panel ID="panelregisted" runat="server" Visible="False">
+                            <div style="margin-right: 30px;">
+                                <ul class="nav navbar-nav " style="float: right;">
+                                    <li style="padding: 0; margin: 0;">
+                                        <p class="navbar-text">欢迎您</p>
+                                        <li />
+                                    <li style="padding: 0; margin: 0;" class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                            <asp:Label ID="LabelName" runat="server" Text="李老六"></asp:Label>
+                                            <span class="caret"></span></a>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="#" runat="server" onserverclick="btnSelf_Click">个人中心</a></li>
+                                            <li><a href="PersonalGoods.aspx">我的商品</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#" id="exit" runat="server" onserverclick="btnExit_Click">退出登录</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </asp:Panel>
+                        <asp:Panel ID="PanelManager" runat="server" Visible="False">
+                            <div style="margin-right: 30px;">
+                                <ul class="nav navbar-nav " style="float: right;">
+                                    <li style="padding: 0; margin: 0;">
+                                        <p class="navbar-text">欢迎您</p>
+                                        <li />
+                                    <li style="padding: 0; margin: 0;" class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                            <asp:Label ID="lblManagername" runat="server" Text="管理员"></asp:Label>
+                                            <span class="caret"></span></a>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="#" runat="server" onserverclick="btnmanager_Click">管理员入口→</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#" id="managerexit" runat="server" onserverclick="btnExit1_Click">退出登录</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </asp:Panel>
+                        <%--搜索框--%>
+                        <div class=" navbar-form navbar-right " role="search">
+                            <div class="input-group ">
+                                <%--<input type="text" class="form-control" placeholder="搜索站内二手物品"/>--%>
+                                <asp:TextBox ID="TextSearch" class="form-control" runat="server" placeholder="搜索站内二手物品"></asp:TextBox>
+                                <span class="input-group-btn">
+                                    <button type="submit" class=" btn btn-default" runat="server" onserverclick="btnSearch_Click">
+                                        <span class="glyphicon glyphicon-search"></span>
+                                    </button>
+                                    <%--<asp:Button ID="btnSearch" class=" btn btn-default"  runat="server" Text="搜索"></asp:Button>--%>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <%--登录模态框--%>
+        <div class="modal fade" id="myModal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header text">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span
+                                aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">登录</h4>
+                    </div>
+                    <div class="modal-body">
+                        <%--登录注册的表单--%>
+                        <div class="form-horizontal">
+                            <div class="form-group">
+                                <label for="inputEmail3" class="col-lg-2 col-lg-offset-1 control-label">邮箱</label>
+                                <div class="col-sm-6 ">
+                                    <%--  has-success--%>
+                                    <%--                                <input type="email" class="form-control" id="inputEmail3" placeholder="Email" />--%>
+                                    <asp:TextBox ID="TextEmail" class="form-control" placeholder="Email" runat="server"></asp:TextBox>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPassword3" class="col-lg-2 col-lg-offset-1 control-label">密码</label>
+                                <div class="col-sm-6">
+                                    <%--                                <input type="password" class="form-control" id="inputPassword3" placeholder="Password" />--%>
+                                    <asp:TextBox ID="TextPassWord" class="form-control" placeholder="Password" runat="server"
+                                        TextMode="Password"></asp:TextBox>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-3 col-sm-3">
+                                    <div class="checkbox">
+                                        <label>
+                                            <%--<input type="checkbox"/>记住密码--%>
+                                            <%--<asp:CheckBox ID="CheckBox1" runat="server" />记住密码 --%>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="col-sm-2 col-sm-offset-3">
+                            <%--<button type="button" class="btn btn-default" data-dismiss="modal">　取消&nbsp;&nbsp;&nbsp;</button>--%>
+                            <asp:Button ID="btnCancel" class="btn btn-default" runat="server" data-dismiss="modal"
+                                Text="&nbsp;&nbsp;取消&nbsp;&nbsp;" />
+                        </div>
+                        <div class="col-sm-2 col-sm-offset-1 ">
+                            <%--<button type="button" class="btn btn-primary">　登录&nbsp;&nbsp;&nbsp;</button>--%>
+                            <asp:Button ID="btnLogin" class="btn btn-primary" runat="server" OnClick="btnLogin_Click"
+                                Text="&nbsp;&nbsp;登陆&nbsp;&nbsp;" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%--注册模态框--%>
+        <div class="modal fade" id="RegistModal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header ">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span
+                                aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title text" id="myModalLabel">用户注册</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-horizontal">
+                            <p class="spantext">*必填项*</p>
+                            <div class="form-group">
+                                <label for="useremail" class="col-lg-2 col-lg-offset-2 control-label">邮箱</label>
+                                <div class="col-lg-6">
+                                    <asp:TextBox ID="useremail" runat="server" class="form-control" placeholder="请输入邮箱以用来登陆"
+                                        TextMode="Email"></asp:TextBox>
+                                </div>
+                                <%--校验图标--%>
+                                <div class="col-lg-1  divglyphicon">
+                                    <label id="lbluseremailyes" class=" glyphicon glyphicon-ok hidden"></label>
+                                    <label id="lbluseremailno" class=" glyphicon glyphicon-remove hidden"></label>
+                                </div>
+                            </div>
+                            <div class="form-group username">
+                                <label for="username" class="col-lg-2 col-lg-offset-2 control-label">用户名</label>
+                                <div class="col-lg-6">
+                                    <asp:TextBox ID="username" runat="server" class="form-control" placeholder="1至12个字符（中文/英文/数字）"
+                                        EnableViewState="True" onkeyup="value=value.replace(/[^\w\u4E00-\u9FA5]/g, '')"></asp:TextBox>
+                                </div>
+                                <%--校验图标--%>
+                                <div class="col-lg-1  divglyphicon">
+                                    <label id="lblusernameyes" class=" glyphicon glyphicon-ok hidden"></label>
+                                    <label id="lblusernameno" class=" glyphicon glyphicon-remove hidden"></label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="registpassword" class="col-lg-2 col-lg-offset-2 control-label">密码</label>
+                                <div class="col-lg-6">
+                                    <asp:TextBox ID="registpassword" runat="server" class="form-control" placeholder="请输入密码"
+                                        TextMode="Password"></asp:TextBox>
+                                </div>
+                                <%--校验图标--%>
+                                <div class="col-lg-1  divglyphicon">
+                                    <label id="lblregistpasswordyes" class=" glyphicon glyphicon-ok hidden"></label>
+                                    <label id="lblregistpasswordno" class=" glyphicon glyphicon-remove hidden"></label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="repeatpassword" class="col-lg-2 col-lg-offset-2 control-label">确认密码</label>
+                                <div class="col-lg-6">
+                                    <asp:TextBox ID="repeatpassword" runat="server" class="form-control" placeholder="确认密码"
+                                        TextMode="Password"></asp:TextBox>
+                                </div>
+                                <%--校验图标--%>
+                                <div class="col-lg-1  divglyphicon">
+                                    <label id="lblrepeatpasswordyes" class=" glyphicon glyphicon-ok hidden"></label>
+                                    <label id="lblrepeatpasswordno" class=" glyphicon glyphicon-remove hidden"></label>
+                                </div>
+                            </div>
+                            <hr class="pad" />
+                            <p class="spantext pad ">完善信息</p>
+                            <div class="form-group">
+                                <label for="sex" class="col-lg-2 col-lg-offset-2 control-label">性别</label>
+                                <div class="col-lg-6">
+                                    <input id="sex" runat="server" type="checkbox" aria-checked="True" class="form-control  "
+                                        data-handle-width="60" data-on-text="男" data-off-text="女" data-off-color="success"
+                                        checked="checked" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="txtPhoneNum" class="col-lg-2 col-lg-offset-2 control-label">手机号</label>
+                                <div class="col-lg-6">
+                                    <asp:TextBox ID="txtPhoneNum" runat="server" class="form-control" placeholder="请输入您的手机号"
+                                        TextMode="Phone"></asp:TextBox>
+                                </div>
+                                <%--校验图标--%>
+                                <div class="col-lg-1  divglyphicon">
+                                    <label id="lblPhoneNumyes" class=" glyphicon glyphicon-ok hidden"></label>
+                                    <label id="lblPhoneNumno" class=" glyphicon glyphicon-remove hidden"></label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="txtQQ" class="col-lg-2 col-lg-offset-2 control-label">QQ</label>
+                                <div class="col-lg-6">
+                                    <asp:TextBox ID="txtQQ" runat="server" class="form-control" placeholder="留下您的QQ，以便交易物品时联系您" MaxLength="11" onkeyup="value=value.replace(/[^\d.]/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')"></asp:TextBox>
+                                </div>
+                            </div>
+                            <%--    <hr class="pad" />
+                            <p class="spantext pad">个人认证</p>
+                            <div class="form-group">
+                                <label for="txtStuName" class="col-lg-2 col-lg-offset-2 control-label">姓名</label>
+                                <div class="col-lg-6">
+                                    <asp:TextBox ID="txtStuName" runat="server" class="form-control" placeholder="请填写您的真实姓名，进行认证"></asp:TextBox>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="txtStuNum" class="col-lg-2 col-lg-offset-2 control-label">学号</label>
+                                <div class="col-lg-6">
+                                    <asp:TextBox ID="txtStuNum" runat="server" class="form-control" placeholder="请输入您的学号"></asp:TextBox>
+                                </div>
+                            </div>--%>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <%--<a data-dismiss="modal">→去登陆</a>--%><asp:Button ID="btnRegist" runat="server"
+                            Text="注册" class="btn btn-primary col-lg-2 col-lg-offset-5" OnClick="btnRegist_Click" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12"></div>
+        <%--侧边栏--%>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            <div class="panel-group col-lg-1" id="accordion" style="padding: 0; float: left; position: absolute; top: 300px; left: 0;" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">校园代步
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
+                        <div class="panel-body">
+                            <a href="GoodsByClass.aspx?classid=100">电动车</a><br />
+                            <a href="GoodsByClass.aspx?classid=101">自行车</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="heading2">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="false" aria-controls="collapse2">手机
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
+                        <div class="panel-body">
+                            <a href="GoodsByClass.aspx?classid=156">手机</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingThree">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">电脑
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                        <div class="panel-body">
+                            <a href="GoodsByClass.aspx?classid=102">笔记本</a><br />
+                            <a href="GoodsByClass.aspx?classid=103">台式机</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingfive">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapsefive" aria-expanded="false" aria-controls="collapsefive">数码
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapsefive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingfive">
+                        <div class="panel-body">
+                            <a href="GoodsByClass.aspx?classid=113">数码配件</a><br />
+                            <a href="GoodsByClass.aspx?classid=114">相机</a><br />
+                            <a href="GoodsByClass.aspx?classid=115">单反</a><br />
+                            <a href="GoodsByClass.aspx?classid=117">游戏机</a><br />
+                            <a href="GoodsByClass.aspx?classid=155">平板</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="heading6">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse6" aria-expanded="false" aria-controls="collapse6">电器
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading6">
+                        <div class="panel-body">
+                            <a href="GoodsByClass.aspx?classid=119">电扇</a><br />
+                            <a href="GoodsByClass.aspx?classid=120">台灯</a><br />
+                            <a href="GoodsByClass.aspx?classid=121">洗衣机</a><br />
+                            <a href="GoodsByClass.aspx?classid=122">电吹风</a><br />
+                            <a href="GoodsByClass.aspx?classid=123">电水壶</a><br />
+                            <a href="GoodsByClass.aspx?classid=126">其他</a><br />
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="heading7">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse7" aria-expanded="false" aria-controls="collapse7">运动健身
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse7" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                        <div class="panel-body">
+                            <a href="GoodsByClass.aspx?classid=127">篮球</a><br />
+                            <a href="GoodsByClass.aspx?classid=128">足球</a><br />
+                            <a href="GoodsByClass.aspx?classid=129">球拍</a><br />
+                            <a href="GoodsByClass.aspx?classid=130">哑铃</a><br />
+                            <a href="GoodsByClass.aspx?classid=131">轮滑</a><br />
+                            <a href="GoodsByClass.aspx?classid=132">其他</a><br />
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="heading8">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse8" aria-expanded="false" aria-controls="collapse8">衣物伞帽
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse8" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading8">
+                        <div class="panel-body">
+                            <a href="GoodsByClass.aspx?classid=133">衣服</a><br />
+                            <a href="GoodsByClass.aspx?classid=135">背包</a><br />
+                            <a href="GoodsByClass.aspx?classid=136">雨伞</a><br />
+                            <a href="GoodsByClass.aspx?classid=137">鞋</a><br />
+                            <a href="GoodsByClass.aspx?classid=138">帽子</a><br />
+                            <a href="GoodsByClass.aspx?classid=139">其他</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="heading9">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse9" aria-expanded="false" aria-controls="collapse9">图书教材
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse9" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading9">
+                        <div class="panel-body">
+                            <a href="GoodsByClass.aspx?classid=140">教材</a><br />
+                            <a href="GoodsByClass.aspx?classid=141">考研</a><br />
+                            <a href="GoodsByClass.aspx?classid=142">托福/雅思</a><br />
+                            <a href="GoodsByClass.aspx?classid=143">课外书</a><br />
+                            <a href="GoodsByClass.aspx?classid=144">其他</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="heading10">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse10" aria-expanded="false" aria-controls="collapse10">租赁
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse10" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                        <div class="panel-body">
+                            <a href="GoodsByClass.aspx?classid=146">服装</a><br />
+                            <a href="GoodsByClass.aspx?classid=147">道具</a><br />
+                            <a href="GoodsByClass.aspx?classid=148">其他</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="heading11">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse11" aria-expanded="false" aria-controls="collapse11">生活娱乐
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse11" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading11">
+                        <div class="panel-body">
+                            <a href="GoodsByClass.aspx?classid=149">虚拟账号</a><br />
+                            <a href="GoodsByClass.aspx?classid=150">日常用品</a><br />
+                            <a href="GoodsByClass.aspx?classid=151">其他</a><br />
+                            <a href="GoodsByClass.aspx?classid=152">乐器</a><br />
+                            <a href="GoodsByClass.aspx?classid=153">化妆品</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="heading12">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse12" aria-expanded="false" aria-controls="collapse12">其他
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse12" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading12">
+                        <div class="panel-body">
+                            <a href="GoodsByClass.aspx?classid=157">其他</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-1 " style="float: right; position: absolute; top: 300px; right: 26px; margin: 0; padding: 0">
+                <a href="PublishGoods.aspx" class="btn btn-danger btn-lg" style="margin-left: 15px;">我要发布
+                </a>
+                <div class="helped ">
+                    <span class="helpers">
+                        <asp:Label ID="Allgoodscount" runat="server" Text="" Style="color: #00ad90; font-family: impact; font-size: 1.4em; line-height: 155px;"></asp:Label>
+                    </span>
+                </div>
+            </div>
+            <%--左边菜单栏--%>
+            <%--侧边栏--%>
+            <%--右边菜单栏--%>
+        </div>
+        <%--页脚--%>
+        <footer class="col-lg-12 footer">
+            <div class="container">
+                <div class="row footer-top">
+                    <div class="col-sm-6 col-lg-6">
+                        <a href="UserLogin.aspx" style="text-decoration: none">
+                            <h1 style="color: #563d7c; margin-left: 200px;">校园二手网
+                            </h1>
+                        </a>
+                    </div>
+                    <div class="col-sm-6  col-lg-5 col-lg-offset-1">
+                        <div class="row about">
+                            <div class="col-xs-3">
+                                <h4>关于</h4>
+                                <ul class="list-unstyled">
+                                    <li><a href="UserLogin.aspx">关于我们</a></li>
+                                    <li><a href=" WZNotice/RegistNotice.html">网站声明</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-3">
+                                <h4>联系方式</h4>
+                                <ul class="list-unstyled">
+                                    <li><a target="_blank" title="私人微博" href="http://weibo.com/u/3181475561">新浪微博</a></li>
+                                    <li><a href="mailto:admin@bootcss.com">电子邮件</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-3">
+                                <h4>友情链接</h4>
+                                <ul class="list-unstyled">
+                                    <li><a target="_blank" href="http://www.bootcss.com/">Bootstrap中文</a></li>
+                                    <li><a target="_blank" href="http://jquery.com/">Jquery官网</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-3">
+                                <h4>技术支持</h4>
+                                <ul class="list-unstyled">
+                                    <li><a target="_blank" href="http://www.w3cschool.cc/">菜鸟教程</a></li>
+                                    <li><a target="_blank" href="http://runjs.cn/">RunJs</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row footer-bottom">
+                    <ul class="list-inline text-center">
+                        <li><a target="_blank" href="http://www.miibeian.gov.cn/">京ICP备11008151号</a></li>
+                        <li>京公网安备11010802014853</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </form>
+</body>
+</html>
+ 

@@ -1,0 +1,1486 @@
+<!DOCTYPE html>
+<html xmlns:wb="http://open.weibo.com/wb" xmlns="http://www.w3.org/1999/xhtml"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>科服网tten.cn - 认定管理、统计监测、科技服务供需对接平台 </title>
+    <meta name="description" content="科服网是科技型中小企业认定平台、科技服务在线对接平台、科技数据统计监测平台，汇聚项目申报、补贴奖励等政府服务，支持在线淘资金、淘仪器、淘载体、淘技术尽在科淘！">
+    <meta name="keywords" content="科服网，科淘，科技服务，对接，科技型中小企业，科技信息，科技金融，孵化载体，仪器共享，技术转移，项目申报，补贴奖励，政策法规">
+    <script src="%E7%A7%91%E6%9C%8D%E7%BD%91tten.cn%20-%20%E8%AE%A4%E5%AE%9A%E7%AE%A1%E7%90%86%E3%80%81%E7%BB%9F%E8%AE%A1%E7%9B%91%E6%B5%8B%E3%80%81%E7%A7%91%E6%8A%80%E6%9C%8D%E5%8A%A1%E4%BE%9B%E9%9C%80%E5%AF%B9%E6%8E%A5%E5%B9%B3%E5%8F%B0_files/jquery-1.js" type="text/javascript"></script>
+    <script src="%E7%A7%91%E6%9C%8D%E7%BD%91tten.cn%20-%20%E8%AE%A4%E5%AE%9A%E7%AE%A1%E7%90%86%E3%80%81%E7%BB%9F%E8%AE%A1%E7%9B%91%E6%B5%8B%E3%80%81%E7%A7%91%E6%8A%80%E6%9C%8D%E5%8A%A1%E4%BE%9B%E9%9C%80%E5%AF%B9%E6%8E%A5%E5%B9%B3%E5%8F%B0_files/jquery.js" type="text/javascript"></script>
+    <link href="%E7%A7%91%E6%9C%8D%E7%BD%91tten.cn%20-%20%E8%AE%A4%E5%AE%9A%E7%AE%A1%E7%90%86%E3%80%81%E7%BB%9F%E8%AE%A1%E7%9B%91%E6%B5%8B%E3%80%81%E7%A7%91%E6%8A%80%E6%9C%8D%E5%8A%A1%E4%BE%9B%E9%9C%80%E5%AF%B9%E6%8E%A5%E5%B9%B3%E5%8F%B0_files/layout-style.css" rel="stylesheet">
+    <link href="%E7%A7%91%E6%9C%8D%E7%BD%91tten.cn%20-%20%E8%AE%A4%E5%AE%9A%E7%AE%A1%E7%90%86%E3%80%81%E7%BB%9F%E8%AE%A1%E7%9B%91%E6%B5%8B%E3%80%81%E7%A7%91%E6%8A%80%E6%9C%8D%E5%8A%A1%E4%BE%9B%E9%9C%80%E5%AF%B9%E6%8E%A5%E5%B9%B3%E5%8F%B0_files/style.css" rel="stylesheet">
+    <link href="%E7%A7%91%E6%9C%8D%E7%BD%91tten.cn%20-%20%E8%AE%A4%E5%AE%9A%E7%AE%A1%E7%90%86%E3%80%81%E7%BB%9F%E8%AE%A1%E7%9B%91%E6%B5%8B%E3%80%81%E7%A7%91%E6%8A%80%E6%9C%8D%E5%8A%A1%E4%BE%9B%E9%9C%80%E5%AF%B9%E6%8E%A5%E5%B9%B3%E5%8F%B0_files/CustomizePage.css" rel="stylesheet">
+    <script src="%E7%A7%91%E6%9C%8D%E7%BD%91tten.cn%20-%20%E8%AE%A4%E5%AE%9A%E7%AE%A1%E7%90%86%E3%80%81%E7%BB%9F%E8%AE%A1%E7%9B%91%E6%B5%8B%E3%80%81%E7%A7%91%E6%8A%80%E6%9C%8D%E5%8A%A1%E4%BE%9B%E9%9C%80%E5%AF%B9%E6%8E%A5%E5%B9%B3%E5%8F%B0_files/CustomizePage.js" type="text/javascript"></script>
+<style class="firebugResetStyles" type="text/css" charset="utf-8">/* See license.txt for terms of usage */
+/** reset styling **/
+.firebugResetStyles {
+    z-index: 2147483646 !important;
+    top: 0 !important;
+    left: 0 !important;
+    display: block !important;
+    border: 0 none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    outline: 0 !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    position: fixed !important;
+    transform: rotate(0deg) !important;
+    transform-origin: 50% 50% !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    background: transparent none !important;
+    pointer-events: none !important;
+    white-space: normal !important;
+}
+style.firebugResetStyles {
+    display: none !important;
+}
+
+.firebugBlockBackgroundColor {
+    background-color: transparent !important;
+}
+
+.firebugResetStyles:before, .firebugResetStyles:after {
+    content: "" !important;
+}
+/**actual styling to be modified by firebug theme**/
+.firebugCanvas {
+    display: none !important;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+.firebugLayoutBox {
+    width: auto !important;
+    position: static !important;
+}
+
+.firebugLayoutBoxOffset {
+    opacity: 0.8 !important;
+    position: fixed !important;
+}
+
+.firebugLayoutLine {
+    opacity: 0.4 !important;
+    background-color: #000000 !important;
+}
+
+.firebugLayoutLineLeft, .firebugLayoutLineRight {
+    width: 1px !important;
+    height: 100% !important;
+}
+
+.firebugLayoutLineTop, .firebugLayoutLineBottom {
+    width: 100% !important;
+    height: 1px !important;
+}
+
+.firebugLayoutLineTop {
+    margin-top: -1px !important;
+    border-top: 1px solid #999999 !important;
+}
+
+.firebugLayoutLineRight {
+    border-right: 1px solid #999999 !important;
+}
+
+.firebugLayoutLineBottom {
+    border-bottom: 1px solid #999999 !important;
+}
+
+.firebugLayoutLineLeft {
+    margin-left: -1px !important;
+    border-left: 1px solid #999999 !important;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+.firebugLayoutBoxParent {
+    border-top: 0 none !important;
+    border-right: 1px dashed #E00 !important;
+    border-bottom: 1px dashed #E00 !important;
+    border-left: 0 none !important;
+    position: fixed !important;
+    width: auto !important;
+}
+
+.firebugRuler{
+    position: absolute !important;
+}
+
+.firebugRulerH {
+    top: -15px !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 14px !important;
+    background: url("data:image/png,%89PNG%0D%0A%1A%0A%00%00%00%0DIHDR%00%00%13%88%00%00%00%0E%08%02%00%00%00L%25a%0A%00%00%00%04gAMA%00%00%D6%D8%D4OX2%00%00%00%19tEXtSoftware%00Adobe%20ImageReadyq%C9e%3C%00%00%04%F8IDATx%DA%EC%DD%D1n%E2%3A%00E%D1%80%F8%FF%EF%E2%AF2%95%D0D4%0E%C1%14%B0%8Fa-%E9%3E%CC%9C%87n%B9%81%A6W0%1C%A6i%9A%E7y%0As8%1CT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AATE9%FE%FCw%3E%9F%AF%2B%2F%BA%97%FDT%1D~K(%5C%9D%D5%EA%1B%5C%86%B5%A9%BDU%B5y%80%ED%AB*%03%FAV9%AB%E1%CEj%E7%82%EF%FB%18%BC%AEJ8%AB%FA'%D2%BEU9%D7U%ECc0%E1%A2r%5DynwVi%CFW%7F%BB%17%7Dy%EACU%CD%0E%F0%FA%3BX%FEbV%FEM%9B%2B%AD%BE%AA%E5%95v%AB%AA%E3E5%DCu%15rV9%07%B5%7F%B5w%FCm%BA%BE%AA%FBY%3D%14%F0%EE%C7%60%0EU%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5JU%88%D3%F5%1F%AE%DF%3B%1B%F2%3E%DAUCNa%F92%D02%AC%7Dm%F9%3A%D4%F2%8B6%AE*%BF%5C%C2Ym~9g5%D0Y%95%17%7C%C8c%B0%7C%18%26%9CU%CD%13i%F7%AA%90%B3Z%7D%95%B4%C7%60%E6E%B5%BC%05%B4%FBY%95U%9E%DB%FD%1C%FC%E0%9F%83%7F%BE%17%7DkjMU%E3%03%AC%7CWj%DF%83%9An%BCG%AE%F1%95%96yQ%0Dq%5Dy%00%3Et%B5'%FC6%5DS%95pV%95%01%81%FF'%07%00%00%00%00%00%00%00%00%00%F8x%C7%F0%BE%9COp%5D%C9%7C%AD%E7%E6%EBV%FB%1E%E0(%07%E5%AC%C6%3A%ABi%9C%8F%C6%0E9%AB%C0'%D2%8E%9F%F99%D0E%B5%99%14%F5%0D%CD%7F%24%C6%DEH%B8%E9rV%DFs%DB%D0%F7%00k%FE%1D%84%84%83J%B8%E3%BA%FB%EF%20%84%1C%D7%AD%B0%8E%D7U%C8Y%05%1E%D4t%EF%AD%95Q%BF8w%BF%E9%0A%BF%EB%03%00%00%00%00%00%00%00%00%00%B8vJ%8E%BB%F5%B1u%8Cx%80%E1o%5E%CA9%AB%CB%CB%8E%03%DF%1D%B7T%25%9C%D5(%EFJM8%AB%CC'%D2%B2*%A4s%E7c6%FB%3E%FA%A2%1E%80~%0E%3E%DA%10x%5D%95Uig%15u%15%ED%7C%14%B6%87%A1%3B%FCo8%A8%D8o%D3%ADO%01%EDx%83%1A~%1B%9FpP%A3%DC%C6'%9C%95gK%00%00%00%00%00%00%00%00%00%20%D9%C9%11%D0%C0%40%AF%3F%EE%EE%92%94%D6%16X%B5%BCMH%15%2F%BF%D4%A7%C87%F1%8E%F2%81%AE%AAvzr%DA2%ABV%17%7C%E63%83%E7I%DC%C6%0Bs%1B%EF6%1E%00%00%00%00%00%00%00%00%00%80cr%9CW%FF%7F%C6%01%0E%F1%CE%A5%84%B3%CA%BC%E0%CB%AA%84%CE%F9%BF)%EC%13%08WU%AE%AB%B1%AE%2BO%EC%8E%CBYe%FE%8CN%ABr%5Dy%60~%CFA%0D%F4%AE%D4%BE%C75%CA%EDVB%EA(%B7%F1%09g%E5%D9%12%00%00%00%00%00%00%00%00%00H%F6%EB%13S%E7y%5E%5E%FB%98%F0%22%D1%B2'%A7%F0%92%B1%BC%24z3%AC%7Dm%60%D5%92%B4%7CEUO%5E%F0%AA*%3BU%B9%AE%3E%A0j%94%07%A0%C7%A0%AB%FD%B5%3F%A0%F7%03T%3Dy%D7%F7%D6%D4%C0%AAU%D2%E6%DFt%3F%A8%CC%AA%F2%86%B9%D7%F5%1F%18%E6%01%F8%CC%D5%9E%F0%F3z%88%AA%90%EF%20%00%00%00%00%00%00%00%00%00%C0%A6%D3%EA%CFi%AFb%2C%7BB%0A%2B%C3%1A%D7%06V%D5%07%A8r%5D%3D%D9%A6%CAu%F5%25%CF%A2%99%97zNX%60%95%AB%5DUZ%D5%FBR%03%AB%1C%D4k%9F%3F%BB%5C%FF%81a%AE%AB'%7F%F3%EA%FE%F3z%94%AA%D8%DF%5B%01%00%00%00%00%00%00%00%00%00%8E%FB%F3%F2%B1%1B%8DWU%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*UiU%C7%BBe%E7%F3%B9%CB%AAJ%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5*%AAj%FD%C6%D4%5Eo%90%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5%86%AF%1B%9F%98%DA%EBm%BBV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%AD%D6%E4%F58%01%00%00%00%00%00%00%00%00%00%00%00%00%00%40%85%7F%02%0C%008%C2%D0H%16j%8FX%00%00%00%00IEND%AEB%60%82") repeat-x !important;
+    border-top: 1px solid #BBBBBB !important;
+    border-right: 1px dashed #BBBBBB !important;
+    border-bottom: 1px solid #000000 !important;
+}
+
+.firebugRulerV {
+    top: 0 !important;
+    left: -15px !important;
+    width: 14px !important;
+    height: 100% !important;
+    background: url("data:image/png,%89PNG%0D%0A%1A%0A%00%00%00%0DIHDR%00%00%00%0E%00%00%13%88%08%02%00%00%00%0E%F5%CB%10%00%00%00%04gAMA%00%00%D6%D8%D4OX2%00%00%00%19tEXtSoftware%00Adobe%20ImageReadyq%C9e%3C%00%00%06~IDATx%DA%EC%DD%D1v%A20%14%40Qt%F1%FF%FF%E4%97%D9%07%3BT%19%92%DC%40(%90%EEy%9A5%CB%B6%E8%F6%9Ac%A4%CC0%84%FF%DC%9E%CF%E7%E3%F1%88%DE4%F8%5D%C7%9F%2F%BA%DD%5E%7FI%7D%F18%DDn%BA%C5%FB%DF%97%BFk%F2%10%FF%FD%B4%F2M%A7%FB%FD%FD%B3%22%07p%8F%3F%AE%E3%F4S%8A%8F%40%EEq%9D%BE8D%F0%0EY%A1Uq%B7%EA%1F%81%88V%E8X%3F%B4%CEy%B7h%D1%A2E%EBohU%FC%D9%AF2fO%8BBeD%BE%F7X%0C%97%A4%D6b7%2Ck%A5%12%E3%9B%60v%B7r%C7%1AI%8C%BD%2B%23r%00c0%B2v%9B%AD%CA%26%0C%1Ek%05A%FD%93%D0%2B%A1u%8B%16-%95q%5Ce%DCSO%8E%E4M%23%8B%F7%C2%FE%40%BB%BD%8C%FC%8A%B5V%EBu%40%F9%3B%A72%FA%AE%8C%D4%01%CC%B5%DA%13%9CB%AB%E2I%18%24%B0n%A9%0CZ*Ce%9C%A22%8E%D8NJ%1E%EB%FF%8F%AE%CAP%19*%C3%BAEKe%AC%D1%AAX%8C*%DEH%8F%C5W%A1e%AD%D4%B7%5C%5B%19%C5%DB%0D%EF%9F%19%1D%7B%5E%86%BD%0C%95%A12%AC%5B*%83%96%CAP%19%F62T%86%CAP%19*%83%96%CA%B8Xe%BC%FE)T%19%A1%17xg%7F%DA%CBP%19*%C3%BA%A52T%86%CAP%19%F62T%86%CA%B0n%A9%0CZ%1DV%C6%3D%F3%FCH%DE%B4%B8~%7F%5CZc%F1%D6%1F%AF%84%F9%0F6%E6%EBVt9%0E~%BEr%AF%23%B0%97%A12T%86%CAP%19%B4T%86%CA%B8Re%D8%CBP%19*%C3%BA%A52huX%19%AE%CA%E5%BC%0C%7B%19*CeX%B7h%A9%0C%95%E1%BC%0C%7B%19*CeX%B7T%06%AD%CB%5E%95%2B%BF.%8F%C5%97%D5%E4%7B%EE%82%D6%FB%CF-%9C%FD%B9%CF%3By%7B%19%F62T%86%CA%B0n%D1R%19*%A3%D3%CA%B0%97%A12T%86uKe%D0%EA%B02*%3F1%99%5DB%2B%A4%B5%F8%3A%7C%BA%2B%8Co%7D%5C%EDe%A8%0C%95a%DDR%19%B4T%C66%82fA%B2%ED%DA%9FC%FC%17GZ%06%C9%E1%B3%E5%2C%1A%9FoiB%EB%96%CA%A0%D5qe4%7B%7D%FD%85%F7%5B%ED_%E0s%07%F0k%951%ECr%0D%B5C%D7-g%D1%A8%0C%EB%96%CA%A0%A52T%C6)*%C3%5E%86%CAP%19%D6-%95A%EB*%95q%F8%BB%E3%F9%AB%F6%E21%ACZ%B7%22%B7%9B%3F%02%85%CB%A2%5B%B7%BA%5E%B7%9C%97%E1%BC%0C%EB%16-%95%A12z%AC%0C%BFc%A22T%86uKe%D0%EA%B02V%DD%AD%8A%2B%8CWhe%5E%AF%CF%F5%3B%26%CE%CBh%5C%19%CE%CB%B0%F3%A4%095%A1%CAP%19*Ce%A8%0C%3BO*Ce%A8%0C%95%A12%3A%AD%8C%0A%82%7B%F0v%1F%2FD%A9%5B%9F%EE%EA%26%AF%03%CA%DF9%7B%19*Ce%A8%0C%95%A12T%86%CA%B8Ze%D8%CBP%19*Ce%A8%0C%95%D1ae%EC%F7%89I%E1%B4%D7M%D7P%8BjU%5C%BB%3E%F2%20%D8%CBP%19*Ce%A8%0C%95%A12T%C6%D5*%C3%5E%86%CAP%19*Ce%B4O%07%7B%F0W%7Bw%1C%7C%1A%8C%B3%3B%D1%EE%AA%5C%D6-%EBV%83%80%5E%D0%CA%10%5CU%2BD%E07YU%86%CAP%19*%E3%9A%95%91%D9%A0%C8%AD%5B%EDv%9E%82%FFKOee%E4%8FUe%A8%0C%95%A12T%C6%1F%A9%8C%C8%3D%5B%A5%15%FD%14%22r%E7B%9F%17l%F8%BF%ED%EAf%2B%7F%CF%ECe%D8%CBP%19*Ce%A8%0C%95%E1%93~%7B%19%F62T%86%CAP%19*Ce%A8%0C%E7%13%DA%CBP%19*Ce%A8%0CZf%8B%16-Z%B4h%D1R%19f%8B%16-Z%B4h%D1R%19%B4%CC%16-Z%B4h%D1R%19%B4%CC%16-Z%B4h%D1%A2%A52%CC%16-Z%B4h%D1%A2%A52h%99-Z%B4h%D1%A2%A52h%99-Z%B4h%D1%A2EKe%98-Z%B4h%D1%A2EKe%D02%5B%B4h%D1%A2EKe%D02%5B%B4h%D1%A2E%8B%96%CA0%5B%B4h%D1%A2E%8B%96%CA%A0e%B6h%D1%A2E%8B%96%CA%A0e%B6h%D1%A2E%8B%16-%95a%B6h%D1%A2E%8B%16-%95A%CBl%D1%A2E%8B%16-%95A%CBl%D1%A2E%8B%16-Z*%C3l%D1%A2E%8B%16-Z*%83%96%D9%A2E%8B%16-Z*%83%96%D9%A2E%8B%16-Z%B4T%86%D9%A2E%8B%16-Z%B4T%06-%B3E%8B%16-Z%B4T%06-%B3E%8B%16-Z%B4h%A9%0C%B3E%8B%16-Z%B4h%A9%0CZf%8B%16-Z%B4h%A9%0CZf%8B%16-Z%B4h%D1R%19f%8B%16-Z%B4h%D1R%19%B4%CC%16-Z%B4h%D1R%19%B4%CC%16-Z%B4h%D1%A2%A52%CC%16-Z%B4h%D1%A2%A52h%99-Z%B4h%D1%A2%A52h%99-Z%B4h%D1%A2EKe%98-Z%B4h%D1%A2EKe%D02%5B%B4h%D1%A2EKe%D02%5B%B4h%D1%A2E%8B%96%CA0%5B%B4h%D1%A2E%8B%96%CA%A0e%B6h%D1%A2E%8B%96%CA%A0e%B6h%D1%A2E%8B%16-%95a%B6h%D1%A2E%8B%16-%95A%CBl%D1%A2E%8B%16-%95A%CBl%D1%A2E%8B%16-Z*%C3l%D1%A2E%8B%16-Z*%83%96%D9%A2E%8B%16-Z*%83%96%D9%A2E%8B%16-Z%B4T%86%D9%A2E%8B%16-Z%B4T%06-%B3E%8B%16-Z%B4T%06-%B3E%8B%16-Z%B4h%A9%0C%B3E%8B%16-Z%B4h%A9%0CZf%8B%16-Z%B4h%A9%0CZf%8B%16-Z%B4h%D1R%19f%8B%16-Z%B4h%D1R%19%B4%CC%16-Z%B4h%D1R%19%B4%CC%16-Z%B4h%D1%A2%A52%CC%16-Z%B4h%D1%A2%A52h%99-Z%B4h%D1%A2%A52h%99-Z%B4h%D1%A2EKe%98-Z%B4h%D1%A2EKe%D02%5B%B4h%D1%A2EKe%D02%5B%B4h%D1%A2E%8B%96%CA0%5B%B4h%D1%A2E%8B%96%CA%A0e%B6h%D1%A2E%8B%96%CA%A0e%B6h%D1%A2E%8B%16-%95a%B6h%D1%A2E%8B%16-%95A%CBl%D1%A2E%8B%16-%95A%CBl%D1%A2E%8B%16-Z*%C3l%D1%A2E%8B%16-Z*%83%96%D9%A2E%8B%16-Z*%83%96%D9%A2E%8B%16-Z%B4T%86%D9%A2E%8B%16-Z%B4T%06-%B3E%8B%16-Z%B4%AE%A4%F5%25%C0%00%DE%BF%5C'%0F%DA%B8q%00%00%00%00IEND%AEB%60%82") repeat-y !important;
+    border-left: 1px solid #BBBBBB !important;
+    border-right: 1px solid #000000 !important;
+    border-bottom: 1px dashed #BBBBBB !important;
+}
+
+.overflowRulerX > .firebugRulerV {
+    left: 0 !important;
+}
+
+.overflowRulerY > .firebugRulerH {
+    top: 0 !important;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+.fbProxyElement {
+    position: fixed !important;
+    pointer-events: auto !important;
+}
+</style></head>
+<body>
+    <div>
+        
+        
+        
+        
+        
+        
+        
+        
+        <div class="layout_item_base" style="margin-top: -10px;" data-horizontalfilling="true">
+
+
+
+<div class="layout_item_module_containers" style="width: 100%;">
+<div class="layout_item_module_container" style="width: 100%;">
+
+
+<div class="module_item" style="width: 100%; height: 35px;" data-mid="CST.App.CustomizePage.Module.TopLoginBarModule" data-width="-1" data-height="35">
+<div id="CSTAppCustomizePageModuleTopLoginBarModule"><div style="width:100%;height:35px"><iframe src="%E7%A7%91%E6%9C%8D%E7%BD%91tten.cn%20-%20%E8%AE%A4%E5%AE%9A%E7%AE%A1%E7%90%86%E3%80%81%E7%BB%9F%E8%AE%A1%E7%9B%91%E6%B5%8B%E3%80%81%E7%A7%91%E6%8A%80%E6%9C%8D%E5%8A%A1%E4%BE%9B%E9%9C%80%E5%AF%B9%E6%8E%A5%E5%B9%B3%E5%8F%B0_files/TopLoginBarModule.htm" scrolling="no" frameborder="0" height="100%" width="100%"></iframe>
+</div></div>
+</div></div></div>
+<div class="clear"></div></div>
+<div class="layout_item_base">
+
+
+
+<div class="layout_item_module_containers" style="width: 980px;">
+<div class="layout_item_module_container" style="width: 980px;">
+
+
+<div class="module_item" style="width: 980px; height: 80px;" data-mid="CST.App.CustomizePage.Module.LogoAndSearchModule" data-width="980" data-height="80">
+<div id="CSTAppCustomizePageModuleLogoAndSearchModule"><!--LOGO&查询-->
+<div class="top_b">
+           <input runat="server" id="clickValue" value="-1" type="hidden">
+    <!--LOGO-->
+    <div class="top_bl">
+        <div onclick="returnDefalt();" style="width: 140px; height: 40px; float: left; margin-left: -155px;cursor: pointer;"></div>
+    </div>
+    <!--查询-->
+    <div class="top_br">
+        <ul class="top_brt" id="top_menu0">
+            <li onclick="topTag(0,0)" class="top_hover">服务</li>
+            <li onclick="topTag(0,1)">需求</li>
+            <li onclick="topTag(0,2)">机构</li>
+            <div class="clear"></div>
+        </ul>
+        <div id="top_main0">
+            <ul class="top_brc" id="top_block">
+                <li style="width: 375px;">
+                    <input id="txtSearchA" class="top_search" type="text">
+                </li>
+                <li style="width: 67px;"><a href="#" class="top_search_btn" onclick="LogoAndSearchModuleMenuClick(this,'http://www.tten.cn','http://218.69.114.49/Product/AllProductSearch.aspx' ,'txtSearchA')"></a></li>
+                <li>
+                </li>
+            </ul>
+            <div class="clear">
+            </div>
+            <ul class="top_brc">
+                <li style="width: 375px;">
+                    <input id="txtSearchB" class="top_search" type="text">
+                </li>
+                <li style="width: 67px;"><a href="#" class="top_search_btn" onclick="LogoAndSearchModuleMenuClick(this,'http://www.tten.cn','http://218.69.114.49/Demand/DemandSearch.aspx','txtSearchB')"></a></li>
+                <li>
+                </li>
+            </ul>
+            <div class="clear">
+            </div>
+            <ul class="top_brc">
+                <li style="width: 375px;">
+                    <input id="txtSearchC" class="top_search" type="text">
+                </li>
+                <li style="width: 67px;">
+                    <a href="#" class="top_search_btn" onclick="LogoAndSearchModuleOrgMenuClick(this,'http://www.tten.cn','txtSearchC')"></a>
+                </li>
+                <li>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="clear"></div>
+</div>
+</div></div></div>
+<div class="clear"></div></div>
+<div class="layout_item_base">
+
+
+
+<div class="layout_item_module_containers" style="width: 980px;">
+<div class="layout_item_module_container" style="width: 980px;">
+
+
+<div class="module_item" style="width: 980px; height: 35px;" data-mid="CST.App.CustomizePage.Module.NavigationModule" data-width="980" data-height="35">
+<div id="CSTAppCustomizePageModuleNavigationModule"><div class="home_page_nav_div">
+    <ul>
+        <li><a href="#" target="_parent">首页</a></li>
+        <li><a onclick="HomePageNavigationMenuClick(this,'http://www.tten.cn/Portal/GovServer.aspx')" href="#">政府服务</a></li>
+        <li><a href="http://www.tten.cn/ktdefault.html" target="_blank" style="font-size: 16px; font-weight: 900; font-family: 黑体">科淘</a>
+            <img alt="" src="%E7%A7%91%E6%9C%8D%E7%BD%91tten.cn%20-%20%E8%AE%A4%E5%AE%9A%E7%AE%A1%E7%90%86%E3%80%81%E7%BB%9F%E8%AE%A1%E7%9B%91%E6%B5%8B%E3%80%81%E7%A7%91%E6%8A%80%E6%9C%8D%E5%8A%A1%E4%BE%9B%E9%9C%80%E5%AF%B9%E6%8E%A5%E5%B9%B3%E5%8F%B0_files/nav_newicon.gif" width="38px"></li>
+        <li><a onclick="HomePageNavigationMenuClick(this,'http://www.tten.cn/Portal/FinancePlatform.aspx')" href="#">科技金融</a></li>
+        <li><a onclick="HomePageNavigationMenuClick(this,'http://www.tten.cn/trs/chuangke/chuangke/changke/index.htm')" href="#">创新创业</a></li>
+        <li><a onclick="HomePageNavigationMenuClick(this,'http://www.tten.cn/Portal/AppService.aspx')" href="#">仪器设备</a></li>
+        <li><a href="http://www.tten.cn/trs/kjxx/index.html" target="_blank">科技信息</a></li>
+        <li><a href="http://www.tten.cn/trs/dtxx/index.html" target="_blank">新闻中心</a></li>
+        <li><a href="http://www.tten.cn/trs/help/" target="_blank">帮助中心</a></li>
+    </ul>
+</div>
+<div class="clear"></div>
+</div>
+</div></div></div>
+<div class="clear"></div></div>
+          <div class="layout_item_base" data-horizontalfilling="true">
+            
+            
+            
+            <div class="layout_item_module_containers" style="width: 100%;"><div class="layout_item_module_container" style="width: 100%;"><div class="module_item" style="width: 980px; height: 100px;" data-mid="CST.App.CustomizePage.Module.ZhongChuangBannerModule" data-width="980" data-height="100">
+<div id="CSTAppCustomizePageModuleZhongChuangBannerModule"><div class="ZhongChuangBanner" id="ZhongChuangBanner" style="width:980px; height:100px;">
+    <a href="http://www.tten.cn/trs/chuangke/chuangke/changke/index.htm">
+        <img src="%E7%A7%91%E6%9C%8D%E7%BD%91tten.cn%20-%20%E8%AE%A4%E5%AE%9A%E7%AE%A1%E7%90%86%E3%80%81%E7%BB%9F%E8%AE%A1%E7%9B%91%E6%B5%8B%E3%80%81%E7%A7%91%E6%8A%80%E6%9C%8D%E5%8A%A1%E4%BE%9B%E9%9C%80%E5%AF%B9%E6%8E%A5%E5%B9%B3%E5%8F%B0_files/ZhongChuang.jpg" alt="众创空间">
+    </a>
+</div></div>
+</div></div></div>
+            <div class="clear">
+            </div>
+        </div>
+    
+<div class="layout_item_base">
+
+
+
+<div class="layout_item_module_containers" style="width: 980px;">
+<div class="layout_item_module_container layout_item_module_container_border-right" style="width: 250px;">
+
+
+<div class="module_item" style="width: 250px; height: 400px;" data-mid="CST.App.CustomizePage.Module.GovermentServiceModule" data-width="250" data-height="400">
+<div id="CSTAppCustomizePageModuleGovermentServiceModule">
+<div class="module" style="width:248px;height:398px">
+	<div class="module_head"><span class="more_span"><a href="http://www.tten.cn/Portal/GovServer.aspx?name=%25E6%2594%25BF%25E5%25BA%259C%25E6%259C%258D%25E5%258A%25A1" class="more" target="_blank">更多&gt;&gt;</a></span><div class="icon_div icon"></div><div class="title">政府服务</div></div>
+	<div class="module_head_body_center_hr"></div>
+	<div class="module_body">
+<ul class="module_ul">
+	<li><a href="http://www.tten.cn/trs/rdgl/index.html" target="_blank" title="科技型中小企业认定">科技型中小企业认定</a></li>
+	<li><a href="http://www.tten.cn/TechnologyFinance.htm" target="_blank" title="科技金融对接平台认定">科技金融对接平台认定</a></li>
+	<li><a href="http://www.tten.cn/daxingyiqi.htm" target="_blank" title="大型仪器共享机构认定">大型仪器共享机构认定</a></li>
+	<li><a href="http://www.tten.cn/ganbubangfu.htm" target="_blank" title="干部帮扶电子档案管理系统">干部帮扶电子档案管理系统</a></li>
+	<li><a href="http://zhiyuanzhe.tten.cn/" target="_blank" title="科技型中小企业青年服务系统">科技型中小企业青年服务系统</a></li>
+	<li><a href="http://www.tten.cn/trs/qyj/index.html" target="_blank" title="新型企业家培养工程">新型企业家培养工程</a></li>
+	<li><a href="http://www.tstc.gov.cn/zhengwugongkai/zxgz/gqrd/" target="_blank" title="高新技术企业认定">高新技术企业认定</a></li>
+	<li><a href="http://home.tjbia.org.cn/" target="_blank" title="孵化器认定">孵化器认定</a></li>
+	<li><a href="http://www.tjppca.com.cn:20080/index.html" target="_blank" title="生产力促进中心认定">生产力促进中心认定</a></li>
+	<li><a href="http://www.tstc.gov.cn/zhengwugongkai/zxgz/kpgz" target="_blank" title="科普工作">科普工作</a></li>
+	<li><a href="http://www.tstc.gov.cn/zxbs/asxh/kjjh/zzcx" target="_blank" title="科技型中小企业与产业发展计划">科技型中小企业与产业发展计划</a></li>
+	<li><a href="http://www.tstc.gov.cn/zxbs/asxh/qt/201505/t20150512_78067.html" target="_blank" title="成果登记">成果登记</a></li>
+	<li><a href="http://www.tstc.gov.cn/zxbs/asxh/qt/201505/t20150512_78068.html" target="_blank" title="技术合同认定">技术合同认定</a></li>
+	<li><a href="http://www.tstc.gov.cn/zhengwugongkai/zcfg" target="_blank" title="政策法规">政策法规</a></li>
+	<li><a href="http://www.tstc.gov.cn/zxbs/kjjhxmlc/xmsb/" target="_blank" title="项目申报">项目申报</a></li>
+	<li><a href="http://www.tten.cn/trs/qyda/" target="_blank" title="企业档案管理">企业档案管理</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="module_item" style="width: 250px; height: 130px;" data-mid="CST.App.CustomizePage.Module.StatismisticMonitorModule" data-width="250" data-height="130">
+<div id="CSTAppCustomizePageModuleStatismisticMonitorModule">
+<div class="module" style="width:248px;height:128px">
+	<div class="module_head"><div class="icon_div icon"></div><div class="title">统计监测</div></div>
+	<div class="module_head_body_center_hr"></div>
+	<div class="module_body"><div style="background-color: #FEF1F0; margin-bottom: 5px; margin-top:5px;">
+    <img src="%E7%A7%91%E6%9C%8D%E7%BD%91tten.cn%20-%20%E8%AE%A4%E5%AE%9A%E7%AE%A1%E7%90%86%E3%80%81%E7%BB%9F%E8%AE%A1%E7%9B%91%E6%B5%8B%E3%80%81%E7%A7%91%E6%8A%80%E6%9C%8D%E5%8A%A1%E4%BE%9B%E9%9C%80%E5%AF%B9%E6%8E%A5%E5%B9%B3%E5%8F%B0_files/Search.png" style="width: 15px; height: auto;"><span style="font-size: 14px;"><a href="http://www.tten.cn/IdentifiedEntState.aspx" style="text-decoration: underline" target="_blank">科技型中小企业认定状态查询</a></span><img src="%E7%A7%91%E6%9C%8D%E7%BD%91tten.cn%20-%20%E8%AE%A4%E5%AE%9A%E7%AE%A1%E7%90%86%E3%80%81%E7%BB%9F%E8%AE%A1%E7%9B%91%E6%B5%8B%E3%80%81%E7%A7%91%E6%8A%80%E6%9C%8D%E5%8A%A1%E4%BE%9B%E9%9C%80%E5%AF%B9%E6%8E%A5%E5%B9%B3%E5%8F%B0_files/new01.gif" style="width: 30px; height: auto;">
+</div>
+<ul class="module_ul">
+	<li>全市累计认定&nbsp;<span style="color:red;">71191</span>&nbsp;家</li>
+	<li>小巨人企业&nbsp;<span style="color:red;">3406</span>&nbsp;家</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="module_item" style="width: 250px; height: 125px;" data-mid="CST.App.CustomizePage.Module.TechnologyService_NavigationModule" data-width="250" data-height="125">
+<div id="CSTAppCustomizePageModuleTechnologyService_NavigationModule">
+<div class="module" style="width:248px;height:123px">
+	<div class="module_head"><div class="icon_div icon"></div><div class="title">主题导航</div></div>
+	<div class="module_head_body_center_hr"></div>
+	<div class="module_body"><div style="margin-top: 15px;">
+    <ul style="width: 280px; line-height: 25px;">
+        <li class="TechnologyServiceli" onclick="liclick(1);">种子期</li>
+        <li class="TechnologyServiceli" onclick="liclick(2);">初创期</li>
+        <li class="TechnologyServiceli" onclick="liclick(3);">成长期</li>
+        <li class="TechnologyServiceli" onclick="liclick(4);">壮大期</li>
+    </ul>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+<div class="layout_item_module_container" style="width: 720px;">
+
+
+<div class="module_item" style="width: 720px; height: 665px;" data-mid="CST.App.CustomizePage.Module.RightTrsPageModule" data-width="720" data-height="665">
+<div id="CSTAppCustomizePageModuleRightTrsPageModule">
+<div id="CSTAppCustomizePageModuleRightTrsPageModule"><div style="width:720px;height:665px;position:relative;">
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!--微博-->
+<script src="%E7%A7%91%E6%9C%8D%E7%BD%91tten.cn%20-%20%E8%AE%A4%E5%AE%9A%E7%AE%A1%E7%90%86%E3%80%81%E7%BB%9F%E8%AE%A1%E7%9B%91%E6%B5%8B%E3%80%81%E7%A7%91%E6%8A%80%E6%9C%8D%E5%8A%A1%E4%BE%9B%E9%9C%80%E5%AF%B9%E6%8E%A5%E5%B9%B3%E5%8F%B0_files/wb.js" type="text/javascript" charset="utf-8"></script>
+<!--网站主体样式-->
+<link type="text/css" rel="stylesheet" href="%E7%A7%91%E6%9C%8D%E7%BD%91tten.cn%20-%20%E8%AE%A4%E5%AE%9A%E7%AE%A1%E7%90%86%E3%80%81%E7%BB%9F%E8%AE%A1%E7%9B%91%E6%B5%8B%E3%80%81%E7%A7%91%E6%8A%80%E6%9C%8D%E5%8A%A1%E4%BE%9B%E9%9C%80%E5%AF%B9%E6%8E%A5%E5%B9%B3%E5%8F%B0_files/main.css">
+<!--选项卡JS-->
+<script type="text/javascript" src="%E7%A7%91%E6%9C%8D%E7%BD%91tten.cn%20-%20%E8%AE%A4%E5%AE%9A%E7%AE%A1%E7%90%86%E3%80%81%E7%BB%9F%E8%AE%A1%E7%9B%91%E6%B5%8B%E3%80%81%E7%A7%91%E6%8A%80%E6%9C%8D%E5%8A%A1%E4%BE%9B%E9%9C%80%E5%AF%B9%E6%8E%A5%E5%B9%B3%E5%8F%B0_files/tag.js"></script>
+<!--图片幻灯片-->
+<script type="text/javascript" src="%E7%A7%91%E6%9C%8D%E7%BD%91tten.cn%20-%20%E8%AE%A4%E5%AE%9A%E7%AE%A1%E7%90%86%E3%80%81%E7%BB%9F%E8%AE%A1%E7%9B%91%E6%B5%8B%E3%80%81%E7%A7%91%E6%8A%80%E6%9C%8D%E5%8A%A1%E4%BE%9B%E9%9C%80%E5%AF%B9%E6%8E%A5%E5%B9%B3%E5%8F%B0_files/6_img.js"></script>
+<style>
+#divSmallBox{overflow:hidden;*display:inline;*zoom:1;width:10px;height:10px;margin:0 5px;border-radius:10px;background:#ffffff;}
+#playBox{ width:460px; height:250px; background:#333; position:relative; overflow:hidden;}
+#playBox .oUlplay { width:99999px; position:absolute; left:0; top:0;}
+#playBox .oUlplay li{ float:left;}
+#playBox .pre{ cursor:pointer; width:45px; height:45px; background:url(http://www.tten.cn/trs/images/6_l.png) no-repeat; position:absolute; top:100px; left:10px; z-index:10;}
+#playBox .next{ cursor:pointer; width:45px; height:45px; background:url(http://www.tten.cn/trs/images/6_r.png) no-repeat; position:absolute; top:100px; right:10px; z-index:10;}
+#playBox .smalltitle {width:460px; height:10px; position:absolute; bottom:15px; z-index:10}
+#playBox .smalltitle ul{ width:120px; margin:0 auto;}
+#playBox .smalltitle ul li{ width:10px; height:10px; margin:0 5px; border-radius:10px; background:#ffffff; float:left; overflow:hidden;*display:inline;*zoom:1;}
+#playBox .smalltitle .thistitle{ background:#69aaec;}</style>
+
+<title>科服网</title>
+
+
+
+            <!--内左侧内容-->
+        	<div class="right_l">
+            	<!--图片新闻-->
+                <!-- 焦点6img代码 开始 -->
+  <div id="playBox">
+    <div class="pre"></div>
+    <div class="next"></div>
+    <div class="smalltitle">
+      <ul>
+        <li class="thistitle"></li>
+        <li class=""></li>
+        <li class=""></li>
+        <li class=""></li>
+        <li class=""></li>
+        <li class=""></li>
+      </ul>
+    </div>
+    <ul style="left: 0px;" class="oUlplay">
+       <li><a href="http://www.tten.cn/Iframe.aspx?ad=sy&amp;OrgUrl=http://218.69.114.49//Portal/OrgPortal.aspx?uid=69390" target="_blank"><img src="%E7%A7%91%E6%9C%8D%E7%BD%91tten.cn%20-%20%E8%AE%A4%E5%AE%9A%E7%AE%A1%E7%90%86%E3%80%81%E7%BB%9F%E8%AE%A1%E7%9B%91%E6%B5%8B%E3%80%81%E7%A7%91%E6%8A%80%E6%9C%8D%E5%8A%A1%E4%BE%9B%E9%9C%80%E5%AF%B9%E6%8E%A5%E5%B9%B3%E5%8F%B0_files/W020151014350229172867.gif" border="0"></a></li>
+    
+       <li><a href="http://www.tten.cn/Iframe.aspx?ad=sy&amp;OrgUrl=http://218.69.114.49//Portal/OrgPortalt.aspx?uid=31472" target="_blank"><img src="%E7%A7%91%E6%9C%8D%E7%BD%91tten.cn%20-%20%E8%AE%A4%E5%AE%9A%E7%AE%A1%E7%90%86%E3%80%81%E7%BB%9F%E8%AE%A1%E7%9B%91%E6%B5%8B%E3%80%81%E7%A7%91%E6%8A%80%E6%9C%8D%E5%8A%A1%E4%BE%9B%E9%9C%80%E5%AF%B9%E6%8E%A5%E5%B9%B3%E5%8F%B0_files/W020150806391583558578.gif" border="0"></a></li>
+    
+       <li><a href="http://www.tten.cn/Iframe.aspx?ad=sy&amp;OrgUrl=http://218.69.114.49//Portal/OrgPortal.aspx?uid=66001" target="_blank"><img src="%E7%A7%91%E6%9C%8D%E7%BD%91tten.cn%20-%20%E8%AE%A4%E5%AE%9A%E7%AE%A1%E7%90%86%E3%80%81%E7%BB%9F%E8%AE%A1%E7%9B%91%E6%B5%8B%E3%80%81%E7%A7%91%E6%8A%80%E6%9C%8D%E5%8A%A1%E4%BE%9B%E9%9C%80%E5%AF%B9%E6%8E%A5%E5%B9%B3%E5%8F%B0_files/W020150810411328054609.gif" border="0"></a></li>
+    
+       <li><a target="_blank" href="http://www.tten.cn/trs/sydy/gg/201508/t20150819_81562.html"><img src="%E7%A7%91%E6%9C%8D%E7%BD%91tten.cn%20-%20%E8%AE%A4%E5%AE%9A%E7%AE%A1%E7%90%86%E3%80%81%E7%BB%9F%E8%AE%A1%E7%9B%91%E6%B5%8B%E3%80%81%E7%A7%91%E6%8A%80%E6%9C%8D%E5%8A%A1%E4%BE%9B%E9%9C%80%E5%AF%B9%E6%8E%A5%E5%B9%B3%E5%8F%B0_files/W020150819363779399704.gif" border="0"></a></li>
+    
+       <li><a href="http://www.tten.cn/Iframe.aspx?ad=sy&amp;OrgUrl=http://218.69.114.49/Portal/OrgPortal.aspx?uid=85349" target="_blank"><img src="%E7%A7%91%E6%9C%8D%E7%BD%91tten.cn%20-%20%E8%AE%A4%E5%AE%9A%E7%AE%A1%E7%90%86%E3%80%81%E7%BB%9F%E8%AE%A1%E7%9B%91%E6%B5%8B%E3%80%81%E7%A7%91%E6%8A%80%E6%9C%8D%E5%8A%A1%E4%BE%9B%E9%9C%80%E5%AF%B9%E6%8E%A5%E5%B9%B3%E5%8F%B0_files/W020150518339462932554.gif" border="0"></a></li>
+    
+       <li><a target="_blank" href="http://www.tten.cn/trs/sydy/gg/201507/P020150807559309217156.pdf"><img src="%E7%A7%91%E6%9C%8D%E7%BD%91tten.cn%20-%20%E8%AE%A4%E5%AE%9A%E7%AE%A1%E7%90%86%E3%80%81%E7%BB%9F%E8%AE%A1%E7%9B%91%E6%B5%8B%E3%80%81%E7%A7%91%E6%8A%80%E6%9C%8D%E5%8A%A1%E4%BE%9B%E9%9C%80%E5%AF%B9%E6%8E%A5%E5%B9%B3%E5%8F%B0_files/W020150727591940756028.gif" border="0"></a></li>
+    </ul>
+  </div>
+<!-- 焦点6img代码 结束 -->
+
+
+
+            	<!--对接流程-->
+                <div class="process">
+                	<img src="%E7%A7%91%E6%9C%8D%E7%BD%91tten.cn%20-%20%E8%AE%A4%E5%AE%9A%E7%AE%A1%E7%90%86%E3%80%81%E7%BB%9F%E8%AE%A1%E7%9B%91%E6%B5%8B%E3%80%81%E7%A7%91%E6%8A%80%E6%9C%8D%E5%8A%A1%E4%BE%9B%E9%9C%80%E5%AF%B9%E6%8E%A5%E5%B9%B3%E5%8F%B0_files/2013process.jpg">
+                </div>
+            	<!--分类按钮-->
+            	<div class="four_btn">
+            	  <ul class="four_btnl font_title">
+                  
+                            <li><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49//Portal/OrgPortal.aspx?uid=69390" target="_blank">三人行（天津）<br>
+知识产权代...</a></li>
+                            
+                  
+                  
+            	    
+                  
+                 <li style="margin-left:9px;"><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Portal/OrgPortalt.aspx?uid=94147" target="_blank">天津君宜财税<br>
+咨询服务有...</a></li>
+                            
+          	    </ul>
+            	  <ul class="four_btnr font_title">
+            	    
+                 <li><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Portal/OrgPortalt.aspx?uid=90140" target="_blank">天津坤厚税务<br>
+师事务所有...</a></li>
+                            
+                  
+                 <li style="margin-left:9px;"><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Portal/OrgPortalt.aspx?uid=94148" target="_blank">天津俊泽财务<br>
+咨询有限公司</a></li>
+                            
+          	    </ul>
+            	  <div class="clear"></div>
+          	  </div>
+            	<!--通知通告 | 新闻动态 | 工作简报-->
+              <div class="same_mc">
+                    <div class="same_mct font_title">
+                        <ul class="same_mct_ull" id="menu0">
+                            <li onclick="setTag(0,0)" class="">工作动态</li>
+                            <li class="" onclick="setTag(0,1)">通知公告</li>
+                            <li class="hover" style="border:none;" onclick="setTag(0,2)">工作简报</li>
+                            
+                            <div class="clear"></div>
+                        </ul>
+                        <ul class="same_mct_ulr">
+                        <li style="display: none;" id="subLink0"><span class="more_sp02"><a class="more" target="_blank" href="http://www.tten.cn/trs/dtxx/gzdt/">更多&gt;&gt;</a></span></li>
+                        <li id="subLink1" style="display: none;"><span class="more_sp02"><a class="more" target="_blank" href="http://www.tten.cn/trs/dtxx/tzgg/">更多&gt;&gt;</a></span></li>
+                        <li id="subLink2" style="display: block;"><span class="more_sp02"><a class="more" target="_blank" href="http://www.tten.cn/trs/dtxx/gzjb/">更多&gt;&gt;</a></span></li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="same_mcc">
+                        <div id="main0">
+                            <ul style="display: none;" class="same_mcc_ul" id="block">
+                            
+                                <li><span class="time">10-15</span><span class="font_cono">[通知公告]</span>
+                              <a target="_blank" title="市科委关于组织申报2016年度天津市工程中心的通知" href="http://www.tten.cn/trs/dtxx/tzgg/201510/t20151015_83411.html">市科委关于组织申报2016年度天津市工程中心的...</a></li>
+                              
+                            
+                                <li><span class="time">10-16</span><a target="_blank" title="我市科技型企业通过开展国际合作取得重大科技突破" href="http://www.tten.cn/trs/dtxx/gzdt/201510/t20151016_83427.html">我市科技型企业通过开展国际合作取得重大科技突破</a></li>
+                                
+                                <li><span class="time">10-16</span><a target="_blank" title="李克强:催生新的动能 实现发展升级" href="http://www.tten.cn/trs/dtxx/gzdt/201510/t20151016_83426.html">李克强:催生新的动能 实现发展升级</a></li>
+                                
+                                <li><span class="time">10-16</span><a target="_blank" title="科技部长万钢就我国科技创新重要进展作报告" href="http://www.tten.cn/trs/dtxx/gzdt/201510/t20151016_83425.html">科技部长万钢就我国科技创新重要进展作报告</a></li>
+                                
+                                <li><span class="time">10-15</span><a target="_blank" title="《2015中国城市创新创业环境评价研究报告》出炉" href="http://www.tten.cn/trs/dtxx/gzdt/201510/t20151015_83398.html">《2015中国城市创新创业环境评价研究报告》出炉</a></li>
+                                
+                                <li><span class="time">10-15</span><a target="_blank" title="发展改革委举行新闻发布会介绍大众创业万众创新活动周相关情况" href="http://www.tten.cn/trs/dtxx/gzdt/201510/t20151015_83396.html">发展改革委举行新闻发布会介绍大众创业万众创新活动周相...</a></li>
+                                
+                                <li><span class="time">10-14</span><a target="_blank" title="五部委印发通知加强知识产权运用和保护" href="http://www.tten.cn/trs/dtxx/gzdt/201510/t20151014_83387.html">五部委印发通知加强知识产权运用和保护</a></li>
+                                
+                                <li><span class="time">10-14</span><a target="_blank" title="超28万营业执照被核发 “三证合一、一照一码”改革成效初显" href="http://www.tten.cn/trs/dtxx/gzdt/201510/t20151014_83386.html">超28万营业执照被核发 “三证合一、一照一码”改革成效初显</a></li>
+                                
+                            </ul>
+                            <div class="clear"></div>
+                            <ul style="display: none;" class="same_mcc_ul">
+                                
+                                <li><span class="time">10-15</span><a target="_blank" title="市科委关于组织申报2016年度天津市工程中心的通知" href="http://www.tten.cn/trs/dtxx/tzgg/201510/t20151015_83411.html">市科委关于组织申报2016年度天津市工程中心的通知</a></li>
+                                
+                                <li><span class="time">10-15</span><a target="_blank" title="市科委关于开展2015年第二批市级示范生产力促进中心认定工作的通知" href="http://www.tten.cn/trs/dtxx/tzgg/201510/t20151015_83409.html">市科委关于开展2015年第二批市级示范生产力促进中心认定...</a></li>
+                                
+                                <li><span class="time">10-15</span><a target="_blank" title="市科委关于举办2015年天津市第五期新型企业家大讲堂的通知" href="http://www.tten.cn/trs/dtxx/tzgg/201510/t20151015_83392.html">市科委关于举办2015年天津市第五期新型企业家大讲堂的通知</a></li>
+                                
+                                <li><span class="time">10-14</span><a target="_blank" title="市科委关于申报2015年度天津市天使投资引导基金参股子基金项目的通知" href="http://www.tten.cn/trs/dtxx/tzgg/201510/t20151014_83378.html">市科委关于申报2015年度天津市天使投资引导基金参股子基...</a></li>
+                                
+                                <li><span class="time">10-14</span><a target="_blank" title="市科委市财政局关于印发天津市天使投资引导基金实施细则的通知" href="http://www.tten.cn/trs/dtxx/tzgg/201510/t20151014_83377.html">市科委市财政局关于印发天津市天使投资引导基金实施细则...</a></li>
+                                
+                                <li><span class="time">10-10</span><a target="_blank" title="市科委关于举办2015年科技金融大讲堂第二十期活动的通知" href="http://www.tten.cn/trs/dtxx/tzgg/201510/t20151012_83227.html">市科委关于举办2015年科技金融大讲堂第二十期活动的通知</a></li>
+                                
+                                <li><span class="time">09-28</span><a target="_blank" title="市科委关于开展天津市科技计划项目2015年度执行情况检查的通知" href="http://www.tten.cn/trs/dtxx/tzgg/201509/t20150928_82945.html">市科委关于开展天津市科技计划项目2015年度执行情况检查...</a></li>
+                                
+                                <li><span class="time">09-25</span><a target="_blank" title="2015年天津市第四批科技计划项目立项及补贴公示" href="http://www.tten.cn/trs/dtxx/tzgg/201509/t20150928_82833.html">2015年天津市第四批科技计划项目立项及补贴公示</a></li>
+                                
+                            </ul>
+                            <div class="clear"></div>
+                            <ul style="display: block;" class="same_mcc_ul">
+                                
+                                <li><span class="time">09-22</span><a target="_blank" title="工作简报第190期（总第2104期）" href="http://www.tten.cn/trs/dtxx/gzjb/201509/P020150929613655052565.pdf">工作简报第190期（总第2104期）</a></li>
+                                
+                                <li><span class="time">09-21</span><a target="_blank" title="工作简报第189期（总第2103期）" href="http://www.tten.cn/trs/dtxx/gzjb/201509/P020150929612404632074.pdf">工作简报第189期（总第2103期）</a></li>
+                                
+                                <li><span class="time">09-18</span><a target="_blank" title="工作简报第188期（总第2102期）" href="http://www.tten.cn/trs/dtxx/gzjb/201509/P020150929611057979958.pdf">工作简报第188期（总第2102期）</a></li>
+                                
+                                <li><span class="time">09-17</span><a target="_blank" title="工作简报第187期（总第2101期）" href="http://www.tten.cn/trs/dtxx/gzjb/201509/P020150929609734537605.pdf">工作简报第187期（总第2101期）</a></li>
+                                
+                                <li><span class="time">09-16</span><a target="_blank" title="工作简报第186期（总第2100期）" href="http://www.tten.cn/trs/dtxx/gzjb/201509/P020150929607264192267.pdf">工作简报第186期（总第2100期）</a></li>
+                                
+                                <li><span class="time">09-15</span><a target="_blank" title="工作简报第185期（总第2099期）" href="http://www.tten.cn/trs/dtxx/gzjb/201509/P020150929605977736848.pdf">工作简报第185期（总第2099期）</a></li>
+                                
+                                <li><span class="time">09-15</span><a target="_blank" title="工作简报第184期（总第2098期）" href="http://www.tten.cn/trs/dtxx/gzjb/201509/P020150929603635956837.pdf">工作简报第184期（总第2098期）</a></li>
+                                
+                                <li><span class="time">09-14</span><a target="_blank" title="工作简报第183期（总第2097期）" href="http://www.tten.cn/trs/dtxx/gzjb/201509/P020150929600912985425.pdf">工作简报第183期（总第2097期）</a></li>
+                                
+                            </ul>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+           	</div>
+            <!--内右侧内容-->
+        	<div class="right_r">
+
+                <!--注册宣传-->
+           	  <div class="advertise">
+              
+                
+                
+<!--科淘宣传图片                 	<div class="advertise_t">
+                   	<a href="http://www.tten.cn/SysManage/OrgDisclaimer.aspx" target="_blank"><img src="./images/2013ad_01.jpg" /></a>
+                  </div>-->  
+                    <div class="advertise_b" style="margin-top:0">
+                    	<div class="advertise_bl">
+                            <a href="http://www.tten.cn/LoginNew.aspx" target="_blank"><img src="%E7%A7%91%E6%9C%8D%E7%BD%91tten.cn%20-%20%E8%AE%A4%E5%AE%9A%E7%AE%A1%E7%90%86%E3%80%81%E7%BB%9F%E8%AE%A1%E7%9B%91%E6%B5%8B%E3%80%81%E7%A7%91%E6%8A%80%E6%9C%8D%E5%8A%A1%E4%BE%9B%E9%9C%80%E5%AF%B9%E6%8E%A5%E5%B9%B3%E5%8F%B0_files/ad_02.jpg"></a>
+                        </div>
+                    	<div class="advertise_br">
+                            <a href="http://www.tten.cn/LoginNew.aspx" target="_blank"><img src="%E7%A7%91%E6%9C%8D%E7%BD%91tten.cn%20-%20%E8%AE%A4%E5%AE%9A%E7%AE%A1%E7%90%86%E3%80%81%E7%BB%9F%E8%AE%A1%E7%9B%91%E6%B5%8B%E3%80%81%E7%A7%91%E6%8A%80%E6%9C%8D%E5%8A%A1%E4%BE%9B%E9%9C%80%E5%AF%B9%E6%8E%A5%E5%B9%B3%E5%8F%B0_files/ad_03.jpg"></a>
+                        </div>
+                    </div> 
+                                    <!--微博-->
+                <div class="advertise_b" style="background:url(http://www.tten.cn/trs/images/weibo.png) no-repeat"><div style="padding-bottom: 0px; padding-left: 149px; padding-right: 0px; height: 35px; padding-top: 8px;">
+                  <a href="http://widget.weibo.com/dialog/follow.php?fuid=3516630045&amp;refer=www.tten.cn&amp;language=zh_cn&amp;type=widget_page&amp;vsrc=app_followbutton&amp;backurl=http%3A%2F%2Fwww.tten.cn%2Ftrs%2Fiframeindex.html&amp;rnd=1385975666644" target="_blank"><img src="%E7%A7%91%E6%9C%8D%E7%BD%91tten.cn%20-%20%E8%AE%A4%E5%AE%9A%E7%AE%A1%E7%90%86%E3%80%81%E7%BB%9F%E8%AE%A1%E7%9B%91%E6%B5%8B%E3%80%81%E7%A7%91%E6%8A%80%E6%9C%8D%E5%8A%A1%E4%BE%9B%E9%9C%80%E5%AF%B9%E6%8E%A5%E5%B9%B3%E5%8F%B0_files/weibo1.jpg" height="23" width="63"><!--<wb:follow-button uid="3516630045" type="red_1" width="67" height="24"></wb:follow-button>--></a></div></div>
+               <!--新手上路-->
+                <div class="same_con r_height01" style="margin-top:0">
+                    <div class="same_cont font_title">
+                        <span class="more_sp"><a class="more" target="_blank" href="http://www.tten.cn/trs/help/">更多&gt;&gt;</a></span>新手上路
+                    </div>
+                    <div class="same_conc">
+                        <ul class="same_conculr">
+                        
+                            <li><span class="same_concr_li font_conb"><a target="_blank" title="如何申报科企认定及年检？" href="http://www.tten.cn/trs/help/xssl/201311/t20131126_61629.html">如何申报科企认定及年检？</a></span></li>
+                            
+                            <li><span class="same_concr_li font_conb"><a target="_blank" title="如何发布服务产品？" href="http://www.tten.cn/trs/help/jgfwfzn/cpgl/201309/t20130916_60026.html">如何发布服务产品？</a></span></li>
+                            
+                            <li><span class="same_concr_li font_conb"><a target="_blank" title="科服网法律声明" href="http://www.tten.cn/trs/help/gywm_279/201409/t20140902_68546.html">科服网法律声明</a></span></li>
+                            
+                        </ul>
+                    </div>
+                </div></div>
+                <!--视频-->
+                <div class="same_con r_height01">
+                    <div class="same_cont font_title">
+                        <span class="more_sp"><a href="http://www.tten.cn/trs/chuangke/chuangke/changke/index.htm" class="more" target="_blank">详细&gt;&gt;</a></span>创新创业
+                    </div>
+                    <div class="same_conc" style="padding-right:4px;">
+                    
+                    <div style="width:225px; float:left;">
+                    
+                    <div style="clear: left;float: left;height: 80px;width: 110px;border: 1px solid #E0E0E0;">
+                    <a href="http://www.tten.cn/trs/chuangke/chuangke/changke/zcjj/index.htm" target="_blank">
+                          <img src="%E7%A7%91%E6%9C%8D%E7%BD%91tten.cn%20-%20%E8%AE%A4%E5%AE%9A%E7%AE%A1%E7%90%86%E3%80%81%E7%BB%9F%E8%AE%A1%E7%9B%91%E6%B5%8B%E3%80%81%E7%A7%91%E6%8A%80%E6%9C%8D%E5%8A%A1%E4%BE%9B%E9%9C%80%E5%AF%B9%E6%8E%A5%E5%B9%B3%E5%8F%B0_files/W020150609561716812042.jpg" border="0"></a></div>
+                    
+                    
+                        <div style=" float: right;width: 105px; height:80px; margin: 0px 0px 0px 6px;">
+                        
+							<ul>
+                            <li style=" width:100px; white-space: nowrap;"><span class="same_concr_li font_conb"><a href="http://www.tten.cn/trs/chuangke/chuangke/changke/zcjj/index.htm" target="_blank" title="政策聚焦">政策聚焦</a></span></li>
+                            </ul>
+							<ul>
+                            <li style=" width:100px; white-space: nowrap;"><span class="same_concr_li font_conb"><a href="http://www.tten.cn/trs/chuangke/chuangke/changke/zckj/index.htm" target="_blank" title="众创空间">众创空间</a></span></li>
+                            </ul>
+							<ul>
+                            <li style=" width:100px; white-space: nowrap;"><span class="same_concr_li font_conb"><a href="http://www.tten.cn/trs/chuangke/chuangke/changke/cysp/index.htm" target="_blank" title="创业视频">创业视频</a></span></li>
+                            </ul>
+</div>
+
+                    </div>
+                    
+                    
+                    
+
+                    </div>
+                </div>
+                <!--专题活动-->
+                <div class="same_con r_height02">
+                    <div class="same_cont01 font_title">
+                        专题活动
+                    </div>
+                    <div class="same_conc">
+                        <ul class="same_conculr01">
+                            <li><a href="http://www.tj.lss.gov.cn/ecdomain/framework/qqwr/index.jsp" target="_blank"><img src="%E7%A7%91%E6%9C%8D%E7%BD%91tten.cn%20-%20%E8%AE%A4%E5%AE%9A%E7%AE%A1%E7%90%86%E3%80%81%E7%BB%9F%E8%AE%A1%E7%9B%91%E6%B5%8B%E3%80%81%E7%A7%91%E6%8A%80%E6%9C%8D%E5%8A%A1%E4%BE%9B%E9%9C%80%E5%AF%B9%E6%8E%A5%E5%B9%B3%E5%8F%B0_files/right_block05.gif" height="70" width="228"></a></li>
+                            <li style="margin-top:2px;"><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/CommProductDetail.aspx?ID=666" target="_blank"><img src="%E7%A7%91%E6%9C%8D%E7%BD%91tten.cn%20-%20%E8%AE%A4%E5%AE%9A%E7%AE%A1%E7%90%86%E3%80%81%E7%BB%9F%E8%AE%A1%E7%9B%91%E6%B5%8B%E3%80%81%E7%A7%91%E6%8A%80%E6%9C%8D%E5%8A%A1%E4%BE%9B%E9%9C%80%E5%AF%B9%E6%8E%A5%E5%B9%B3%E5%8F%B0_files/right_cxds.jpg" height="70" width="228"></a></li>
+                            <li style="margin-top:2px;"><a href="http://www.tten.cn/trs/kjxx/" target="_blank"><img src="%E7%A7%91%E6%9C%8D%E7%BD%91tten.cn%20-%20%E8%AE%A4%E5%AE%9A%E7%AE%A1%E7%90%86%E3%80%81%E7%BB%9F%E8%AE%A1%E7%9B%91%E6%B5%8B%E3%80%81%E7%A7%91%E6%8A%80%E6%9C%8D%E5%8A%A1%E4%BE%9B%E9%9C%80%E5%AF%B9%E6%8E%A5%E5%B9%B3%E5%8F%B0_files/right_block01.gif" height="70" width="228"></a></li>
+
+<!--                        <li><a href="http://www.tten.cn/trs/kjxx/" target="_blank"><img src="./images/right_block01.gif" width="228" height="70" /></a></li>
+                            <li style="margin-top:4px;"><a href="./kjxx/mail/" target="_blank"><img src="./images/right_block00.gif" width="228" height="70" /></a></li>
+                            <div class="clear"></div>
+                            <li style="margin-top:4px;"><a href="./fldjt/" class="right_rbtn01 font_nav" target="_blank">法律大讲堂</a></li>
+                            <li><a href="./fldjt/fxff/" class="right_rbtn02 font_nav" target="_blank">企业法律风险防范100招</a></li>
+-->                        </ul>
+                    </div>
+                </div>
+            <!--每日推荐--><!--最新发布服务产品--><!--最新实名认证服务机构--></div>
+
+
+
+
+</div></div>
+</div>
+</div></div></div>
+<div class="clear"></div></div>
+<div class="layout_item_base">
+
+
+
+<div class="layout_item_module_containers" style="width: 980px;">
+<div class="layout_item_module_container layout_item_module_container_border-right" style="width: 250px;">
+
+
+<div class="module_item" style="width: 250px; height: 1185px;" data-mid="CST.App.CustomizePage.Module.KeTaoModule" data-width="250" data-height="1185">
+<div id="CSTAppCustomizePageModuleKeTaoModule">
+<div class="module" style="width:248px;height:1183px">
+	<div class="module_head"><span class="more_span"><a href="http://www.tten.cn/Iframe.aspx?name=%E7%A7%91%E6%B7%98&amp;OrgUrl=http://218.69.114.49/Portal/CloudIndex.aspx" class="more" target="_blank">更多&gt;&gt;</a></span><div class="icon_div icon"></div><div class="title">科淘</div></div>
+	<div class="module_head_body_center_hr"></div>
+	<div class="module_body"><ul id="test" class="same_concul03" style="padding: 0px;">
+	<li><span class="same_conc_f font_cono"><a style="color: #ff4e00; font-size: 13px;" href="http://www.tten.cn/Iframe.aspx?name=%E7%A7%91%E6%B7%98&amp;OrgUrl=http://218.69.114.49/Product/BankSearch.aspx?CID=006003" target="_blank">科技金融</a> </span>
+		<ul class="same_concul04">
+			<li class="same_concul04_li4"><a class="font_conb" href="http://www.tten.cn/Iframe.aspx?name=%E7%A7%91%E6%B7%98&amp;OrgUrl=http://218.69.114.49/Product/BankSearch.aspx?CID=006003%7C%5ECategoryID=006003001" target="_blank">债权融资</a></li>
+			<li class="same_concul04_li4"><a class="font_conb" href="http://www.tten.cn/Iframe.aspx?name=%E7%A7%91%E6%B7%98&amp;OrgUrl=http://218.69.114.49/Product/BankSearch.aspx?CID=006003%7C%5ECategoryID=006003002" target="_blank">股权融资</a></li>
+		</ul>
+		<ul class="same_concul04">
+			<li class="same_concul04_li6"><a class="font_conb" href="http://www.tten.cn/Iframe.aspx?name=%E7%A7%91%E6%B7%98&amp;OrgUrl=http://218.69.114.49/Product/BankSearch.aspx?CID=006003%7C%5ECategoryID=006003003" target="_blank">债权/股权融资</a></li>
+		</ul>
+		<ul class="same_concul04">
+			<li class="same_concul04_li4"><a class="font_conb" href="http://www.tten.cn/Iframe.aspx?name=%E7%A7%91%E6%B7%98&amp;OrgUrl=http://218.69.114.49/Product/BankSearch.aspx?CID=006003%7C%5ECategoryID=006003004" target="_blank">融资担保</a></li>
+			<li class="same_concul04_li4"><a class="font_conb" href="http://www.tten.cn/Iframe.aspx?name=%E7%A7%91%E6%B7%98&amp;OrgUrl=http://218.69.114.49/Product/BankSearch.aspx?CID=006003%7C%5ECategoryID=006003005" target="_blank">科技保险</a></li>
+		</ul>
+	</li>
+</ul>
+<div class="clear">
+</div>
+<ul class="same_concul03">
+	<li><span class="same_conc_f font_cono"><a style="color: #ff4e00; font-size: 13px;" href="http://www.tten.cn/Iframe.aspx?name=%E7%A7%91%E6%B7%98&amp;OrgUrl=http://218.69.114.49/Product/CommSearch.aspx?CID=006006" target="_blank">创新创业</a></span>
+		<ul class="same_concul04">
+			<li class="same_concul04_li4"><a class="font_conb" href="http://www.tten.cn/Iframe.aspx?name=%E7%A7%91%E6%B7%98&amp;OrgUrl=http://218.69.114.49/Product/CommSearch.aspx?CID=006006%7C%5ECategoryID=006006001" target="_blank">孵化服务</a></li>
+			<li class="same_concul04_li5"><a class="font_conb" href="http://www.tten.cn/Iframe.aspx?name=%E7%A7%91%E6%B7%98&amp;OrgUrl=http://218.69.114.49/Product/CommSearch.aspx?CID=006006%7C%5ECategoryID=006006002" target="_blank">产学研促进</a></li>
+		</ul>
+		<ul class="same_concul04">
+			<li class="same_concul04_li4"><a class="font_conb" href="http://www.tten.cn/Iframe.aspx?name=%E7%A7%91%E6%B7%98&amp;OrgUrl=http://218.69.114.49/Product/CommSearch.aspx?CID=006006%7C%5ECategoryID=006006003" target="_blank">创新方法</a></li>
+			<li class="same_concul04_li4"><a class="font_conb" href="http://www.tten.cn/Iframe.aspx?name=%E7%A7%91%E6%B7%98&amp;OrgUrl=http://218.69.114.49/Product/CommSearch.aspx?CID=006006%7C%5ECategoryID=006006004" target="_blank">企业注册代理</a></li>
+		</ul>
+	</li>
+</ul>
+<div class="clear">
+</div>
+<ul class="same_concul03">
+	<li><span class="same_conc_f font_cono"><a style="color: #ff4e00; font-size: 13px;" href="http://www.tten.cn/Iframe.aspx?name=%E7%A7%91%E6%B7%98&amp;OrgUrl=http://218.69.114.49/Product/EquipmentSearch.aspx?CID=006005" target="_blank">仪器设备</a></span>
+		<ul class="same_concul04">
+			<li class="same_concul04_li4"><a class="font_conb" href="http://www.tten.cn/Iframe.aspx?name=%E7%A7%91%E6%B7%98&amp;OrgUrl=http://218.69.114.49/Product/EquipmentSearch.aspx?CID=006005%7C%5ECategoryID=006005001" target="_blank">仪器共享</a></li>
+			<li class="same_concul04_li4"><a class="font_conb" href="http://www.tten.cn/Iframe.aspx?name=%E7%A7%91%E6%B7%98&amp;OrgUrl=http://218.69.114.49/Product/EquipmentSearch.aspx?CID=006005%7C%5ECategoryID=006005002" target="_blank">租赁服务</a></li>
+		</ul>
+		<ul class="same_concul04">
+			<li class="same_concul04_li4"><a class="font_conb" href="http://www.tten.cn/Iframe.aspx?name=%E7%A7%91%E6%B7%98&amp;OrgUrl=http://218.69.114.49/Product/EquipmentSearch.aspx?CID=006005%7C%5ECategoryID=006005003" target="_blank">维修服务</a></li>
+			<li class="same_concul04_li4"><a class="font_conb" href="http://www.tten.cn/Iframe.aspx?name=%E7%A7%91%E6%B7%98&amp;OrgUrl=http://218.69.114.49/Product/EquipmentSearch.aspx?CID=006005%7C%5ECategoryID=006005004" target="_blank">价值评估</a></li>
+		</ul>
+	</li>
+</ul>
+<div class="clear">
+</div>
+<ul class="same_concul03">
+	<li><span class="same_conc_f font_cono"><a style="color: #ff4e00; font-size: 13px;" href="http://www.tten.cn/Iframe.aspx?name=%E7%A7%91%E6%B7%98&amp;OrgUrl=http://218.69.114.49/Product/CommSearch.aspx?CID=006001" target="_blank">科技信息</a></span>
+		<ul class="same_concul04">
+			<li class="same_concul04_li4"><a class="font_conb" href="http://www.tten.cn/Iframe.aspx?name=%E7%A7%91%E6%B7%98&amp;OrgUrl=http://218.69.114.49/Product/CommSearch.aspx?CID=006001%7C%5ECategoryID=006001001" target="_blank">科技查新</a></li>
+			<li class="same_concul04_li7"><a class="font_conb" href="http://www.tten.cn/Iframe.aspx?name=%E7%A7%91%E6%B7%98&amp;OrgUrl=http://218.69.114.49/Product/CommSearch.aspx?CID=006001%7C%5ECategoryID=006001002" target="_blank">定题检索(代查代检)</a></li>
+		</ul>
+		<ul class="same_concul04">
+			<li class="same_concul04_li4"><a class="font_conb" href="http://www.tten.cn/Iframe.aspx?name=%E7%A7%91%E6%B7%98&amp;OrgUrl=http://218.69.114.49/Product/CommSearch.aspx?CID=006001%7C%5ECategoryID=006001003" target="_blank">文献情报</a></li>
+			<li class="same_concul04_li4"><a class="font_conb" href="http://www.tten.cn/Iframe.aspx?name=%E7%A7%91%E6%B7%98&amp;OrgUrl=http://218.69.114.49/Product/CommSearch.aspx?CID=006001%7C%5ECategoryID=006001006" target="_blank">原文传递</a></li>
+		</ul>
+	</li>
+</ul>
+<div class="clear">
+</div>
+<ul class="same_concul03">
+	<li><span class="same_conc_f font_cono"><a style="color: #ff4e00; font-size: 13px;" href="http://www.tten.cn/Iframe.aspx?name=%E7%A7%91%E6%B7%98&amp;OrgUrl=http://218.69.114.49/Product/CommSearch.aspx?CID=006010" target="_blank">中介咨询</a></span>
+		<ul class="same_concul04">
+			<li class="same_concul04_li4"><a class="font_conb" href="http://www.tten.cn/Iframe.aspx?name=%E7%A7%91%E6%B7%98&amp;OrgUrl=http://218.69.114.49/Product/CommSearch.aspx?CID=006010%7C%5ECategoryID=006010001" target="_blank">管理咨询</a></li>
+			<li class="same_concul04_li7"><a class="font_conb" href="http://www.tten.cn/Iframe.aspx?name=%E7%A7%91%E6%B7%98&amp;OrgUrl=http://218.69.114.49/Product/CommSearch.aspx?CID=006010%7C%5ECategoryID=006010002" target="_blank">技术评估与成果鉴定</a></li>
+		</ul>
+		<ul class="same_concul04">
+			<li class="same_concul04_li4"><a class="font_conb" href="http://www.tten.cn/Iframe.aspx?name=%E7%A7%91%E6%B7%98&amp;OrgUrl=http://218.69.114.49/Product/CommSearch.aspx?CID=006010%7C%5ECategoryID=006010003" target="_blank">认证服务</a></li>
+			<li class="same_concul04_li4"><a class="font_conb" href="http://www.tten.cn/Iframe.aspx?name=%E7%A7%91%E6%B7%98&amp;OrgUrl=http://218.69.114.49/Product/CommSearch.aspx?CID=006010%7C%5ECategoryID=006010004" target="_blank">资质认定</a></li>
+		</ul>
+		<ul class="same_concul04">
+			<li class="same_concul04_li4"><a class="font_conb" href="http://www.tten.cn/Iframe.aspx?name=%E7%A7%91%E6%B7%98&amp;OrgUrl=http://218.69.114.49/Product/CommSearch.aspx?CID=006010%7C%5ECategoryID=006010006" target="_blank">市场调查</a></li>
+			<li class="same_concul04_li7"><a class="font_conb" href="http://www.tten.cn/Iframe.aspx?name=%E7%A7%91%E6%B7%98&amp;OrgUrl=http://218.69.114.49/Product/CommSearch.aspx?CID=006010%7C%5ECategoryID=006010005" target="_blank">科技项目(资金)</a></li>
+		</ul>
+		<ul class="same_concul04">
+			<li class="same_concul04_li4"><a class="font_conb" href="http://www.tten.cn/Iframe.aspx?name=%E7%A7%91%E6%B7%98&amp;OrgUrl=http://218.69.114.49/Product/CommSearch.aspx?CID=006010%7C%5ECategoryID=006010007" target="_blank">可行性研究</a></li>
+		</ul>
+	</li>
+</ul>
+<div class="clear">
+</div>
+<ul class="same_concul03">
+	<li><span class="same_conc_f font_cono"><a style="color: #ff4e00; font-size: 13px;" href="http://www.tten.cn/Iframe.aspx?name=%E7%A7%91%E6%B7%98&amp;OrgUrl=http://218.69.114.49/Product/CommSearch.aspx?CID=006011" target="_blank">知识产权</a></span>
+		<ul class="same_concul04">
+			<li class="same_concul04_li4"><a class="font_conb" href="http://www.tten.cn/Iframe.aspx?name=%E7%A7%91%E6%B7%98&amp;OrgUrl=http://218.69.114.49/Product/CommSearch.aspx?CID=006011%7C%5ECategoryID=006011004" target="_blank">知识产权咨询</a></li>
+			<li class="same_concul04_li4"><a class="font_conb" href="http://www.tten.cn/Iframe.aspx?name=%E7%A7%91%E6%B7%98&amp;OrgUrl=http://218.69.114.49/Product/CommSearch.aspx?CID=006011%7C%5ECategoryID=006011002" target="_blank">商标代理</a></li>
+		</ul>
+		<ul class="same_concul04">
+			<li class="same_concul04_li4"><a class="font_conb" href="http://www.tten.cn/Iframe.aspx?name=%E7%A7%91%E6%B7%98&amp;OrgUrl=http://218.69.114.49/Product/CommSearch.aspx?CID=006011%7C%5ECategoryID=006011005" target="_blank">知识产权转让</a></li>
+			<li class="same_concul04_li4"><a class="font_conb" href="http://www.tten.cn/Iframe.aspx?name=%E7%A7%91%E6%B7%98&amp;OrgUrl=http://218.69.114.49/Product/CommSearch.aspx?CID=006011%7C%5ECategoryID=006011001" target="_blank">专利代理</a></li>
+		</ul>
+		<ul class="same_concul04">
+			<li class="same_concul04_li4"><a class="font_conb" href="http://www.tten.cn/Iframe.aspx?name=%E7%A7%91%E6%B7%98&amp;OrgUrl=http://218.69.114.49/Product/CommSearch.aspx?CID=006011%7C%5ECategoryID=006011007" target="_blank">知识产权鉴定</a></li>
+			<li class="same_concul04_li7"><a class="font_conb" href="http://www.tten.cn/Iframe.aspx?name=%E7%A7%91%E6%B7%98&amp;OrgUrl=http://218.69.114.49/Product/CommSearch.aspx?CID=006011%7C%5ECategoryID=006011003" target="_blank">著作权（版权）代理</a></li>
+		</ul>
+	</li>
+</ul>
+<div class="clear">
+</div>
+<ul class="same_concul03">
+	<li><span class="same_conc_f font_cono"><a style="color: #ff4e00; font-size: 13px;" href="http://www.tten.cn/Iframe.aspx?name=%E7%A7%91%E6%B7%98&amp;OrgUrl=http://218.69.114.49/Product/CommSearch.aspx?CID=006012" target="_blank">法律服务</a></span>
+		<ul class="same_concul04">
+			<li class="same_concul04_li4"><a class="font_conb" href="http://www.tten.cn/Iframe.aspx?name=%E7%A7%91%E6%B7%98&amp;OrgUrl=http://218.69.114.49/Product/CommSearch.aspx?CID=006012%7C%5ECategoryID=006012001" target="_blank">公司治理</a></li>
+			<li class="same_concul04_li4"><a class="font_conb" href="http://www.tten.cn/Iframe.aspx?name=%E7%A7%91%E6%B7%98&amp;OrgUrl=http://218.69.114.49/Product/CommSearch.aspx?CID=006012%7C%5ECategoryID=006012004" target="_blank">知识产权保护</a></li>
+		</ul>
+		<ul class="same_concul04">
+			<li class="same_concul04_li4"><a class="font_conb" href="http://www.tten.cn/Iframe.aspx?name=%E7%A7%91%E6%B7%98&amp;OrgUrl=http://218.69.114.49/Product/CommSearch.aspx?CID=006012%7C%5ECategoryID=006012002" target="_blank">人事法律</a></li>
+			<li class="same_concul04_li4"><a class="font_conb" href="http://www.tten.cn/Iframe.aspx?name=%E7%A7%91%E6%B7%98&amp;OrgUrl=http://218.69.114.49/Product/CommSearch.aspx?CID=006012%7C%5ECategoryID=006012005" target="_blank">金融法律事务</a></li>
+		</ul>
+		<ul class="same_concul04">
+			<li class="same_concul04_li4"><a class="font_conb" href="http://www.tten.cn/Iframe.aspx?name=%E7%A7%91%E6%B7%98&amp;OrgUrl=http://218.69.114.49/Product/CommSearch.aspx?CID=006012%7C%5ECategoryID=006012006" target="_blank">纠纷诉讼</a></li>
+			<li class="same_concul04_li4"><a class="font_conb" href="http://www.tten.cn/Iframe.aspx?name=%E7%A7%91%E6%B7%98&amp;OrgUrl=http://218.69.114.49/Product/CommSearch.aspx?CID=006012%7C%5ECategoryID=006012007" target="_blank">破产清算</a></li>
+		</ul>
+	</li>
+</ul>
+<div class="clear">
+</div>
+<ul class="same_concul03">
+	<li><span class="same_conc_f font_cono"><a style="color: #ff4e00; font-size: 13px;" href="http://www.tten.cn/Iframe.aspx?name=%E7%A7%91%E6%B7%98&amp;OrgUrl=http://218.69.114.49/Product/CommSearch.aspx?CID=006015" target="_blank">创意设计与制造</a></span>
+		<ul class="same_concul04">
+			<li class="same_concul04_li4"><a class="font_conb" href="http://www.tten.cn/Iframe.aspx?name=%E7%A7%91%E6%B7%98&amp;OrgUrl=http://218.69.114.49/Product/CommSearch.aspx?CID=006015%7C%5ECategoryID=006015001" target="_blank">平面设计</a></li>
+			<li class="same_concul04_li4"><a class="font_conb" href="http://www.tten.cn/Iframe.aspx?name=%E7%A7%91%E6%B7%98&amp;OrgUrl=http://218.69.114.49/Product/CommSearch.aspx?CID=006015%7C%5ECategoryID=006015002" target="_blank">展会设计</a></li>
+		</ul>
+		<ul class="same_concul04">
+			<li class="same_concul04_li4"><a class="font_conb" href="http://www.tten.cn/Iframe.aspx?name=%E7%A7%91%E6%B7%98&amp;OrgUrl=http://218.69.114.49/Product/CommSearch.aspx?CID=006015%7C%5ECategoryID=006015003" target="_blank">工业设计</a></li>
+			<li class="same_concul04_li4"><a class="font_conb" href="http://www.tten.cn/Iframe.aspx?name=%E7%A7%91%E6%B7%98&amp;OrgUrl=http://218.69.114.49/Product/CommSearch.aspx?CID=006015%7C%5ECategoryID=006015004" target="_blank">动漫设计</a></li>
+		</ul>
+		<ul class="same_concul04">
+			<li class="same_concul04_li4"><a class="font_conb" href="http://www.tten.cn/Iframe.aspx?name=%E7%A7%91%E6%B7%98&amp;OrgUrl=http://218.69.114.49/Product/CommSearch.aspx?CID=006015%7C%5ECategoryID=006015005" target="_blank">影视设计</a></li>
+		</ul>
+	</li>
+</ul>
+<div class="clear">
+</div>
+<ul style="padding-top: 2px;">
+	<li><span class="same_conc_f font_cono">其他服务</span>
+		<ul class="same_concul04">
+			<li class="same_concul04_li4"><a class="font_conb" href="http://www.tten.cn/Iframe.aspx?name=%E7%A7%91%E6%B7%98&amp;OrgUrl=http://218.69.114.49/Product/CommSearch.aspx?CID=006018" target="_blank">
+				产品研发</a></li>
+			<li class="same_concul04_li4"><a class="font_conb" href="http://www.tten.cn/Iframe.aspx?name=%E7%A7%91%E6%B7%98&amp;OrgUrl=http://218.69.114.49/Product/CommSearch.aspx?CID=006016" target="_blank">
+				信息化服务</a></li>
+		</ul>
+		<ul class="same_concul04">
+			<li class="same_concul04_li4"><a class="font_conb" href="http://www.tten.cn/Iframe.aspx?name=%E7%A7%91%E6%B7%98&amp;OrgUrl=http://218.69.114.49/Product/CommSearch.aspx?CID=006007" target="_blank">
+				检验检测</a></li>
+			<li class="same_concul04_li4"><a class="font_conb" href="http://www.tten.cn/Iframe.aspx?name=%E7%A7%91%E6%B7%98&amp;OrgUrl=http://218.69.114.49/Product/CommSearch.aspx?CID=006017" target="_blank">
+				人才与培训</a></li>
+		</ul>
+		<ul class="same_concul04">
+			<li class="same_concul04_li4"><a class="font_conb" href="http://www.tten.cn/Iframe.aspx?name=%E7%A7%91%E6%B7%98&amp;OrgUrl=http://218.69.114.49/Product/CommSearch.aspx?CID=006014" target="_blank">
+				财税服务</a></li>
+			<li class="same_concul04_li7"><a class="font_conb" href="http://www.tten.cn/Iframe.aspx?name=%E7%A7%91%E6%B7%98&amp;OrgUrl=http://218.69.114.49/Product/CommSearch.aspx?CID=006009" target="_blank">
+				技术转移与推广</a></li>
+		</ul>
+	</li>
+</ul>
+<div class="clear">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="module_item" style="width: 250px; height: 362px;" data-mid="CST.App.CustomizePage.Module.CompanyExhibitionModule" data-width="250" data-height="362">
+<div id="CSTAppCustomizePageModuleCompanyExhibitionModule">
+<div class="module" style="width:248px;height:360px">
+	<div class="module_head"><span class="more_span"><a href="http://218.69.114.79/CompanyShow/CompanyShowList.aspx" class="more" target="_blank">更多&gt;&gt;</a></span><div class="icon_div icon"></div><div class="title">企业展厅</div></div>
+	<div class="module_head_body_center_hr"></div>
+	<div class="module_body"><!--企业展厅-->
+<div id="scrollup" style="overflow: hidden; height: 361px;">
+    <div id="scrollup1" class="same_conc">
+<ul class="module_ul">
+	<li><a href="#" onclick="CompanyExhibitionClick('152706','AA5A0061-FE10-4622-8A45-428E855B4A67')">天津市恒安食品有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('152792','836929F2-E5AE-4371-8D68-EAE6B2CD670C')">天津市秀鹏生物技术开发有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('156771','BA5AD27E-4F9A-409D-8BE8-DF820EC7498A')">天津宏能科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('146440','2D3D93BB-B6D4-411D-9B6B-9FD0538A9FE1')">天津罗斯诺普信息技术有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('152591','03B353D9-2CE3-4838-B04B-A207B0864290')">天津市优耐特汽车电控技术服务有限...</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('154614','06E0CC7A-92D4-43B8-883F-11EC5AFB1BCD')">天津天润一品有机食品基地发展有限...</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('159258','85449493-3D77-467D-A449-307D1723C953')">天津诚处科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('134958','702184EF-737F-46A9-951B-17F654F896E4')">天津智导科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('132235','B6C2D530-DFE5-40DB-BBCF-B5C1707CC5BF')">乐视致新电子科技（天津）有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('176148','7A0F13F1-4794-449A-B3EA-819BB96CA1E0')">天津市双源津瑞科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('166720','18BFE6BA-F4E0-4380-BE70-C6159F91F7EA')">天津市金岭科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('157913','D5CE3AA5-D481-421C-A7DD-AFA28A72E161')">天津北方万峰环保科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('161206','01CCA253-3052-4F5E-A281-33CDF94B8DB0')">天津光宏科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('145112','eed14b3e-8550-40d8-8d88-70e028dbce61')">天津华清健坤膜科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('189768','4f8d6d4e-cd77-41e0-9c75-98e53e4f15d8')">天津行知育家教育科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('185522','c7a97784-7922-4b9a-9355-1b821a457cf3')">天津万象财务咨询服务有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('166002','649D8B44-E617-466E-B95F-3C239BB20837')">德逸时代（天津）科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('146297','54335545-9E49-48B3-942D-78361B501B77')">天津朝日物产彩印有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('128190','f848d64e-782e-404f-9f6d-81870836c79e')">天津市一诺天地科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('133423','52127BEE-EC8D-416F-AF10-C5CCE721986A')">天津凯进科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('149735','8B94BEB5-68FE-42C5-A24A-A283DF4933A7')">天津梅花医药有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('191230','f056bf97-7ffe-4198-93e8-e78f8bf5061d')">天津市招财猫信息技术有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('192783','d124448c-e9ff-4a37-bc50-b58fe94210f1')">天津天恒智远科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('176940','0EFE122A-C21C-4E0A-968D-9CE3F3D748B1')">天津清华德人环境工程有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('137967','71794917-37D4-4DA0-ADB7-810ABACD6C84')">天津汇通众嘉科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('143622','995af246-6ba4-4421-bd4b-628ba60bd9ba')">天津市云图汇展科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('153382','43CA8F05-ED45-4387-8907-C3A392A98831')">天津市鑫卫化工有限责任公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('169894','CDE57598-A67E-4953-AD20-C32518B59392')">天津港林耐盐碱植物科技开发有限公...</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('166750','54EB9695-77F5-40C8-9828-D007CA084A8C')">天津科林电气有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('147689','EDF1A8F8-AD5B-450A-83FD-693609A9A60F')">耐驰泵阀科技（天津）有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('154850','DAA5187C-121B-442C-BC8E-65F0A299B1A9')">盛世绍普（天津）环保科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('133360','AB3CECFD-876A-4DD0-A246-D693AD3E9A22')">天津超之璐科技发展有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('169498','289B51C7-CA0C-45AD-9A64-157F767F4E63')">天津潮霆科技发展有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('163525','00D5AACB-AE47-4FC4-962A-4DE413850A87')">天津熔之宝科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('159767','FF4F2A46-E6FA-4F85-8E23-178A31576903')">天津飞旋科技研发有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('152091','3443C0CF-DEBD-4236-AA4E-19DA6AFEB300')">天津市詹佛斯科技发展有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('162969','4AF03DE2-80FC-4176-82C9-AE980E5F35CB')">天津迦堂科技发展有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('160262','512ADB58-F344-4239-AE1F-16A2C4E51197')">天津中油华鹏科技发展有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('151337','76F94284-42D2-4172-9F16-099537166CE6')">天津市百思达气体有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('154996','B1D9A135-3E6C-4F06-87B2-A67B4C57DE10')">天津赛智科技发展有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('153896','BFFEAF93-5744-4AD9-87C8-1807E15272FC')">天津市德固特科技发展有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('147694','D5C56F70-EB95-459A-9126-70D0DDE431BD')">天津绿心韵花卉苗木种植专业合作社</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('174482','D6490EA8-AE76-4F69-9560-9DF3F510BC2B')">天津智用科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('153154','88A66BEA-43CA-4DA1-85C1-2F8E260DF76E')">天津国芯科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('154358','238BE9CD-3F07-4200-A8DA-6DC68B3D95A7')">天津市软件评测中心</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('129256','8162d7da-f743-4d1e-8dc3-121ed3e527f5')">天津箭牌石油化工有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('173855','B5F90ADD-6D11-4725-A9CB-249A732AEB2B')">天津中天海盛环保科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('156750','E5CC832F-4A75-4969-8ECC-B06DE00206A4')">天津精利为科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('152270','3AE2FF45-FA7E-457F-AE50-3CF385A1E0DC')">天津强微特生物科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('146861','3943F261-2F82-4A59-A5AF-10EDEED6FB9A')">大美泰康(天津)生态科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('82621','6805195D-00A2-4A3B-8611-D59469B6847F')">天津市爱心壹加壹净水设备有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('153792','F0E5CA6E-AEF7-4B47-8A38-DCCBCE7AFBCF')">天津神能科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('191760','3ef41e11-8d10-4a4c-8570-83910d1d82fb')">天津慧沣智联科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('149805','57F83B82-A1BE-464D-B9A9-8241A92FC807')">天津市科力起重设备有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('156257','C4C0762E-F93E-43AB-B145-5F0E83A26371')">天津威盛电子有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('151784','A1B10088-58C5-4E97-8655-663AC735B88F')">天津通天科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('158961','9239CBD0-6925-41BF-87E1-88CEB9C5166E')">富士通天研究开发（天津）有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('167128','4F3271BD-E50D-4EE7-88A4-C95386D69A2B')">天津晟远环境有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('155839','8ADBCB21-9522-41D0-9257-DD3A2779498E')">天津兴华织造有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('153738','C5B78900-5D4E-4339-8BDC-79925663A979')">天津开发区沃思电子商务有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('144297','59fa192d-521c-4fa1-ba4d-346b47f1ed43')">天津优物库电子商务有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('150247','05FEA807-BA8D-42A1-A706-E7CE036D96FA')">天津天元东建通信工程有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('155393','866D5863-1E9C-405B-B29E-3411AD467042')">天津泰康生物制药有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('170912','A775A70F-41BB-43D9-BE93-18322D71FEBE')">天津爱谷工业设计有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('145803','e249475a-7f4c-40ab-8007-cdde24a735db')">天津英拓成科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('179836','0555BCCA-331A-40EC-9737-A3D1CA4E047A')">天津博敏达生物科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('152228','7F22B697-4DCF-447E-95AF-C48AC1AA57E7')">天津市润生塑胶制品有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('149413','1557C328-BB39-4248-A989-7F92CC1C3141')">天津市昕源泰能光电科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('150249','85F23DDD-DE03-4705-8BB9-CB760AE35FEC')">天津联盟科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('154900','6EC06018-FFCB-462B-BEC3-600F663AC7D3')">天津开发区唯成电子技术有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('177698','F9C62DEB-2DBA-4262-814D-6D8888ECB44F')">天津泰瑞倍药研科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('152285','F48606E0-C83D-48E3-8AAE-CC01B61D2A01')">天津星洋电子科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('154334','6EA34BAE-8BB8-4611-90FC-8A8ADC804B6E')">天津开发区精锐精密模具有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('151669','CC9E2F72-6C48-43DC-AB97-3DE243E6B140')">天津海维科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('183766','e640a049-2c91-4afb-8054-a0247d27a03b')">天津网士通科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('249337','419D73C2-358E-4C71-99DA-EDC4CE75B1CD')">天津市智联恒信电力设备股份有限公...</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('156056','98014E57-C407-41C6-AEBC-FE5753514F47')">天津津裕电业股份有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('154584','BBB6F482-CAE0-4804-82E9-1073C9C0B79B')">天津银宝山新科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('154014','17D76D5A-E938-46F2-82D9-651FB2084414')">博迈科海洋工程股份有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('167343','0F9AED18-A9C1-4161-8565-AAE3F03E7970')">天津市哈维泰科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('157562','B7D1CCD5-30D0-4B3D-A9AC-659EE91A0FB3')">天津市信霖塑料制品有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('167207','DE3F8719-E494-404D-BD25-D515AB7A7DAF')">天津诺蓝科技发展有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('149491','34E2FDAB-7EF0-46E8-9061-03F51E48B5EC')">天津市双翼乐器有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('146849','C7480363-14DF-4559-86DB-B1168FA6387B')">天津博堂科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('155992','A448592C-E8DD-4ECD-8AD3-9A1DEAED2F06')">大禹节水（天津）有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('130716','4940c02f-e0f1-4af3-b1fc-937248edcc25')">天津安达生产力促进有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('177158','1A7E44A2-5F85-4672-86E1-CDFBCF86B906')">天津市泰冠建材工贸有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('136064','C968DB6C-7943-4596-BFDE-CEBC01F88A44')">掌云间（天津）科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('167198','D4065312-A572-4360-8B2A-B4D2F6216C2B')">天津市恩来顺食品发展有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('133524','825CBCA4-651F-45D8-836A-2951B5455F28')">威尔玛克（天津）科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('171010','E442697B-6716-482A-8B9A-071B62BE4FF2')">中盐工程技术研究院有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('134192','AC3900E0-CF1E-44AE-A7B3-29CA4CC76A2E')">天津朗思世纪科技发展有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('149835','195AAE8C-E9E6-4FE4-87F9-89FDEEFD578A')">天津市裕川微生物制品有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('174824','EAF113D6-C152-4F7F-82FE-643581332560')">天津市葆沃软件科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('138256','EC82D7AE-1D1D-4727-80A2-023CEECDD7D4')">格莱美特（天津）新能源技术有限公...</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('183010','3f714bee-4a89-4796-93d3-cd4a5abad8c4')">天津认真环保科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('170878','5D8F0FE2-DACE-4E45-AC73-9D0285BC336D')">天津德润文化传播有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('145578','ca49ece2-7845-4d72-8404-e5056b88acf1')">天津赋润科技发展有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('151994','B8B0EF01-9EE9-4A3F-A386-92BDB35D2045')">天津锐新昌轻合金股份有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('147185','16BDAE45-2858-4434-BC36-97A07E944675')">天津市天健科贸有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('152350','DBBE67AB-EB08-4EA7-AFEA-6729B0AB43EA')">天津尚德药缘科技股份有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('187127','09bc47eb-f3ed-44bd-a0a5-a2d295818a43')">天津乐者科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('179674','E008C46C-348F-421F-84A6-0ED5E08085C0')">天津航空产业开发有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('174209','A329BDED-E477-4FA2-9E60-8CBC8F04DC1C')">天津市森特奈电子有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('168493','53C5C210-EC04-42FC-B1A3-2BC3321B0BFB')">天津华夏恒达科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('176968','54D01BF9-4776-41AC-853B-325365209CD2')">天津迪兰奥特环保科技开发有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('149924','79019D39-6027-405A-ADDD-527758526172')">天津吉鼎万通绿化有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('147352','A2DC675A-19F3-4B2D-A1B1-7C5FE6DECD17')">天津柒喜科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('135067','DE3DE307-A1DC-46F1-9E27-CB13AE541BC1')">中宝（天津）能源科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('174979','F61CD1C2-8E02-478A-B407-B7DBF8A3D40B')">天津市联合环保工程设计有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('146852','015AF0C5-4650-41E0-A687-9DCD706C53EE')">一族（天津）传媒科技有限公司</a></li>
+</ul>
+    </div>
+    <div id="scrollup2" style="padding-left: 10px; padding-right: 10px; overflow: hidden">
+<ul class="module_ul">
+	<li><a href="#" onclick="CompanyExhibitionClick('152706','AA5A0061-FE10-4622-8A45-428E855B4A67')">天津市恒安食品有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('152792','836929F2-E5AE-4371-8D68-EAE6B2CD670C')">天津市秀鹏生物技术开发有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('156771','BA5AD27E-4F9A-409D-8BE8-DF820EC7498A')">天津宏能科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('146440','2D3D93BB-B6D4-411D-9B6B-9FD0538A9FE1')">天津罗斯诺普信息技术有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('152591','03B353D9-2CE3-4838-B04B-A207B0864290')">天津市优耐特汽车电控技术服务有限...</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('154614','06E0CC7A-92D4-43B8-883F-11EC5AFB1BCD')">天津天润一品有机食品基地发展有限...</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('159258','85449493-3D77-467D-A449-307D1723C953')">天津诚处科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('134958','702184EF-737F-46A9-951B-17F654F896E4')">天津智导科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('132235','B6C2D530-DFE5-40DB-BBCF-B5C1707CC5BF')">乐视致新电子科技（天津）有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('176148','7A0F13F1-4794-449A-B3EA-819BB96CA1E0')">天津市双源津瑞科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('166720','18BFE6BA-F4E0-4380-BE70-C6159F91F7EA')">天津市金岭科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('157913','D5CE3AA5-D481-421C-A7DD-AFA28A72E161')">天津北方万峰环保科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('161206','01CCA253-3052-4F5E-A281-33CDF94B8DB0')">天津光宏科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('145112','eed14b3e-8550-40d8-8d88-70e028dbce61')">天津华清健坤膜科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('189768','4f8d6d4e-cd77-41e0-9c75-98e53e4f15d8')">天津行知育家教育科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('185522','c7a97784-7922-4b9a-9355-1b821a457cf3')">天津万象财务咨询服务有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('166002','649D8B44-E617-466E-B95F-3C239BB20837')">德逸时代（天津）科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('146297','54335545-9E49-48B3-942D-78361B501B77')">天津朝日物产彩印有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('128190','f848d64e-782e-404f-9f6d-81870836c79e')">天津市一诺天地科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('133423','52127BEE-EC8D-416F-AF10-C5CCE721986A')">天津凯进科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('149735','8B94BEB5-68FE-42C5-A24A-A283DF4933A7')">天津梅花医药有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('191230','f056bf97-7ffe-4198-93e8-e78f8bf5061d')">天津市招财猫信息技术有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('192783','d124448c-e9ff-4a37-bc50-b58fe94210f1')">天津天恒智远科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('176940','0EFE122A-C21C-4E0A-968D-9CE3F3D748B1')">天津清华德人环境工程有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('137967','71794917-37D4-4DA0-ADB7-810ABACD6C84')">天津汇通众嘉科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('143622','995af246-6ba4-4421-bd4b-628ba60bd9ba')">天津市云图汇展科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('153382','43CA8F05-ED45-4387-8907-C3A392A98831')">天津市鑫卫化工有限责任公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('169894','CDE57598-A67E-4953-AD20-C32518B59392')">天津港林耐盐碱植物科技开发有限公...</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('166750','54EB9695-77F5-40C8-9828-D007CA084A8C')">天津科林电气有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('147689','EDF1A8F8-AD5B-450A-83FD-693609A9A60F')">耐驰泵阀科技（天津）有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('154850','DAA5187C-121B-442C-BC8E-65F0A299B1A9')">盛世绍普（天津）环保科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('133360','AB3CECFD-876A-4DD0-A246-D693AD3E9A22')">天津超之璐科技发展有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('169498','289B51C7-CA0C-45AD-9A64-157F767F4E63')">天津潮霆科技发展有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('163525','00D5AACB-AE47-4FC4-962A-4DE413850A87')">天津熔之宝科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('159767','FF4F2A46-E6FA-4F85-8E23-178A31576903')">天津飞旋科技研发有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('152091','3443C0CF-DEBD-4236-AA4E-19DA6AFEB300')">天津市詹佛斯科技发展有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('162969','4AF03DE2-80FC-4176-82C9-AE980E5F35CB')">天津迦堂科技发展有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('160262','512ADB58-F344-4239-AE1F-16A2C4E51197')">天津中油华鹏科技发展有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('151337','76F94284-42D2-4172-9F16-099537166CE6')">天津市百思达气体有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('154996','B1D9A135-3E6C-4F06-87B2-A67B4C57DE10')">天津赛智科技发展有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('153896','BFFEAF93-5744-4AD9-87C8-1807E15272FC')">天津市德固特科技发展有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('147694','D5C56F70-EB95-459A-9126-70D0DDE431BD')">天津绿心韵花卉苗木种植专业合作社</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('174482','D6490EA8-AE76-4F69-9560-9DF3F510BC2B')">天津智用科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('153154','88A66BEA-43CA-4DA1-85C1-2F8E260DF76E')">天津国芯科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('154358','238BE9CD-3F07-4200-A8DA-6DC68B3D95A7')">天津市软件评测中心</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('129256','8162d7da-f743-4d1e-8dc3-121ed3e527f5')">天津箭牌石油化工有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('173855','B5F90ADD-6D11-4725-A9CB-249A732AEB2B')">天津中天海盛环保科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('156750','E5CC832F-4A75-4969-8ECC-B06DE00206A4')">天津精利为科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('152270','3AE2FF45-FA7E-457F-AE50-3CF385A1E0DC')">天津强微特生物科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('146861','3943F261-2F82-4A59-A5AF-10EDEED6FB9A')">大美泰康(天津)生态科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('82621','6805195D-00A2-4A3B-8611-D59469B6847F')">天津市爱心壹加壹净水设备有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('153792','F0E5CA6E-AEF7-4B47-8A38-DCCBCE7AFBCF')">天津神能科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('191760','3ef41e11-8d10-4a4c-8570-83910d1d82fb')">天津慧沣智联科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('149805','57F83B82-A1BE-464D-B9A9-8241A92FC807')">天津市科力起重设备有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('156257','C4C0762E-F93E-43AB-B145-5F0E83A26371')">天津威盛电子有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('151784','A1B10088-58C5-4E97-8655-663AC735B88F')">天津通天科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('158961','9239CBD0-6925-41BF-87E1-88CEB9C5166E')">富士通天研究开发（天津）有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('167128','4F3271BD-E50D-4EE7-88A4-C95386D69A2B')">天津晟远环境有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('155839','8ADBCB21-9522-41D0-9257-DD3A2779498E')">天津兴华织造有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('153738','C5B78900-5D4E-4339-8BDC-79925663A979')">天津开发区沃思电子商务有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('144297','59fa192d-521c-4fa1-ba4d-346b47f1ed43')">天津优物库电子商务有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('150247','05FEA807-BA8D-42A1-A706-E7CE036D96FA')">天津天元东建通信工程有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('155393','866D5863-1E9C-405B-B29E-3411AD467042')">天津泰康生物制药有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('170912','A775A70F-41BB-43D9-BE93-18322D71FEBE')">天津爱谷工业设计有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('145803','e249475a-7f4c-40ab-8007-cdde24a735db')">天津英拓成科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('179836','0555BCCA-331A-40EC-9737-A3D1CA4E047A')">天津博敏达生物科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('152228','7F22B697-4DCF-447E-95AF-C48AC1AA57E7')">天津市润生塑胶制品有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('149413','1557C328-BB39-4248-A989-7F92CC1C3141')">天津市昕源泰能光电科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('150249','85F23DDD-DE03-4705-8BB9-CB760AE35FEC')">天津联盟科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('154900','6EC06018-FFCB-462B-BEC3-600F663AC7D3')">天津开发区唯成电子技术有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('177698','F9C62DEB-2DBA-4262-814D-6D8888ECB44F')">天津泰瑞倍药研科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('152285','F48606E0-C83D-48E3-8AAE-CC01B61D2A01')">天津星洋电子科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('154334','6EA34BAE-8BB8-4611-90FC-8A8ADC804B6E')">天津开发区精锐精密模具有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('151669','CC9E2F72-6C48-43DC-AB97-3DE243E6B140')">天津海维科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('183766','e640a049-2c91-4afb-8054-a0247d27a03b')">天津网士通科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('249337','419D73C2-358E-4C71-99DA-EDC4CE75B1CD')">天津市智联恒信电力设备股份有限公...</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('156056','98014E57-C407-41C6-AEBC-FE5753514F47')">天津津裕电业股份有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('154584','BBB6F482-CAE0-4804-82E9-1073C9C0B79B')">天津银宝山新科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('154014','17D76D5A-E938-46F2-82D9-651FB2084414')">博迈科海洋工程股份有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('167343','0F9AED18-A9C1-4161-8565-AAE3F03E7970')">天津市哈维泰科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('157562','B7D1CCD5-30D0-4B3D-A9AC-659EE91A0FB3')">天津市信霖塑料制品有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('167207','DE3F8719-E494-404D-BD25-D515AB7A7DAF')">天津诺蓝科技发展有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('149491','34E2FDAB-7EF0-46E8-9061-03F51E48B5EC')">天津市双翼乐器有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('146849','C7480363-14DF-4559-86DB-B1168FA6387B')">天津博堂科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('155992','A448592C-E8DD-4ECD-8AD3-9A1DEAED2F06')">大禹节水（天津）有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('130716','4940c02f-e0f1-4af3-b1fc-937248edcc25')">天津安达生产力促进有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('177158','1A7E44A2-5F85-4672-86E1-CDFBCF86B906')">天津市泰冠建材工贸有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('136064','C968DB6C-7943-4596-BFDE-CEBC01F88A44')">掌云间（天津）科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('167198','D4065312-A572-4360-8B2A-B4D2F6216C2B')">天津市恩来顺食品发展有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('133524','825CBCA4-651F-45D8-836A-2951B5455F28')">威尔玛克（天津）科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('171010','E442697B-6716-482A-8B9A-071B62BE4FF2')">中盐工程技术研究院有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('134192','AC3900E0-CF1E-44AE-A7B3-29CA4CC76A2E')">天津朗思世纪科技发展有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('149835','195AAE8C-E9E6-4FE4-87F9-89FDEEFD578A')">天津市裕川微生物制品有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('174824','EAF113D6-C152-4F7F-82FE-643581332560')">天津市葆沃软件科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('138256','EC82D7AE-1D1D-4727-80A2-023CEECDD7D4')">格莱美特（天津）新能源技术有限公...</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('183010','3f714bee-4a89-4796-93d3-cd4a5abad8c4')">天津认真环保科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('170878','5D8F0FE2-DACE-4E45-AC73-9D0285BC336D')">天津德润文化传播有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('145578','ca49ece2-7845-4d72-8404-e5056b88acf1')">天津赋润科技发展有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('151994','B8B0EF01-9EE9-4A3F-A386-92BDB35D2045')">天津锐新昌轻合金股份有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('147185','16BDAE45-2858-4434-BC36-97A07E944675')">天津市天健科贸有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('152350','DBBE67AB-EB08-4EA7-AFEA-6729B0AB43EA')">天津尚德药缘科技股份有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('187127','09bc47eb-f3ed-44bd-a0a5-a2d295818a43')">天津乐者科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('179674','E008C46C-348F-421F-84A6-0ED5E08085C0')">天津航空产业开发有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('174209','A329BDED-E477-4FA2-9E60-8CBC8F04DC1C')">天津市森特奈电子有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('168493','53C5C210-EC04-42FC-B1A3-2BC3321B0BFB')">天津华夏恒达科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('176968','54D01BF9-4776-41AC-853B-325365209CD2')">天津迪兰奥特环保科技开发有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('149924','79019D39-6027-405A-ADDD-527758526172')">天津吉鼎万通绿化有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('147352','A2DC675A-19F3-4B2D-A1B1-7C5FE6DECD17')">天津柒喜科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('135067','DE3DE307-A1DC-46F1-9E27-CB13AE541BC1')">中宝（天津）能源科技有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('174979','F61CD1C2-8E02-478A-B407-B7DBF8A3D40B')">天津市联合环保工程设计有限公司</a></li>
+	<li><a href="#" onclick="CompanyExhibitionClick('146852','015AF0C5-4650-41E0-A687-9DCD706C53EE')">一族（天津）传媒科技有限公司</a></li>
+</ul>
+    </div>
+</div>
+<script type="text/javascript">
+    var speed = 20;
+    scrollup2.innerHTML = scrollup1.innerHTML;
+    var offsetTop = scrollup2.offsetTop - 300;
+    function Marquee() {
+        if (scrollup2.offsetTop - scrollup.scrollTop - offsetTop <= 0) {
+            scrollup.scrollTop -= scrollup1.offsetHeight;
+        }
+        else {
+            scrollup.scrollTop++;
+        }
+    };
+    var MyMar = setInterval(Marquee, speed);
+    scrollup.onmouseover = function () {
+        clearInterval(MyMar);
+    };
+    scrollup.onmouseout = function () {
+        MyMar = setInterval(Marquee, speed);
+    };
+</script>
+</div>
+</div>
+</div>
+</div></div>
+<div class="layout_item_module_container layout_item_module_container_border-right" style="width: 460px;">
+
+
+<div class="module_item" style="width: 460px; height: 280px;" data-mid="CST.App.CustomizePage.Module.TechnologyFinancialModule" data-width="460" data-height="280">
+<div id="CSTAppCustomizePageModuleTechnologyFinancialModule">
+<div class="module" style="width:458px;height:278px">
+	<div class="module_head"><span class="more_span"><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Demand/DemandSearch.aspx" class="more" target="_blank">更多&gt;&gt;</a></span><div class="icon_div"></div><div class="title">需求信息</div><div class="head_ex"><div style="width:300px">
+                                    <div style="float:left;">企业需求&nbsp;249&nbsp;条</div>
+                                    <div style="float:right;"><a class="mct_mffb font_confw" onclick="javascript:TechnologyFinancialModulePostXuqu();">免费发布需求</a></div>
+                                    <div class="clear"></div>
+                                </div></div></div>
+	<div class="module_head_body_center_hr"></div>
+	<div class="module_body"><div id="technologyFinancialModule_tab" style="width:440px;"><div class="module_tab"><ul><li class="cst-tab-curr cst-tab-hover" data-flag="cst-tab-head">科技金融</li><li data-flag="cst-tab-head">技术转移与推广</li><li data-flag="cst-tab-head">其他需求</li></ul></div><div class="module_tab_body"><div data-flag="cst-tab-body">
+<table class="module_table">
+	<tbody><tr>
+<th align="left">需求名称</th><th align="center">融资金额</th><th align="center">发布时间</th><th align="center">对接状态</th></tr>
+<tr>
+<td align="left"><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Demand/ENDetail.aspx?lo=14c0ebb1-e10b-4227-9a17-0683043999e620150916130000" target="_blank" title="卡布克汽车互联网平台">卡布克汽车互联网...</a></td><td align="center">3000万元</td><td align="center">2015-09-16</td><td align="center">已发布</td></tr>
+<tr>
+<td align="left"><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Demand/ENDetail.aspx?lo=30873541-524a-400f-8a0b-d7bb7bb5a5f220150909154623" target="_blank" title="惠找车融资">惠找车融资</a></td><td align="center">500万元</td><td align="center">2015-09-09</td><td align="center">意向选择</td></tr>
+<tr>
+<td align="left"><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Demand/ENDetail.aspx?lo=81b4bed6-aed1-4c20-a1f3-d36b6715454120150704050414" target="_blank" title="易健身（e健身）">易健身（e健身）</a></td><td align="center">200万元</td><td align="center">2015-07-04</td><td align="center">意向选择</td></tr>
+<tr>
+<td align="left"><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Demand/ENDetail.aspx?lo=6e8dcb9b-8f97-458c-9bf3-fd83a996096b20150610135055" target="_blank" title="基因疾病诊断试剂">基因疾病诊断试剂</a></td><td align="center">1000万元</td><td align="center">2015-06-10</td><td align="center">意向选择</td></tr>
+<tr>
+<td align="left"><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Demand/ENDetail.aspx?lo=9d9ec3b2-3212-4720-8baf-3fa4ff2d34b220141217145320" target="_blank" title="产品研发、流动资金">产品研发、流动资...</a></td><td align="center">500万元</td><td align="center">2014-12-17</td><td align="center">意向选择</td></tr>
+</tbody></table>
+</div><div style="display: none;" data-flag="cst-tab-body">
+<table class="module_table">
+	<tbody><tr>
+<th align="left">需求名称</th><th align="center">行业类别</th><th align="center">发布时间</th><th align="center">对接状态</th></tr>
+<tr>
+<td align="left"><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Demand/TransferDemandDetail.aspx?id=7" target="_blank" title="抗肝癌特效药">抗肝癌特效药</a></td><td align="center">生物与医药</td><td align="center">2015-09-14</td><td align="center">意向选择</td></tr>
+<tr>
+<td align="left"><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Demand/TransferDemandDetail.aspx?id=5" target="_blank" title="天津线上线下科技有限公司天津电商平台技术转让">天津线上线下科...</a></td><td align="center">电子与信息</td><td align="center">2015-01-26</td><td align="center">意向选择</td></tr>
+<tr>
+<td align="left"><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Demand/TransferDemandDetail.aspx?id=4" target="_blank" title="新型精神疾病健康食品">新型精神疾病健...</a></td><td align="center">生物与医药</td><td align="center">2014-12-31</td><td align="center">意向选择</td></tr>
+<tr>
+<td align="left"><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Demand/TransferDemandDetail.aspx?id=3" target="_blank" title="转让供热收费软件">转让供热收费软...</a></td><td align="center">电子与信息 高技术服务...</td><td align="center">2014-12-18</td><td align="center">已发布</td></tr>
+<tr>
+<td align="left"><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Demand/TransferDemandDetail.aspx?id=2" target="_blank" title="诚求洗手液产品代理代销商">诚求洗手液产品...</a></td><td align="center">生物与医药 新材料 资...</td><td align="center">2014-11-17</td><td align="center">已发布</td></tr>
+</tbody></table>
+</div><div style="display: none;" data-flag="cst-tab-body">
+<table class="module_table">
+	<tbody><tr>
+<th align="left">需求名称</th><th align="center">需求类型</th><th align="center">发布时间</th><th align="center">对接状态</th></tr>
+<tr>
+<td align="left"><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Demand/UniversalNeedDetail.aspx?id=111" target="_blank" title="高新企业需要年检吗">高新企业需要年检...</a></td><td align="center">中介咨询-资质认定</td><td align="center">2015-09-19</td><td align="center">意向选择</td></tr>
+<tr>
+<td align="left"><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Demand/UniversalNeedDetail.aspx?id=108" target="_blank" title="高新技术企业认证">高新技术企业认证</a></td><td align="center">中介咨询-认证服务</td><td align="center">2015-09-16</td><td align="center">意向选择</td></tr>
+<tr>
+<td align="left"><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Demand/UniversalNeedDetail.aspx?id=105" target="_blank" title="惠找车注册商标">惠找车注册商标</a></td><td align="center">知识产权-商标代理</td><td align="center">2015-09-09</td><td align="center">已发布</td></tr>
+<tr>
+<td align="left"><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Demand/UniversalNeedDetail.aspx?id=81" target="_blank" title="科技支撑项目国家高新企业认定项目万企转型升级项目申报项目等国家无偿补贴项目">科技支撑项目国家...</a></td><td align="center">创新创业-其他</td><td align="center">2015-07-27</td><td align="center">意向选择</td></tr>
+<tr>
+<td align="left"><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Demand/UniversalNeedDetail.aspx?id=60" target="_blank" title="代理申请软件著作权">代理申请软件著作...</a></td><td align="center">知识产权-著作权（版...</td><td align="center">2015-07-23</td><td align="center">意向选择</td></tr>
+</tbody></table>
+</div></div></div>
+<div style="display: none; height: 25px; width: 300px;" id="divFreeServer"><span style="font-size: 14px;">对不起,只有实名认证的企业可以发布服务</span></div>
+</div>
+</div>
+</div>
+</div>
+<div class="module_item" style="width: 460px; height: 33px;" data-mid="CST.App.CustomizePage.Module.ServiceProductModule" data-width="460" data-height="33">
+<div id="CSTAppCustomizePageModuleServiceProductModule">
+<div class="module" style="width:458px;height:31px">
+	<div class="module_head"><span class="more_span"><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/AllProductSearch.aspx?para=" class="more" target="_blank">更多&gt;&gt;</a></span><div class="icon_div"></div><div class="title">服务产品</div><div class="head_ex"><div style="width:300px">
+                                    <div style="float:left;">服务产品&nbsp;2406&nbsp;项&nbsp;&nbsp;服务机构&nbsp;996&nbsp;家</div>
+                                    <div style="float:right;"><a class="mct_mffb font_confw" onclick="javascript:ServiceProductModulePostFuwu();">免费发布服务</a></div>
+                                    <div class="clear"></div>
+                                </div></div></div>
+	<div class="module_head_body_center_hr"></div>
+	<div class="module_body"></div>
+</div>
+</div>
+</div>
+<div class="module_item" style="width: 460px; height: 237px;" data-mid="CST.App.CustomizePage.Module.TechnologyFinanceModule" data-width="460" data-height="237">
+<div id="CSTAppCustomizePageModuleTechnologyFinanceModule">
+<div class="module" style="width:458px;height:235px">
+	<div class="module_head"><div class="icon_div"></div><div class="title"><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/CommSearch.aspx?CID=006003" target="_blank">科技金融</a></div><div class="head_ex"><div>服务产品&nbsp;89&nbsp;项&nbsp;&nbsp;&nbsp;&nbsp;服务机构&nbsp;506&nbsp;家</div></div></div>
+	<div class="module_head_body_center_hr"></div>
+	<div class="module_body">
+<table class="module_table">
+	<tbody><tr>
+<th align="left">产品名称</th><th align="center">融资额度</th><th align="center">融资期限</th></tr>
+<tr>
+<td align="left"><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/itemB.aspx?item=91" target="_blank" title="天交所挂牌咨询【天津OTC会员机构】">天交所挂牌咨询【天津OT...</a></td><td align="center">1000-5000万</td><td align="center">1年</td></tr>
+<tr>
+<td align="left"><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/itemB.aspx?item=92" target="_blank" title="企业股份制改造">企业股份制改造</a></td><td align="center">50-50万</td><td align="center">1年</td></tr>
+<tr>
+<td align="left"><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/itemB.aspx?item=85" target="_blank" title="企业股份制改造">企业股份制改造</a></td><td align="center">40-40万</td><td align="center">1年</td></tr>
+<tr>
+<td align="left"><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/itemB.aspx?item=87" target="_blank" title="天交所挂牌上市">天交所挂牌上市</a></td><td align="center">1000-3000万</td><td align="center">1年</td></tr>
+<tr>
+<td align="left"><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/itemB.aspx?item=86" target="_blank" title="新三板挂牌上市">新三板挂牌上市</a></td><td align="center">1000-5000万</td><td align="center">1年</td></tr>
+</tbody></table>
+</div>
+</div>
+</div>
+</div>
+<div class="module_item" style="width: 460px; height: 237px;" data-mid="CST.App.CustomizePage.Module.AppratusEquipmentModule" data-width="460" data-height="237">
+<div id="CSTAppCustomizePageModuleAppratusEquipmentModule">
+<div class="module" style="width:458px;height:235px">
+	<div class="module_head"><div class="icon_div"></div><div class="title"><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/CommSearch.aspx?CID=006005" target="_blank">仪器设备</a></div><div class="head_ex"><div>服务产品&nbsp;885&nbsp;项&nbsp;&nbsp;&nbsp;&nbsp;服务机构&nbsp;534&nbsp;家</div></div></div>
+	<div class="module_head_body_center_hr"></div>
+	<div class="module_body">
+<table class="module_table">
+	<tbody><tr>
+<th align="left">仪器名称</th><th align="center">服务领域</th><th align="center">收费标准</th></tr>
+<tr>
+<td align="left"><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/itemE.aspx?item=995" target="_blank" title="车床">车床</a></td><td align="center"><span title="机械">机械</span></td><td align="center">50元/机时</td></tr>
+<tr>
+<td align="left"><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/itemE.aspx?item=994" target="_blank" title="Q-Excative plus">Q-Excative p.</a></td><td align="center"><span title="食品、医药、农产品、生物、其他">食品、医药、农...</span></td><td align="center">1元/机时</td></tr>
+<tr>
+<td align="left"><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/itemE.aspx?item=993" target="_blank" title="PIV多相流场测速系统">PIV多相流场测速系统</a></td><td align="center"><span title="材料">材料</span></td><td align="center">24元/项</td></tr>
+<tr>
+<td align="left"><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/itemE.aspx?item=992" target="_blank" title="震动样品磁强计">震动样品磁强计</a></td><td align="center"><span title="材料">材料</span></td><td align="center">1500元/项</td></tr>
+<tr>
+<td align="left"><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/itemE.aspx?item=991" target="_blank" title="物理化学吸附分析仪">物理化学吸附分析仪</a></td><td align="center"><span title="材料">材料</span></td><td align="center">300元/项</td></tr>
+</tbody></table>
+</div>
+</div>
+</div>
+</div>
+<div class="module_item" style="width: 460px; height: 237px;" data-mid="CST.App.CustomizePage.Module.EntrepreneurshipCarrierModule" data-width="460" data-height="237">
+<div id="CSTAppCustomizePageModuleEntrepreneurshipCarrierModule">
+<div class="module" style="width:458px;height:235px">
+	<div class="module_head"><div class="icon_div"></div><div class="title"><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/CommSearch.aspx?CID=006006" target="_blank">创新创业</a></div><div class="head_ex"><div>服务产品&nbsp;189&nbsp;项&nbsp;&nbsp;&nbsp;&nbsp;服务机构&nbsp;525&nbsp;家</div></div></div>
+	<div class="module_head_body_center_hr"></div>
+	<div class="module_body">
+<table class="module_table">
+	<tbody><tr>
+<th align="left">产品名称</th><th align="center">产品类别</th><th align="center">收费标准</th></tr>
+<tr>
+<td align="left"><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/VehicleDetail.aspx?vid=42" target="_blank" title="灵创科技园">灵创科技园</a></td><td align="center">孵化服务</td><td align="center">1.2元/平方米</td></tr>
+<tr>
+<td align="left"><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/VehicleDetail.aspx?vid=41" target="_blank" title="生物医药类专业孵化器">生物医药类专业孵化器</a></td><td align="center">孵化服务</td><td align="center">面议</td></tr>
+<tr>
+<td align="left"><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/VehicleDetail.aspx?vid=28" target="_blank" title="企业孵化服务">企业孵化服务</a></td><td align="center">孵化服务</td><td align="center">面议</td></tr>
+<tr>
+<td align="left"><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/VehicleDetail.aspx?vid=36" target="_blank" title="会议室租赁">会议室租赁</a></td><td align="center">孵化服务</td><td align="center">面议</td></tr>
+<tr>
+<td align="left"><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/VehicleDetail.aspx?vid=31" target="_blank" title="场地服务">场地服务</a></td><td align="center">孵化服务</td><td align="center">620元/平方米</td></tr>
+</tbody></table>
+</div>
+</div>
+</div>
+</div>
+<div class="module_item" style="width: 460px; height: 237px;" data-mid="CST.App.CustomizePage.Module.TechnologyInormationModule" data-width="460" data-height="237">
+<div id="CSTAppCustomizePageModuleTechnologyInormationModule">
+<div class="module" style="width:458px;height:235px">
+	<div class="module_head"><div class="icon_div"></div><div class="title"><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/CommSearch.aspx?CID=006001" target="_blank">科技信息</a></div><div class="head_ex"><div>服务产品&nbsp;194&nbsp;项&nbsp;&nbsp;&nbsp;&nbsp;服务机构&nbsp;602&nbsp;家</div></div></div>
+	<div class="module_head_body_center_hr"></div>
+	<div class="module_body">
+<table class="module_table">
+	<tbody><tr>
+<th align="left">产品名称</th><th align="center">产品类别</th><th align="center">收费标准</th></tr>
+<tr>
+<td align="left"><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/CommProductDetail.aspx?ID=1794" target="_blank" title="2012-2016年中国聚乙烯塑料薄膜行业市场深度调研及投资战略研究分析报告">2012-2016年中...</a></td><td align="center">其他</td><td align="center">面议</td></tr>
+<tr>
+<td align="left"><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/CommProductDetail.aspx?ID=189" target="_blank" title="科技查新检索">科技查新检索</a></td><td align="center">科技查新</td><td align="center">面议</td></tr>
+<tr>
+<td align="left"><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/CommProductDetail.aspx?ID=1787" target="_blank" title="聚苯乙烯2015年9月分析报告">聚苯乙烯2015年9月...</a></td><td align="center">其他</td><td align="center">面议</td></tr>
+<tr>
+<td align="left"><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/CommProductDetail.aspx?ID=129" target="_blank" title="定题检索">定题检索</a></td><td align="center">定题检索（代查代检）</td><td align="center">面议</td></tr>
+<tr>
+<td align="left"><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/CommProductDetail.aspx?ID=1744" target="_blank" title="现代农业—2015下半年国内农产品价格前瞻与投资启示">现代农业—2015下半...</a></td><td align="center">其他</td><td align="center">面议</td></tr>
+</tbody></table>
+</div>
+</div>
+</div>
+</div>
+<div class="module_item" style="width: 460px; height: 237px;" data-mid="CST.App.CustomizePage.Module.OtherServiceProductModule" data-width="460" data-height="237">
+<div id="CSTAppCustomizePageModuleOtherServiceProductModule">
+<div class="module" style="width:458px;height:235px">
+	<div class="module_head"><div class="icon_div"></div><div class="title">其他服务产品</div></div>
+	<div class="module_head_body_center_hr"></div>
+	<div class="module_body">
+<table class="module_table">
+	<tbody><tr>
+<th align="left">产品名称</th><th align="center">产品类别</th><th align="center">收费标准</th></tr>
+<tr>
+<td align="left"><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/CommProductDetail.aspx?ID=1986" target="_blank" title="商标许可备案">商标许可备案</a></td><td align="center">知识产权许可</td><td align="center">面议</td></tr>
+<tr>
+<td align="left"><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/CommProductDetail.aspx?ID=1985" target="_blank" title="商标转让">商标转让</a></td><td align="center">知识产权转让</td><td align="center">面议</td></tr>
+<tr>
+<td align="left"><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/CommProductDetail.aspx?ID=1935" target="_blank" title="企业宣传片制作/视频剪辑/微电影拍摄/年会总结回顾">企业宣传片制作/视频剪辑...</a></td><td align="center">影视设计</td><td align="center">面议</td></tr>
+<tr>
+<td align="left"><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/CommProductDetail.aspx?ID=1936" target="_blank" title="十年专业画册/折页/海报/书籍装帧设计/印刷/拍照">十年专业画册/折页/海报...</a></td><td align="center">平面设计</td><td align="center">面议</td></tr>
+<tr>
+<td align="left"><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/CommProductDetail.aspx?ID=1937" target="_blank" title="天津医学动画/工业动画/三维仿真/影视特效制作">天津医学动画/工业动画/...</a></td><td align="center">动漫设计</td><td align="center">面议</td></tr>
+</tbody></table>
+</div>
+</div>
+</div>
+</div></div>
+<div class="layout_item_module_container" style="width: 250px;">
+
+
+<div class="module_item" style="width: 250px; height: 400px;" data-mid="CST.App.CustomizePage.Module.LastedApprovedOrgModule" data-width="250" data-height="400">
+<div id="CSTAppCustomizePageModuleLastedApprovedOrgModule">
+<div class="module" style="width:248px;height:398px">
+	<div class="module_head"><span class="more_span"><a href="http://www.tten.cn/OrgInformation/OrgSearch.aspx?OrgName=" class="more" target="_blank">更多&gt;&gt;</a></span><div class="icon_div icon"></div><div class="title">最新实名认证服务机构</div></div>
+	<div class="module_head_body_center_hr"></div>
+	<div class="module_body">
+<ul class="module_ul">
+	<li><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49//Portal/OrgPortal.aspx?uid=94307" target="_blank" title="天津津申商标事务所有限公司">天津津申商标事务所有限公司</a></li>
+	<li><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49//Portal/OrgPortal.aspx?uid=94257" target="_blank" title="高智科技（天津）有限公司">高智科技（天津）有限公司</a></li>
+	<li><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49//Portal/OrgPortal.aspx?uid=93973" target="_blank" title="天津祥旺兴科技发展有限公司">天津祥旺兴科技发展有限公司</a></li>
+	<li><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49//Portal/OrgPortal.aspx?uid=93975" target="_blank" title="天津埃克申科技有限公司">天津埃克申科技有限公司</a></li>
+	<li><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49//Portal/OrgPortal.aspx?uid=93972" target="_blank" title="天津市文禾新能源科技有限公司">天津市文禾新能源科技有限公司</a></li>
+	<li><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49//Portal/OrgPortal.aspx?uid=93971" target="_blank" title="天津亿鑫盛宇机械科技有限公司">天津亿鑫盛宇机械科技有限公司</a></li>
+	<li><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49//Portal/OrgPortal.aspx?uid=93970" target="_blank" title="天津讯达泰科技有限公司">天津讯达泰科技有限公司</a></li>
+	<li><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49//Portal/OrgPortal.aspx?uid=93968" target="_blank" title="天津博大天地科技有限公司">天津博大天地科技有限公司</a></li>
+	<li><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49//Portal/OrgPortal.aspx?uid=93967" target="_blank" title="天津鑫斯特阀门科技有限公司">天津鑫斯特阀门科技有限公司</a></li>
+	<li><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49//Portal/OrgPortal.aspx?uid=93939" target="_blank" title="天津采菊东篱农业科技有限公司">天津采菊东篱农业科技有限公司</a></li>
+	<li><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49//Portal/OrgPortal.aspx?uid=93938" target="_blank" title="天津环际达科技有限公司">天津环际达科技有限公司</a></li>
+	<li><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49//Portal/OrgPortal.aspx?uid=93935" target="_blank" title="天津市美安科技有限公司">天津市美安科技有限公司</a></li>
+	<li><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49//Portal/OrgPortalt.aspx?uid=93032" target="_blank" title="天津佳奇科技有限公司">天津佳奇科技有限公司</a></li>
+	<li><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49//Portal/OrgPortal.aspx?uid=93568" target="_blank" title="华环（天津）电子科技有限公司">华环（天津）电子科技有限公司</a></li>
+	<li><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49//Portal/OrgPortalt.aspx?uid=62596" target="_blank" title="天津企创知识产权代理有限公司">天津企创知识产权代理有限公司</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="module_item" style="width: 250px; height: 490px;" data-mid="CST.App.CustomizePage.Module.LastedServiceProductModule" data-width="250" data-height="490">
+<div id="CSTAppCustomizePageModuleLastedServiceProductModule">
+<div class="module" style="width:248px;height:488px">
+	<div class="module_head"><span class="more_span"><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/AllProductSearch.aspx?para" class="more" target="_blank">更多&gt;&gt;</a></span><div class="icon_div icon"></div><div class="title">最新发布服务产品</div></div>
+	<div class="module_head_body_center_hr"></div>
+	<div class="module_body">
+<ul class="module_ul">
+	<li><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/CommProductDetail.aspx?ID=1986" target="_blank" title="商标许可备案">商标许可备案</a></li>
+	<li><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/CommProductDetail.aspx?ID=1985" target="_blank" title="商标转让">商标转让</a></li>
+	<li><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/CommProductDetail.aspx?ID=1935" target="_blank" title="企业宣传片制作/视频剪辑/微电影拍摄/年会总结回顾">企业宣传片制作/视频剪辑/微电...</a></li>
+	<li><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/CommProductDetail.aspx?ID=1936" target="_blank" title="十年专业画册/折页/海报/书籍装帧设计/印刷/拍照">十年专业画册/折页/海报/书籍...</a></li>
+	<li><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/CommProductDetail.aspx?ID=1937" target="_blank" title="天津医学动画/工业动画/三维仿真/影视特效制作">天津医学动画/工业动画/三维仿...</a></li>
+	<li><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/CommProductDetail.aspx?ID=1938" target="_blank" title="展览展示设计/店面展示及陈列/企业内部宣传">展览展示设计/店面展示及陈列/...</a></li>
+	<li><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/CommProductDetail.aspx?ID=1939" target="_blank" title="专业LOGO设计 500元 满意为止 欢迎来电咨询">专业LOGO设计 500元 满...</a></li>
+	<li><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/CommProductDetail.aspx?ID=1940" target="_blank" title="专业品牌管理:Vi设计、Logo设计、画册设计等等">专业品牌管理:Vi设计、Log...</a></li>
+	<li><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/CommProductDetail.aspx?ID=1941" target="_blank" title="天津城市景观室内设计策划">天津城市景观室内设计策划</a></li>
+	<li><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/CommProductDetail.aspx?ID=1942" target="_blank" title="专业logo、标识设计 、VI设计、UI设计">专业logo、标识设计 、VI...</a></li>
+	<li><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/CommProductDetail.aspx?ID=1943" target="_blank" title="专业平面设计,1元起,不满意不收费">专业平面设计,1元起,不满意不...</a></li>
+	<li><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/CommProductDetail.aspx?ID=1944" target="_blank" title="公司注册 快速办照 验资 增资 年检">公司注册 快速办照 验资 增资...</a></li>
+	<li><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/CommProductDetail.aspx?ID=1945" target="_blank" title="代理记账 财务服务">代理记账 财务服务</a></li>
+	<li><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/CommProductDetail.aspx?ID=1946" target="_blank" title="专业代办物流公司营业执照,道路运输许可证,代理记账">专业代办物流公司营业执照,道路...</a></li>
+	<li><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/CommProductDetail.aspx?ID=1947" target="_blank" title="滨海新区范围 提供办理工商执照、公司注册、年检、变更、注销">滨海新区范围 提供办理工商执照...</a></li>
+	<li><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/CommProductDetail.aspx?ID=1948" target="_blank" title="代理记帐,税务登记,进出口权,危险品、道路运输许可证">代理记帐,税务登记,进出口权,...</a></li>
+	<li><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/CommProductDetail.aspx?ID=1949" target="_blank" title="专业样册 包装设计品牌策划LOGO VI设计整合等">专业样册 包装设计品牌策划LO...</a></li>
+	<li><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/CommProductDetail.aspx?ID=1950" target="_blank" title="抢滩天津自贸区、独享专属政策、专业一站式代办企业注册">抢滩天津自贸区、独享专属政策、...</a></li>
+	<li><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/CommProductDetail.aspx?ID=1951" target="_blank" title="专业园区注册、一般纳税人包过、高额返税">专业园区注册、一般纳税人包过、...</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="module_item" style="width: 250px; height: 365px;" data-mid="CST.App.CustomizePage.Module.NewDealServiceModule" data-width="250" data-height="365">
+<div id="CSTAppCustomizePageModuleNewDealServiceModule">
+<div class="module" style="width:248px;height:363px">
+	<div class="module_head"><div class="icon_div icon"></div><div class="title">最新成交服务</div></div>
+	<div class="module_head_body_center_hr"></div>
+	<div class="module_body">
+<ul class="module_ul">
+	<li><div style="float:left;"><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/CommProductDetail.aspx?ID=1241" target="_blank" title="天津市科技型中小企业认定">天津市科技型中小企业认定</a></div></li>
+	<li><div style="float:left;"><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/CommProductDetail.aspx?ID=1241" target="_blank" title="天津市科技型中小企业认定">天津市科技型中小企业认定</a></div></li>
+	<li><div style="float:left;"><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/CommProductDetail.aspx?ID=1241" target="_blank" title="天津市科技型中小企业认定">天津市科技型中小企业认定</a></div></li>
+	<li><div style="float:left;"><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/CommProductDetail.aspx?ID=1787" target="_blank" title="聚苯乙烯2015年9月分析报告">聚苯乙烯2015年9月分析报告.</a></div></li>
+	<li><div style="float:left;"><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/CommProductDetail.aspx?ID=1794" target="_blank" title="2012-2016年中国聚乙烯塑料薄膜行业市场深度调研及投资战略研究分析报告">2012-2016年中国聚乙烯.</a></div></li>
+	<li><div style="float:left;"><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/CommProductDetail.aspx?ID=1374" target="_blank" title="【审计+专利+认定费用全免】高新认定">【审计+专利+认定费用全免】高.</a></div></li>
+	<li><div style="float:left;"><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/CommProductDetail.aspx?ID=956" target="_blank" title="【科技型中小企业认定】申报咨询服务">【科技型中小企业认定】申报咨询.</a></div></li>
+	<li><div style="float:left;"><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/CommProductDetail.aspx?ID=944" target="_blank" title="高企申报代理">高企申报代理</a></div></li>
+	<li><div style="float:left;"><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/CommProductDetail.aspx?ID=944" target="_blank" title="高企申报代理">高企申报代理</a></div></li>
+	<li><div style="float:left;"><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/CommProductDetail.aspx?ID=956" target="_blank" title="【科技型中小企业认定】申报咨询服务">【科技型中小企业认定】申报咨询.</a></div></li>
+	<li><div style="float:left;"><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/CommProductDetail.aspx?ID=1015" target="_blank" title="天津市“杀手锏”产品及研发项目">天津市“杀手锏”产品及研发项目.</a></div></li>
+	<li><div style="float:left;"><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/CommProductDetail.aspx?ID=1012" target="_blank" title="国家高新技术企业认定">国家高新技术企业认定</a></div></li>
+	<li><div style="float:left;"><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/CommProductDetail.aspx?ID=1012" target="_blank" title="国家高新技术企业认定">国家高新技术企业认定</a></div></li>
+	<li><div style="float:left;"><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49/Product/CommProductDetail.aspx?ID=1012" target="_blank" title="国家高新技术企业认定">国家高新技术企业认定</a></div></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="module_item" style="width: 250px; height: 273px;" data-mid="CST.App.CustomizePage.Module.ActivesOrgModule" data-width="250" data-height="273">
+<div id="CSTAppCustomizePageModuleActivesOrgModule">
+<div class="module" style="width:248px;height:271px">
+	<div class="module_head"><div class="icon_div icon"></div><div class="title">活跃服务机构</div></div>
+	<div class="module_head_body_center_hr"></div>
+	<div class="module_body">
+<ul class="module_ul">
+	<li><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49//Portal/OrgPortalt.aspx?uid=31472" target="_blank" title="天津至勤投资咨询有限公司">天津至勤投资咨询有限公司</a></li>
+	<li><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49//Portal/OrgPortal.aspx?uid=79088" target="_blank" title="天津弘创投资咨询有限公司">天津弘创投资咨询有限公司</a></li>
+	<li><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49//Portal/OrgPortalt.aspx?uid=89517" target="_blank" title="中创华融生产力促进（天津）有限公司">中创华融生产力促进（天津）有限公...</a></li>
+	<li><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49//Portal/OrgPortalt.aspx?uid=90218" target="_blank" title="天津玛塔德科技有限公司">天津玛塔德科技有限公司</a></li>
+	<li><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49//Portal/OrgPortalt.aspx?uid=65451" target="_blank" title="天津市新天方有限责任专利代理事务所">天津市新天方有限责任专利代理事务...</a></li>
+	<li><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49//Portal/OrgPortalt.aspx?uid=86137" target="_blank" title="天津中帆科技信息咨询有限公司">天津中帆科技信息咨询有限公司</a></li>
+	<li><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49//Portal/OrgPortalt.aspx?uid=89387" target="_blank" title="天津开阖法律咨询有限公司">天津开阖法律咨询有限公司</a></li>
+	<li><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49//Portal/OrgPortalt.aspx?uid=62596" target="_blank" title="天津企创知识产权代理有限公司">天津企创知识产权代理有限公司</a></li>
+	<li><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49//Portal/OrgPortalt.aspx?uid=93032" target="_blank" title="天津佳奇科技有限公司">天津佳奇科技有限公司</a></li>
+	<li><a href="http://www.tten.cn/Iframe.aspx?OrgUrl=http://218.69.114.49//Portal/OrgPortal.aspx?uid=94307" target="_blank" title="天津津申商标事务所有限公司">天津津申商标事务所有限公司</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div></div></div>
+<div class="clear"></div></div>
+<div class="layout_item_base">
+
+
+
+<div class="layout_item_module_containers" style="width: 980px;">
+<div class="layout_item_module_container" style="width: 980px;">
+
+
+<div class="module_item" style="width: 980px; height: 155px;" data-mid="CST.App.CustomizePage.Module.FooterModule" data-width="980" data-height="155">
+<div id="CSTAppCustomizePageModuleFooterModule"><div class="member" style="margin: 0 auto;">
+    <div class="member_t font_title">
+        区县分中心
+    </div>
+    <div class="member_c dark_blue">
+        <ul>
+            <li class="gray" style="width: 50px; text-align: center"><a href="#">滨海新区</a></li>
+            <li class="gray" style="width: 43px; text-align: center"><a href="#">和平区</a></li>
+            <li class="gray" style="width: 43px; text-align: center"><a href="#">河北区</a></li>
+            <li class="gray" style="width: 43px; text-align: center"><a href="#">河西区</a></li>
+            <li class="gray" style="width: 43px; text-align: center"><a href="#">河东区</a></li>
+            <li class="gray" style="width: 43px; text-align: center"><a href="#">南开区</a></li>
+            <li class="gray" style="width: 43px; text-align: center"><a href="#">红桥区</a></li>
+            <li class="gray" style="width: 43px; text-align: center"><a href="#">东丽区</a></li>
+            <li class="gray" style="width: 43px; text-align: center"><a href="#">西青区</a></li>
+            <li class="gray" style="width: 43px; text-align: center"><a href="#">津南区</a></li>
+            <li class="gray" style="width: 43px; text-align: center"><a href="#">北辰区</a></li>
+            <li class="gray" style="width: 43px; text-align: center"><a href="#">武清区</a></li>
+            <li class="gray" style="width: 43px; text-align: center"><a href="#">宝坻区</a></li>
+            <li class="gray" style="width: 43px; text-align: center"><a href="#">蓟县</a></li>
+            <li class="gray" style="width: 43px; text-align: center"><a href="#">静海县</a></li>
+            <li class="gray" style="width: 43px; text-align: center"><a href="#">宁河县</a></li>
+        </ul>
+    </div>
+</div>
+<div class="member" style="margin: 0 auto;">
+    <div class="member_t font_title">
+        成员单位
+    </div>
+    <div class="member_c dark_blue">
+        <ul>
+            <li class="gray">市委组织部</li>
+            <li class="gray">市委宣传部</li>
+            <li><a href="http://www.tjdpc.gov.cn/" target="_blank">发改委</a></li>
+            <li><a href="http://www.tjec.gov.cn/" target="_blank">经信委</a></li>
+            <li><a href="http://www.tjcoc.gov.cn/" target="_blank">商务委</a></li>
+            <li><a href="http://www.tjmec.gov.cn/" target="_blank">教委</a></li>
+            <li><a href="http://www.tstc.gov.cn/" target="_blank">科委</a></li>
+            <li><a href="http://www.e110.info/" target="_blank">公安局</a></li>
+            <li class="red"><a href="http://www.tjcs.gov.cn/" target="_blank">财政局</a></li>
+            <li><a href="http://www.tj.lss.gov.cn/" target="_blank">人力社保局</a></li>
+            <li><a href="http://www.tjwh.gov.cn/" target="_blank">文广局</a></li>
+            <li><a href="http://www.tjaic.gov.cn/" target="_blank">工商局</a></li>
+            <li><a href="http://www.tjipo.gov.cn/" target="_blank">知识产权局</a></li>
+            <li><a href="http://www.tjjr.gov.cn/" target="_blank">金融办</a></li>
+            <li><a href="http://www.smetj.gov.cn/" target="_blank">中小企业局</a></li>
+            <li><a href="http://www.bh.gov.cn/" target="_blank">滨海新区</a></li>
+        </ul>
+    </div>
+</div>
+<div class="clear">
+</div>
+<div class="footer">
+    <!--<p>
+        主办：天津市科技型中小企业发展工作领导小组办公室</p>-->
+    <p>
+        版权所有 天津市科学技术信息研究所 All Rights Reserved</p>
+    <p>
+        津ICP备05001152号</p>
+</div>
+</div>
+</div></div></div>
+<div class="clear"></div></div>
+<div class="layout_item_base" style="height: 0px; overflow: hidden;">
+
+<div class="layout_item_module_containers" style="width: 980px;">
+<div class="layout_item_module_container" style="width: 980px;">
+
+
+
+
+<div class="module_item" style="width: 250px; height: 208px;" data-mid="CST.App.CustomizePage.Module.FloatingNoticeModule" data-width="250" data-height="208">
+<div id="CSTAppCustomizePageModuleFloatingNoticeModule"><!--浮动重要通知-->
+
+<script type="text/javascript">
+    var ad1 = new AdMove("ad1");
+    ad1.Run();
+    //由于浮动广告点击关闭按钮后，之前是隐藏盖层，导致盖层移动到某处就覆盖了下面的链接，所以改成这样
+    //移除img中的 onclick="javascript:window.hide()" 
+    $(function () {
+        $("#ad1 span img").click(function () {
+            $("#ad1").remove();
+        });
+    });
+</script>
+</div>
+</div><div class="module_item" style="width: 110px; height: 150px;" data-mid="CST.App.CustomizePage.Module.WechatRightModule" data-width="110" data-height="150">
+<div id="CSTAppCustomizePageModuleWechatRightModule"><div class="WechatRight" id="WechatRight" style="z-index: 10002;">
+    <div class="content2" style="position: fixed; top: 295px; right: 10px; width:110px; ">
+        <img src="%E7%A7%91%E6%9C%8D%E7%BD%91tten.cn%20-%20%E8%AE%A4%E5%AE%9A%E7%AE%A1%E7%90%86%E3%80%81%E7%BB%9F%E8%AE%A1%E7%9B%91%E6%B5%8B%E3%80%81%E7%A7%91%E6%8A%80%E6%9C%8D%E5%8A%A1%E4%BE%9B%E9%9C%80%E5%AF%B9%E6%8E%A5%E5%B9%B3%E5%8F%B0_files/WechatRight.jpg" alt="关注科服网" width="100%">
+    </div>
+</div>
+</div>
+</div><div class="module_item" style="width: 120px; height: 120px;" data-mid="CST.App.CustomizePage.Module.FloatingKefuModule" data-width="120" data-height="120">
+<div id="CSTAppCustomizePageModuleFloatingKefuModule"><script type="text/javascript" src="%E7%A7%91%E6%9C%8D%E7%BD%91tten.cn%20-%20%E8%AE%A4%E5%AE%9A%E7%AE%A1%E7%90%86%E3%80%81%E7%BB%9F%E8%AE%A1%E7%9B%91%E6%B5%8B%E3%80%81%E7%A7%91%E6%8A%80%E6%9C%8D%E5%8A%A1%E4%BE%9B%E9%9C%80%E5%AF%B9%E6%8E%A5%E5%B9%B3%E5%8F%B0_files/kf.htm"></script><script src="%E7%A7%91%E6%9C%8D%E7%BD%91tten.cn%20-%20%E8%AE%A4%E5%AE%9A%E7%AE%A1%E7%90%86%E3%80%81%E7%BB%9F%E8%AE%A1%E7%9B%91%E6%B5%8B%E3%80%81%E7%A7%91%E6%8A%80%E6%9C%8D%E5%8A%A1%E4%BE%9B%E9%9C%80%E5%AF%B9%E6%8E%A5%E5%B9%B3%E5%8F%B0_files/kf_ivt.htm" type="text/javascript" id="ivt_script"></script><script src="%E7%A7%91%E6%9C%8D%E7%BD%91tten.cn%20-%20%E8%AE%A4%E5%AE%9A%E7%AE%A1%E7%90%86%E3%80%81%E7%BB%9F%E8%AE%A1%E7%9B%91%E6%B5%8B%E3%80%81%E7%A7%91%E6%8A%80%E6%9C%8D%E5%8A%A1%E4%BE%9B%E9%9C%80%E5%AF%B9%E6%8E%A5%E5%B9%B3%E5%8F%B0_files/stat.htm" type="text/javascript" id="stat_script"></script><script language="javascript" src="%E7%A7%91%E6%9C%8D%E7%BD%91tten.cn%20-%20%E8%AE%A4%E5%AE%9A%E7%AE%A1%E7%90%86%E3%80%81%E7%BB%9F%E8%AE%A1%E7%9B%91%E6%B5%8B%E3%80%81%E7%A7%91%E6%8A%80%E6%9C%8D%E5%8A%A1%E4%BE%9B%E9%9C%80%E5%AF%B9%E6%8E%A5%E5%B9%B3%E5%8F%B0_files/gggj.htm"></script><script language="javascript" src="%E7%A7%91%E6%9C%8D%E7%BD%91tten.cn%20-%20%E8%AE%A4%E5%AE%9A%E7%AE%A1%E7%90%86%E3%80%81%E7%BB%9F%E8%AE%A1%E7%9B%91%E6%B5%8B%E3%80%81%E7%A7%91%E6%8A%80%E6%9C%8D%E5%8A%A1%E4%BE%9B%E9%9C%80%E5%AF%B9%E6%8E%A5%E5%B9%B3%E5%8F%B0_files/nav_prompt.htm"></script></div>
+</div></div></div>
+<div class="clear"></div></div>
+    </div><div id="hz6d_kf_icon_1" style="position: fixed; top: 180px; right: 10px;"><img src="%E7%A7%91%E6%9C%8D%E7%BD%91tten.cn%20-%20%E8%AE%A4%E5%AE%9A%E7%AE%A1%E7%90%86%E3%80%81%E7%BB%9F%E8%AE%A1%E7%9B%91%E6%B5%8B%E3%80%81%E7%A7%91%E6%8A%80%E6%9C%8D%E5%8A%A1%E4%BE%9B%E9%9C%80%E5%AF%B9%E6%8E%A5%E5%B9%B3%E5%8F%B0_files/v5_2.gif" onclick='setIsinvited();window.open("http://kefu2.tten.cn/new/client.php?arg=tjkf099f6118-bdba-488f-9b64-1f50ee13522d&amp;style=1&amp;l=zh-cn&amp;charset=GBK&amp;lytype=0&amp;referer=http%3A%2F%2Fwww.tten.cn%2F&amp;keyword=&amp;tfrom=1&amp;tpl=crystal_blue","_blank","height=573,width=803,top=200,left=200,status=yes,toolbar=no,menubar=no,resizable=yes,scrollbars=no,location=no,titlebar=no")' style="cursor:pointer" border="0"></div>
+ <div style="width: 100px; margin: 0 auto; margin-top:-15px; background-image:(url:'http://dcs.conac.cn/image/blue.png')">
+       <script type="text/javascript">           document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src='http://dcs.conac.cn/js/03/000/0000/60434032/CA030000000604340320004.js' type='text/javascript'%3E%3C/script%3E"));</script><span id="_ideConac"><a href="http://bszs.conac.cn/sitename?method=show&amp;id=0AE08D2CD63122F2E053022819ACD565" target="_blank"><img id="imgConac" src="%E7%A7%91%E6%9C%8D%E7%BD%91tten.cn%20-%20%E8%AE%A4%E5%AE%9A%E7%AE%A1%E7%90%86%E3%80%81%E7%BB%9F%E8%AE%A1%E7%9B%91%E6%B5%8B%E3%80%81%E7%A7%91%E6%8A%80%E6%9C%8D%E5%8A%A1%E4%BE%9B%E9%9C%80%E5%AF%B9%E6%8E%A5%E5%B9%B3%E5%8F%B0_files/blue.png" data-bd-imgshare-binded="1" border="0" hspace="0" vspace="0"></a></span><script src="%E7%A7%91%E6%9C%8D%E7%BD%91tten.cn%20-%20%E8%AE%A4%E5%AE%9A%E7%AE%A1%E7%90%86%E3%80%81%E7%BB%9F%E8%AE%A1%E7%9B%91%E6%B5%8B%E3%80%81%E7%A7%91%E6%8A%80%E6%9C%8D%E5%8A%A1%E4%BE%9B%E9%9C%80%E5%AF%B9%E6%8E%A5%E5%B9%B3%E5%8F%B0_files/CA030000000604340320004.js" type="text/javascript"></script><span id="_ideConac"></span>
+   </div>
+
+
+
+</body></html>
+<!-- 页面生成时间：10/16/2015 13:31:09 -->

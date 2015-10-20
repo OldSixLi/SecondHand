@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Jquery生成杂色</title>
+
+    <script src="../Scripts/jquery-1.11.1.min.js"></script>
+    <script>
+
+        $(function () {
+            var scrollheight = (getScrollTop() + 1000);//滚动条的高度+1000
+            $(".rootdiv").css("height", 1200);
+            var divindex = 144;
+            for (var i = 0; i < divindex; i++) {
+                var mm = i + 1;
+                $(".rootdiv").append("<div class='chiliddiv'><b>" + mm + "</b></div>");
+                //var color = indexcolor(i);
+                var color = suiji();
+                $(".rootdiv").find(".chiliddiv").eq(i).css("background-color", color);
+            }
+            //$(window).scroll(function() {
+            //滚动时执行的事件
+            //});
+            var backcolor = $(".chiliddiv").css("background-color");
+            $(".chiliddiv").append("<p>" + backcolor + "</p>");
+        });
+
+
+
+
+        var c = 0;
+        var t;
+        function timedCount() {
+            document.getElementById('txt').value = c;
+            c = c + 1;
+            t = setTimeout("timedCount()", 1000);
+        }
+        //获取滚动条的高度
+        function getScrollTop() {
+            var scrollTop = 0;
+            if (document.documentElement && document.documentElement.scrollTop) {
+                scrollTop = document.documentElement.scrollTop;
+            }
+            else if (document.body) {
+                scrollTop = document.body.scrollTop;
+            }
+            return scrollTop;
+        }
+        //生成颜色，根据i的值从#000000依次相加
+        function indexcolor(i) {
+            var num = 0;
+            num = i.toString().length;
+            var remindsnum = 6 - num;
+            var color = "";
+            for (var m = 0; m < remindsnum; m++) {
+                color += "0";
+            }
+            color = "#" + color + i.toString();
+            return color;
+        }
+        //获取随机颜色的方法，根据随机数，然后从-6位开始截取，生成随机颜色
+        function suiji() {
+            var a1 = ("00000" + ((Math.random() * 16777215 + 0.5) >> 0));
+            var a2 = a1.toString(16);
+            var a3 = a2.slice(-6);
+            return "#" + a3;
+
+        }
+    </script>
+    <style type="text/css">
+        .rootdiv {
+            width: 1200px;
+            height: 1200px;
+            overflow: hidden;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .roottab {
+        }
+
+        .chiliddiv {
+            float: left;
+            width: 100px;
+            height: 100px;
+        
+        }
+
+
+        .chiliddiv b {
+                font-size: 30px;
+            color: white;
+            font-family: Impact;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" id="btn" onclick="timedCount()" value="生成" />
+    <input type="text" id="txt">
+    <div class="rootdiv">
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+/* logo & 搜索功能CST.App.CustomizePage.Module.LogoAndSearchModule 样式 */
+#CSTAppCustomizePageModuleLogoAndSearchModule .top_b{width:980px; margin:0 auto; height:80px; text-align:center; overflow:hidden;} /*顶部LOGO部分样式*/
+#CSTAppCustomizePageModuleLogoAndSearchModule .top_bl{float:left; width:180px; padding-left:150px; height:41px; background:url(../images/logo.png) no-repeat; margin-top:20px; margin-left:10px;}/*LOGO*/
+#CSTAppCustomizePageModuleLogoAndSearchModule .top_bls{float:left; width:280px; padding-left:150px; height:41px; background:url(../images/logo.png) no-repeat; margin-top:20px; margin-left:10px;}/*LOGO*/
+#CSTAppCustomizePageModuleLogoAndSearchModule .top_br{float:right; width:442px; height:60px; margin-top:10px;}/*查找*/
+#CSTAppCustomizePageModuleLogoAndSearchModule #top_main0 ul{display: none;}/*tag选项卡为空*/
+#CSTAppCustomizePageModuleLogoAndSearchModule #top_main0 ul#top_block{display: block;}/*tag选项卡打开*/
+#CSTAppCustomizePageModuleLogoAndSearchModule .top_brt{display:block; height:30px;}
+#CSTAppCustomizePageModuleLogoAndSearchModule .top_brt li{display:block; float:left; width:50px; height:30px; line-height:30px; text-align:center; cursor:pointer;}
+#CSTAppCustomizePageModuleLogoAndSearchModule .top_brt li.top_hover{background:url(../images/top_hoverbg.gif) no-repeat; color:#F60;}
+#CSTAppCustomizePageModuleLogoAndSearchModule .top_brc{font-size:12px;}
+#CSTAppCustomizePageModuleLogoAndSearchModule .top_brc li{display:block; float:left; overflow:hidden;}
+#CSTAppCustomizePageModuleLogoAndSearchModule .top_search{width:375px; height:26px; line-height:26px; border-top:1px #d3d3d3 solid; border-bottom:1px #d3d3d3 solid; border-left:1px #d3d3d3 solid;}
+#CSTAppCustomizePageModuleLogoAndSearchModule .top_search_btn{width:67px; display:block; height:30px; background:url(../images/search_btn.gif) no-repeat; margin-top:1px;}
+#CSTAppCustomizePageModuleLogoAndSearchModule .top_brc li p{display:block; height:18px; margin-left:5px; overflow:hidden;}
+/*首页 导航条模块 CST.App.CustomizePage.Module.NavigationModule 样式 v1.0.4.1*/
+#CSTAppCustomizePageModuleNavigationModule .home_page_nav_div{width:980px; margin:0 auto; height:35px; background:url(../images/nav_bg.png) no-repeat; overflow:hidden;}
+#CSTAppCustomizePageModuleNavigationModule .home_page_nav_div ul{width:972px; display:block; margin:0 auto;}
+#CSTAppCustomizePageModuleNavigationModule .home_page_nav_div ul li{display:block; width:108px; height:35px; line-height:35px; float:left; text-align:center;}
+#CSTAppCustomizePageModuleNavigationModule .home_page_nav_div ul li:hover{background:url(../images/nav_bgh.png) no-repeat bottom center; cursor:pointer;}
+#CSTAppCustomizePageModuleNavigationModule .home_page_nav_div ul li a{font-family:"Microsoft YaHei"; color:#fff; font-weight:bold;}
+#CSTAppCustomizePageModuleNavigationModule .home_page_nav_div ul li a:hover{color:#fff; text-decoration:none; text-shadow:#09C 1px 3px 1px;}
+#CSTAppCustomizePageModuleGovermentServiceModule .module .module_body .module_ul li{
+    height: 21px;
+    line-height: 21px;
+}
+/*统计监测模块CST.App.CustomizePage.Module.StatismisticMonitorModule 样式 v1.0.4.1*/
+#CSTAppCustomizePageModuleStatismisticMonitorModule .same_concul01{border-bottom:1px #ddd solid; padding-left:10px; padding-bottom:10px; overflow:hidden;}/*统计监测第一级UL*/
+#CSTAppCustomizePageModuleStatismisticMonitorModule .same_concul02{padding-top:8px; overflow:hidden;}/*统计监测第二级UL*/
+#CSTAppCustomizePageModuleStatismisticMonitorModule .same_conc_f_s{display:block; width:224px; height:22px; background:url(../images/icon01.gif) left center no-repeat; line-height:18px; padding-left:14px;}
+#CSTAppCustomizePageModuleStatismisticMonitorModule .same_conc_f{display:block; width:224px; height:26px; background:url(../images/icon01.gif) left center no-repeat; line-height:24px; padding-left:14px;}
+#CSTAppCustomizePageModuleStatismisticMonitorModule .c_query{background-color: #FEF1F0; margin-bottom: 5px;}
+#CSTAppCustomizePageModuleStatismisticMonitorModule .c_query_span{font-size: 12px;}
+#CSTAppCustomizePageModuleStatismisticMonitorModule #txtCompanyName{height: 15px; width: 100px; margin-left: 5px;}/*查询文本框*/
+#CSTAppCustomizePageModuleStatismisticMonitorModule .c_query_img{ height: 15px; width: 17px; margin-left: 5px;} /*搜索图片样式*/
+#CSTAppCustomizePageModuleStatismisticMonitorModule .c_query_a{font-size: 12px; margin-left: 5px; font-weight: bold}
+#CSTAppCustomizePageModuleStatismisticMonitorModule .c_query_li{color:Red;}
+ .TechnologyServicetitle
+        {
+            background: url(../images/TechnologyService/Subject_Head.jpg) left center;
+            width: 220px;
+            height: 37px;
+            color: #1576c9;
+            font-weight: bold;
+            top: 100px;
+            line-height: 3;
+            padding-left: 16px;
+        }
+        .TechnologyServiceli
+        {
+            float: left;
+            background: url(../images/TechnologyService/Subject_Body.jpg) no-repeat;
+            text-align: center;
+            width: 96px;
+            height: 24px;
+            padding-right: 5px;
+            margin-left: 8px;
+            margin-bottom: 8px;
+            color: #fff;
+            font-weight: bold;
+            border: 1px solid #ffa500;
+            cursor: pointer;
+            line-height: 25px;
+        }
+/*科淘模块CST.App.CustomizePage.Module.KeTaoModule 样式 v1.0.4.1 */
+#CSTAppCustomizePageModuleKeTaoModule .font_cono{font-family:"Microsoft YaHei"; color:#ff4e00;font-size: 12px;}
+#CSTAppCustomizePageModuleKeTaoModule .same_concul03{border-bottom:1px #ddd solid; padding-bottom:4px; padding-top:10px; overflow:hidden;padding: 0px;}
+#CSTAppCustomizePageModuleKeTaoModule .same_conc_f{display:block; width:224px; height:28px; background:url(../images/icon01.gif) left center no-repeat; line-height:30px; padding-left:14px;}
+#CSTAppCustomizePageModuleKeTaoModule .same_concul04{width:228px; padding-bottom:10px; overflow:hidden;font-family:"Microsoft YaHei";font-size: 12px;}/*云服务第二级UL*/
+#CSTAppCustomizePageModuleKeTaoModule .same_concul04_li4{float:left; width:80px; height:25px; line-height:25px; text-align:left; padding-left:10px;}
+#CSTAppCustomizePageModuleKeTaoModule .same_concul04_li5{float:left; width:90px; height:25px; line-height:25px; text-align:left; padding-left:10px;}
+#CSTAppCustomizePageModuleKeTaoModule .same_concul04_li6{float:left; width:100px; height:25px; line-height:25px; text-align:left; padding-left:10px;}
+#CSTAppCustomizePageModuleKeTaoModule .same_concul04_li7{float:left; width:120px; height:25px; line-height:25px; text-align:left; padding-left:10px;}
+/*需求信息模块CST.App.CustomizePage.Module.TechnologyFinancialModule 样式 v1.0.4.1*/
+#CSTAppCustomizePageModuleTechnologyFinancialModule .font_confw{font-family:"Microsoft YaHei"; color:#fff; font-weight:bold;}
+#CSTAppCustomizePageModuleTechnologyFinancialModule .mct_mffb{margin-top: 3px; width:120px; height:25px;text-align: center; display:block; background:url(../images/mffb_btnbg.gif) no-repeat; line-height:24px;}
+#CSTAppCustomizePageModuleTechnologyFinancialModule .mct_mffb:hover{text-decoration:underline; color:#fff;cursor: pointer;}
+/*需求信息模块CST.App.CustomizePage.Module.ServiceProductModule 样式 v1.0.4.1*/
+#CSTAppCustomizePageModuleServiceProductModule .font_confw{font-family:"Microsoft YaHei"; color:#fff; font-weight:bold;}
+#CSTAppCustomizePageModuleServiceProductModule .mct_mffb{margin-top: 3px; width:120px; height:25px;text-align: center; display:block; background:url(../images/mffb_btnbg.gif) no-repeat; line-height:24px;}
+#CSTAppCustomizePageModuleServiceProductModule .mct_mffb:hover{text-decoration:underline; color:#fff;cursor: pointer;}
+/*网站底部CST.App.CustomizePage.Module.FooterModule 样式 v1.0.4.1*/
+#CSTAppCustomizePageModuleFooterModule .member{width:980px; height:36px; line-height:36px;}/*成员单位*/
+#CSTAppCustomizePageModuleFooterModule .member_t{width:114px; height:36px; text-align:center; line-height:36px; float:left;  background:url(../images/member_lbg.gif) no-repeat;}
+#CSTAppCustomizePageModuleFooterModule .member_c{width:866px; float:right; background:url(../images/member_rbg.gif) repeat-x;}
+#CSTAppCustomizePageModuleFooterModule .footer_margintop{margin-top:10px;}
+#CSTAppCustomizePageModuleFooterModule .member_c li{display:block; float:left; padding-left:5px; padding-right:5px; cursor:pointer; overflow:hidden; height:36px; line-height:36px; font-size:12px;}
+#CSTAppCustomizePageModuleFooterModule .li1{width: 50px; text-align: center} /*宽度为50的li标签*/
+#CSTAppCustomizePageModuleFooterModule .li2{width: 43px; text-align: center}/*宽度除50的li标签*/
+#CSTAppCustomizePageModuleFooterModule .footer{width:980px; margin:0 auto; text-align:center; font-size:12px;}/*底部声明*/
+#CSTAppCustomizePageModuleFooterModule .footer p{display:block; height:20px; line-height:20px; margin-top:5px;}
+/***********微信二维码-右侧固定***********/
+.WechatRight {
+    position: fixed;
+    top: 100px;
+    right: 50px;
+}

@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <style type="text/css">
+        body {
+            background-color: #444342;
+        }         .windimg {
+            position: absolute;
+            left: 500px;
+            top: 120px;
+            width: 360px;
+            height: 360px;
+            /*z-index: 2;*/
+        }             .windimg img {
+                max-width: 100%;
+                height: auto;
+                /*z-index: 3;*/
+            }         .windimg {
+            /*-moz-animation-name:myfirst;
+        -moz-animation-duration:1s;
+        -moz-animation-timing-function:linear;
+        -moz-animation-delay:10s;
+        -moz-animation-iteration-count:infinite;
+        -moz-animation-direction:alternate;
+        -moz-animation-play-state:running;*/
+            -webkit-backface-visibility: hidden;
+            -moz-backface-visibility: hidden;
+            -ms-backface-visibility: hidden;
+            backface-visibility: hidden;
+            -webkit-perspective: 1000;
+            -moz-perspective: 1000;
+            -ms-perspective: 1000;
+            perspective: 1000;
+            animation: myfirst 10s linear infinite;
+        }         @keyframes myfirst {
+            0% {
+                -webkit-transform: rotate(360deg);
+            }             25% {
+                -webkit-transform: rotate(270deg);
+            }             50% {
+                -webkit-transform: rotate(180deg);
+            }             75% {
+                -webkit-transform: rotate(90deg);
+            }             100% {
+                -webkit-transform: rotate(0deg);
+            }
+        }         @-moz-keyframes myfirst {
+            0% {
+                -moz-transform: rotate(0deg);
+            }             25% {
+                -moz-transform: rotate(90deg);
+            }             50% {
+                -moz-transform: rotate(180deg);
+            }             75% {
+                -moz-transform: rotate(270deg);
+            }             100% {
+                -moz-transform: rotate(360deg);
+            }
+        }         @-webkit-keyframes myfirst {
+        }         .border {
+            width: 0px;
+            height: 500px;
+            position: absolute;
+            left: 672px;
+            top: 300px;
+        }         .dsdsad {
+        }
+    </style>
+</head>
+<body>
+    <div class="windimg">         <img class="imgwin" src="Images/Windcar.png" />
+    </div>
+    <div class="border"></div>
+</body>
+</html>

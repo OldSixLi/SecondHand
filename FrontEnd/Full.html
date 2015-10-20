@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="CSS/jquery.fullPage.css" rel="stylesheet" />
+    <script src="Script/Full/jquery-1.8.3.min.js"></script>
+    <script src="Script/Full/jquery.fullPage.min.js"></script>
+    <title></title>
+
+    <script type="text/javascript">
+
+
+
+
+    </script>
+
+    <script>
+
+        //平台、设备和操作系统
+
+        var system = {
+
+            win: false,
+
+            mac: false,
+
+            xll: false
+
+        };
+
+        //检测平台
+        function ComOrPho() {
+            var p = navigator.platform;
+
+            //alert(p);
+
+            system.win = p.indexOf("Win") == 0;
+
+            system.mac = p.indexOf("Mac") == 0;
+
+            system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);
+
+            //跳转语句
+            var height = window.innerHeight;
+            var width = window.innerWidth;
+            var outheight = window.height;
+            var outwidth = window.width;
+            if (system.win || system.mac || system.xll) {//转向后台登陆页面
+                rootheight = height;
+                rootwidth = height * 11 / 19;
+                $(".root").css("width", rootwidth);
+                $(".root").css("height", rootheight);
+                //alert("电脑");
+            } else {
+            
+                //alert("内宽:" + width + "\r\n外宽:" + outwidth);
+                //alert("内高:" + height + "\r\n外高:" + outheight);
+                rootwidth = width;
+                rootheight = width * 19 / 11;
+                if (rootheight >= height) {
+                    alert(rootheight + "\r\n" + height);
+                    $(".root").css("height", "auto");
+                } else {
+                    $(".root").css("width", rootwidth);
+                    $(".root").css("height", rootheight);
+                }
+               
+            }
+        }
+      
+     
+
+
+
+        $(function () {
+            ComOrPho();
+            //onchange();
+            //window.onresize = function () { onchange(); };
+
+            function onchange() {
+                var height = window.innerHeight;
+                var width = window.innerWidth;
+                //alert("height:" + height + "\r\nWidth:" + width);
+                if (width * 19 > height * 11) {
+                    var rootheight = 0;
+                    var rootwidth = 0;
+
+                    rootheight = height;
+                    rootwidth = height * 11 / 19;
+                }
+
+                else if (width * 19 < height * 11) {
+                    rootwidth = width;
+                    rootheight = width * 19 / 11;
+                } else {
+                    rootwidth = width;
+                    rootheight = height;
+                }
+                $(".root").css("width", rootwidth);
+                $(".root").css("height", rootheight);
+            }
+        });
+    </script>
+    <style type="text/css">
+        .root {
+            /*max-width: 550px;*/
+            /*height: auto;*/
+            margin-left: auto;
+            margin-right: auto;
+       
+        }
+
+        * {
+            font: 16px/1.8 "Microsoft Yahei",verdana;
+        }
+
+        .div1 {
+            background: url('Image/phone/1.jpg') no-repeat;
+            background-size: 100% 100%;
+        }
+
+
+
+        .div2 {
+            background: url('Image/phone/2.jpg') no-repeat;
+            background-size: 100% 100%;
+        }
+
+        .div3 {
+            background: url('Image/phone/3.jpg') no-repeat;
+            background-size: 100% 100%;
+        }
+
+        .div4 {
+            background: url('Image/phone/4.jpg') no-repeat;
+            background-size: 100% 100%;
+        }
+
+        .div5 {
+            background: url('Image/phone/5.jpg') no-repeat;
+            background-size: 100% 100%;
+        }
+
+        .div6 {
+            background: url('Image/phone/6.jpg') no-repeat;
+            background-size: 100% 100%;
+        }
+
+        .slide1 {
+            background: url('Image/phone/7.jpg') no-repeat;
+            background-size: 100% 100%;
+        }
+
+        .slide2 {
+            background: url('Image/phone/8.jpg') no-repeat;
+            background-size: 100% 100%;
+        }
+
+        .slide3 {
+            background: url('Image/phone/9.jpg') no-repeat;
+            background-size: 100% 100%;
+        }
+    </style>
+    <script>
+        $(function () {
+            $('#dowebok').fullpage({
+                verticalCentered: true,
+                anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6'],
+                navigation: true
+            }
+            );
+        });
+    </script>
+</head>
+<body>
+    <div id="dowebok" class="root">
+        <div class="section div1">
+
+        </div>
+        <div class="section div2">
+            
+        </div>
+        <div class="section div3">
+
+        </div>
+        <div class="section div4">
+            <div class="fp-slide slide1"></div>
+            <div class="fp-slide slide2"></div>
+            <div class="fp-slide slide3"></div>
+            <div class="fp-slide"></div>
+            <div class="fp-slide"></div>
+        </div>
+        <div class="section div5">
+
+        </div>
+        <div class="section div6">
+
+        </div>
+    </div>
+</body>
+</html>

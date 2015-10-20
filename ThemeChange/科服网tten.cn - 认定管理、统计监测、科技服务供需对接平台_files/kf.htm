@@ -1,0 +1,234 @@
+	function hz6d$(id)
+	{
+		return document.getElementById(id) ? document.getElementById(id) : null;
+	}var kf_success=1; var kftype=2;	// 获取cookie值 
+
+	function hz6d_getCookie(name)
+	{
+		var offset = document.cookie.indexOf(name + "=");
+		if (offset != -1)
+		{
+			offset += name.length + 1;
+			var end = document.cookie.indexOf(";", offset);
+			if (end == -1)
+			{
+				end = document.cookie.length;
+			}
+			return document.cookie.substring(offset, end);
+		}
+		else
+		{
+			return "";
+		}
+	}
+	var hz6d_from_page = hz6d_getCookie("53kf_"+"70722660"+"_"+"{hz6d_keyword}");
+	if (hz6d_from_page == "")
+	{
+		hz6d_from_page = document.referrer;
+		document.cookie = "53kf_"+"70722660"+"_"+"{hz6d_keyword}"+"=" + hz6d_from_page;
+	}
+	var hz6d_up_referrer = document.referrer;
+	document.cookie = "53kf_up_referrer=" + hz6d_up_referrer;
+	hz6d_from_page = "&keyword=" + escape(hz6d_from_page);
+	hz6d_up_referrer = "&keyword1=" + escape(hz6d_up_referrer);
+	function hz6d_html_replace(html)
+	{
+		var pattern = /{hz6d_keyword}/gim;
+		var str = hz6d_from_page + "&tfrom=1";
+		var hz6d_html = html.replace(pattern, str);
+		return hz6d_html;
+	}	// has defined <!DOCTYPE... > 
+
+	function hasdoctype()
+  {
+		if (document.compatMode == "BackCompat")
+		{
+			ret = false;
+		}
+		else
+		{
+			ret = true;
+		}
+    return ret;
+	}
+	// ie8 =  IE8_Partner_Build [2008-12-11] 
+
+	function detectBrowser()
+	{
+		var ret = "ie6"; // default
+		var user_agent = navigator.userAgent;
+		if (user_agent.indexOf("compatible") > -1)
+		{
+			if (user_agent.indexOf("MSIE 6.0") > -1)
+			{
+				ret = "ie6";
+			}
+			else if (user_agent.indexOf("MSIE 7.0") > -1)
+			{
+				ret = "ie7";
+			}
+			else if (user_agent.indexOf("MSIE 8.0") > -1)
+			{
+				ret = "ie8";
+			}
+			if (user_agent.indexOf("360") > -1)
+			{
+				ret = "360";
+			}
+		}
+		else if (user_agent.indexOf("Gecko") > -1)
+		{
+			ret = "firefox";
+		}
+		if ("" == "TheWorld")
+		{
+			ret = "TheWorld";
+		}
+		return ret;
+	}
+	// 间距小于步进，则移动间距的距离 
+
+	function smoothMove(start, end)
+	{
+		var step = Math.abs(end - start);
+		var forword = end - start;
+		if (step > 2)
+		{
+			step = Math.ceil(step * 0.2) * (forword / Math.abs(forword));
+		}
+		else
+		{
+			step = step * (forword / Math.abs(forword));
+		}
+		posi = start + step;
+		if (step > 0)
+		{
+			if (posi > end) posi = end;
+		}
+		else
+		{
+			if (posi < end) posi = end;
+		}
+		return posi;
+	}
+	var hasdoctype = hasdoctype();
+	var browser = detectBrowser();
+	var unique_id='';
+	var unique_name="";
+	if(!unique_id){
+		unique_id=getCookie2('unique_id');
+	}
+	if(!unique_name){
+		unique_name=getCookie2('myname');
+	}
+	function getCookie2(name)
+	{
+		var search = name+"=";
+		if(document.cookie.length>0)
+		{
+			offset = document.cookie.indexOf(search);
+			if(offset!=-1)
+			{
+				offset += search.length;
+				end = document.cookie.indexOf(";", offset);
+				if(end==-1)
+				{
+					end = document.cookie.length;
+				}
+				return unescape(document.cookie.substring(offset, end));
+			}	
+		}
+		return "";
+	}
+	// 点击图标设置变量 
+
+	function setIsinvited()
+	{
+		try
+		{
+			onliner_zdfq = 2;
+			if (acc_autotype == 3)
+			{
+				document.cookie = "onliner_zdfq70722660=" + onliner_zdfq;
+			}
+		}
+		catch (e)
+		{}
+	}
+	var onliner_zdfq = hz6d_getCookie("onliner_zdfq70722660"); // onliner_zdfq: 0.初始值 2.点击接受 3.点击拒绝 
+	if (onliner_zdfq == "")
+	{
+		onliner_zdfq = 0;
+		document.cookie = "onliner_zdfq70722660=" + onliner_zdfq;
+	}
+	var hz6d_kf_type = 2;
+	var hz6d_pos_model = 3;
+	var hz6d_hidden = 0;
+	var hz6d_close_icon = 0;
+	// 加载ivt.php，即中间的接受邀请层 
+	if (!hz6d$("ivt_script"))
+		var screen_resolution=window.screen.width+"*"+window.screen.height;
+		document.write("<scr"+"ipt src='http://kefu2.tten.cn/kf_ivt.php?guest_id=1234461027&browse_type=老客户&unique_name="+unique_name+"&unique_id="+unique_id+"&screen_resolution="+screen_resolution+"&arg=tjkf099f6118-bdba-488f-9b64-1f50ee13522d&style=1&isonline=1&kfonline=1&lang=zh-cn&resize=yes&charset=GBK&referer=http%3A%2F%2Fwww.tten.cn%2F"+hz6d_from_page+"&lytype=0&tpl_name=crystal_blue&tpl_width=803&tpl_height=573' type='text/javascript' id='ivt_script'></scr"+"ipt>");		if (typeof(kf_icon_id) == "undefined")
+		{
+			kf_icon_id = 1;
+		}
+		else
+		{
+			kf_icon_id++;
+		}
+
+		function hz6d_createFixedDiv(html)
+		{
+			var div = document.createElement("div");
+			div.style.position = "fixed";
+			if (!hasdoctype) div.style.position = "absolute";
+			div.id = "hz6d_kf_icon_" + kf_icon_id;
+			if (1 == 1)
+			{
+				div.style.top = "180" + "px";
+			}
+			else
+			{
+				div.style.bottom = "180" + "px";
+			}
+			if (2 == 1)
+			{
+				div.style.left = "10" + "px";
+			}
+			else
+			{
+				div.style.right = "10" + "px";
+			}
+			div.innerHTML = html + hz6d_closeIcon(kf_icon_id);
+			try
+			{
+				document.getElementsByTagName("body")[0].appendChild(div);
+			}
+			catch (e)
+			{
+				setTimeout(function ()
+				{
+					hz6d_createFixedDiv(html);
+				}, 500);
+			}
+		}
+
+		function hz6d_closeIcon(kf_icon_id)
+		{
+			var str_onmove = "";
+			if (2 == 1 && ('blue' == "new_blue" || 'blue' == "new_red" || 'blue' == "new_yellow" || 'blue' == "new_green"))
+			{
+				str_onmove = "onmousemove='this.src=\"http://kefu2.tten.cn/img/kflist/list_close_move.gif\"' onmouseout='this.src=\"http://kefu2.tten.cn/img/kflogo/close.gif\"'";
+			}
+			if (0 == 1 || 70722660 == 600603 || 70722660 == 61393572 || 70722660 == 1413303 || 70722660 == 61389920 || 70722660 == 61420906 || 70722660 == 61578368)
+			{
+				if (2 == 1)
+				{
+					return "<img onclick='hz6d$(\"hz6d_kf_icon_" + kf_icon_id + "\").style.display=\"none\"' style='position:absolute; right:0px;top:0px; cursor:pointer;' src='http://kefu2.tten.cn/img/kflogo/close.gif' " + str_onmove + " />";
+				}
+				return "<img onclick='hz6d$(\"hz6d_kf_icon_" + kf_icon_id + "\").style.display=\"none\"' style='position:absolute; right:0px;top:0px; cursor:pointer;' src='http://kefu2.tten.cn/img/kflogo/close.gif' />";
+			}
+			return "";
+		}hz6d_con_img=hz6d_html_replace("<img src='http://kefu2.tten.cn/img/kflogo/v5_2.gif' border='0' onclick='setIsinvited();window.open(\"http://kefu2.tten.cn/new/client.php?arg=tjkf099f6118-bdba-488f-9b64-1f50ee13522d&style=1&l=zh-cn&charset=GBK&lytype=0&referer=http%3A%2F%2Fwww.tten.cn%2F{hz6d_keyword}&tpl=crystal_blue\",\"_blank\",\"height=573,width=803,top=200,left=200,status=yes,toolbar=no,menubar=no,resizable=yes,scrollbars=no,location=no,titlebar=no\")' style='cursor:pointer'/>");hz6d_con_img=hz6d_html_replace("<img src='http://kefu2.tten.cn/img/kflogo/v5_2.gif' border='0' onclick='setIsinvited();window.open(\"http://kefu2.tten.cn/new/client.php?arg=tjkf099f6118-bdba-488f-9b64-1f50ee13522d&style=1&l=zh-cn&charset=GBK&lytype=0&referer=http%3A%2F%2Fwww.tten.cn%2F{hz6d_keyword}&tpl=crystal_blue\",\"_blank\",\"height=573,width=803,top=200,left=200,status=yes,toolbar=no,menubar=no,resizable=yes,scrollbars=no,location=no,titlebar=no\")' style='cursor:pointer'/>");hz6d_createFixedDiv(hz6d_con_img);		var screen_resolution=window.screen.width+"*"+window.screen.height;
+	if (!hz6d$("stat_script"))
+		document.write("<scr"+"ipt src='http://kefu2.tten.cn/stat.php?com_id=70722660&referer=http%3A%2F%2Fwww.tten.cn%2F"+hz6d_from_page+"' type='text/javascript' id='stat_script'></scr"+"ipt>");document.write("<scr"+"ipt language=\"javascript\" src=\"http://yingxiao2.53kf.com/gggj.php?arg=tjkf099f6118-bdba-488f-9b64-1f50ee13522d&referer=http%3A%2F%2Fwww.tten.cn%2F\"></scr"+"ipt>");document.write("<scr"+"ipt language=\"javascript\" src=\"http://hlm.53kf.com/nav_prompt.php?arg=tjkf099f6118-bdba-488f-9b64-1f50ee13522d&charset=GBK\"></scr"+"ipt>");

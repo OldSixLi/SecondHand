@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <script src="../Scripts/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("a").click(function () {
+                $("#layer").show();
+            });
+            $("#Check").click(function () {
+                var password = $("#pass").val();
+                if (password == '123') {
+                    $("#layer").hide();
+                    alert('输入正确');
+                } else {
+                    $("#layer").hide();
+                    $("#pass").val("");
+                    alert('密码输入错误');
+                    $("#layer").show();
+                }             });
+        })
+    </script>
+</head>
+<body>
+    <div style="position: relative; width: 400px; height: 30px;">
+        <a href="javascript:void(0);">下载</a>
+    </div>
+    <div id="layer" style="position: absolute; display:none; top: 300px; left: 50%; margin-left: -150px; width: 300px;
+        height: 50px; border: 1px solid #999;">
+        密码：<input type="password" id="pass" />
+        <input type="button" id="Check" value="确定" />
+    </div>
+</body>
+</html>

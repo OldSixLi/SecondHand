@@ -1,0 +1,322 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>毕设注意事项</title>
+    <script src="Scripts/jquery-1.11.1.min.js"></script>
+    <link href="style/bootstrap.css" rel="stylesheet" />
+    <script src="Scripts/bootstrap.min.js"></script>
+    <style>
+        * {
+            font-family: Microsoft YaHei;
+            font-size: 15px;
+        }
+         pre {
+            color: #c7254e;
+            font-size: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container col-lg-10 col-lg-offset-1">
+        <ul class=" nav nav-tabs " role="tabits">
+            <li role="presentation" class="active">
+                <a href="#tab1" data-toggle="tab" style="font-size: 20px; outline: none;">注意事项</a>
+            </li>
+            <li role="presentation">
+                <a href="#tab2" data-toggle="tab" style="font-size: 20px; outline: none;">数据库语句</a>
+            </li>
+            <li role="presentation">
+                <a href="#tab3" data-toggle="tab" style="font-size: 20px;outline: none;">技巧</a>
+            </li>
+            <li role="presentation">
+                <a href="#tab4" data-toggle="tab" style="font-size: 20px;outline: none;">实现功能</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <!--注意事项-->
+            <div class="tab-pane active" id="tab1">
+                <p class="text-center" style="color:red;font-size: 205px;z-index: -1;position:absolute;left: 0;top:300px; -ms-opacity: 0.3; opacity: 0.3;">WARNING!</p>
+                <br />
+                <div class="alert alert-warning" role="alert">   1.后台代码弹出对话框尽量避免使用script，引起页面混乱</div>
+                <div class="alert alert-warning" role="alert">   2.GoodsDetail的left join 以及显示列表时到底根据哪个显示</div>
+                <div class="alert alert-warning" role="alert">
+                    3. dropdownlist的autopostback属性设置为true，才会返回服务器端
+                </div>
+             </div>
+            <!--数据库语句-->
+            <div class="tab-pane" id="tab2">
+                <h1>二手网数据库语句</h1>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">1.  插入UserInfo具体信息 </h3>
+                    </div>
+                    <div class="panel-body">
+                        <code>
+                            insert into UserInfo values(1008,'李二','男','1234567777','1136191854@qq.com','2222456','846588426')
+                        </code>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">2.  两次排序 </h3>
+                    </div>
+                    <div class="panel-body">
+                         <code>
+                            select * from(SELECT TOP 1000 [UserID],[UserName],[RegTime],[Sex],[ContentNum],[Email]
+                            ,[PhoneNum],[QQ],[UserIcon]FROM [SecondHand].[dbo].[UserInfo] order by RegTime desc) t order by UserID desc
+                        </code>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">3.  获取时间，精确到秒 </h3>
+                    </div>
+                    <div class="panel-body">
+                        <code>
+                            insert into  [SecondHand].[dbo].[AllGoods] values(1017,'问问','考研资料',convert(char,getdate(),120));
+                        </code>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">4.  数据库翻页 </h3>
+                    </div>
+                    <div class="panel-body">
+                         <pre> @TableNames varchar(2000), --表名(支持多表)
+@FieldStr varchar(4000), --字段名(全部字段为*)
+@SqlWhere varchar(4000), --条件语句(不用加where)
+@OrderBy varchar(4000), --排序字段(必须!支持多字段，不用加Order By)
+@Sort        bit = 0,        ----排序方法，0为升序，1为降序(如果是多字段排列Sort指代最后一个排序字段的排列顺序(最后一个排序字段不加排序标记)--程序传参如：' SortA Asc,SortB Desc,SortC ')
+@PageSize int, --每页多少条记录
+@PageIndex int, --指定当前为第几页
+@TotalPage int output, --返回总页数
+@TotalRecord int output --返回总条数
+--with encryption --加密时使用
+As
+Begin
+-- Begin Transaction
+If @SqlWhere = '无'
+set @SqlWhere = null
+Declare @Sql nvarchar(max)
+Declare @strFSortType nvarchar(10)    ----数据排序规则
+if @Sort=0
+begin
+set @strFSortType=' ASC '
+end
+else
+begin
+set @strFSortType=' DESC '
+end
+--计算总记录数
+set @Sql = 'select @TotalRecord = count(*) from ' + @TableNames
+If (@SqlWhere !='' or @SqlWhere is not NULL)
+set @Sql = @Sql + ' where ' + @SqlWhere
+print @Sql
+Exec sp_executesql @Sql,N'@TotalRecord int output',@TotalRecord output --计算总记录数
+--计算总页数
+set @TotalPage=CEILING((@TotalRecord+0.0)/@PageSize)
+--处理页数超出范围情况
+if @PageIndex <= 0
+Set @PageIndex = 1
+if @PageIndex > @TotalPage
+Set @PageIndex = @TotalPage
+--处理开始点和结束点
+Declare @StartRecord int
+Declare @EndRecord int
+set @StartRecord = (@pageIndex-1)*@PageSize + 1
+set @EndRecord = @StartRecord + @PageSize - 1
+--合成sql条件
+Declare @TempStr varchar(4000)
+If (@SqlWhere != '' or @SqlWhere is not NULL)
+set @TempStr = ' where ' + @SqlWhere
+--如果是第一页
+If (@PageIndex = 1)
+Begin
+set @Sql = 'select top ' + Convert(varchar(50),@PageSize) + ' row_number() over(order by ' + @OrderBy + @strFSortType +') as rowId,' + @FieldStr + ' from ' + @TableNames
+If (@TempStr !='' or @TempStr is not NULL)
+set @Sql = @Sql + ' ' + @TempStr
+End
+Else
+Begin
+set @Sql = 'select row_number() over(order by ' + @OrderBy + @strFSortType + ') as rowId,' + @FieldStr + ' from ' + @TableNames
+If (@TempStr !='' or @TempStr is not NULL)
+set @Sql = @Sql + ' ' + @TempStr
+set @Sql = 'Select * from (' + @Sql + ') as TempTable where rowId between ' + Convert(varchar(50),@StartRecord) + ' and ' + Convert(varchar(50),@EndRecord)
+End
+--执行查询
+print(@Sql)
+Exec(@Sql)
+End
+             </pre>
+                     </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">4.数据库一张临时表数据插入表中   </h3>
+                    </div>
+                    <div class="panel-body">
+                        <code>
+                             insert into table1(uname,address,school)
+                            <br />select name,address,'北京大学'
+                            <br />from table2
+                            <br />  --其中'北京大学'为固定列，对应school
+                        </code>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">4.删除前100行数据   </h3>
+                    </div>
+                    <div class="panel-body">
+                        <code>
+                             with cte as(select top 100* from CompanyIdentifiedInfoTechnologys )
+                            <br />     delete from cte
+                        </code>
+                    </div>
+                </div>
+                 <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">5.选择最大时间,获取不重复的goodsid  ,获取用户收藏的物品,不带重复的  </h3>
+                    </div>
+                    <div class="panel-body">
+                        <code>
+                             select goodsid,max(savetime) as time from (select  userid,goodsid, savetime  from  saves where userid='1008') a group by goodsid
+                        </code>
+                    </div>
+                </div>
+            </div>
+            <!--技巧-->
+            <div class="tab-pane" id="tab3">
+                <h1>   技巧方法</h1>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">1.导航栏 IE透明 </h3>
+                    </div>
+                    <div class="panel-body">
+                        <pre>.transparent {
+background:rgba(255, 255, 255, 0)!important;
+-webkit-filter:Alpha(opacity=0);
+-moz-filter:Alpha(opacity=0);
+-o-filter:Alpha(opacity=0);
+filter:Alpha(opacity=0); background:#fff; /*　使用IE专属滤镜实现IE背景透明*/
+}
+#panelunregist{
+position:relative;
+}
+                        </pre>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">2..jumbotron 渐变色 </h3>
+                    </div>
+                    <div class="panel-body">
+                         <pre> .jumbotron {
+ font-family: Microsoft YaHei;
+ /*background: #f06;
+ background: linear-gradient(8deg, #006666, #00CC99);
+ min-height: 100%;
+ color: white;*/
+ }
+                        </pre>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">3.const变量</h3>
+                    </div>
+                    <div class="panel-body">
+                        使用 const 关键字来声明某个常量字段或常量局部变量。  常量字段和常量局部变量不是变量并且不能修改。
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">4. Repeater前台数据过长裁剪并且进行提示</h3>
+                    </div>
+                    <div class="panel-body">
+                        <pre> &lt;itemtemplate&gt;
+&lt;asp:LinkButton ID="lblQsn" runat="server" ToolTip='&lt;%# Eval("Question")%&gt;' CommandArgument='&lt;%#Eval("Id")%&gt;'
+OnCommand="lblQsn_Click"&gt;
+&lt;span&gt;&lt;%# Eval("Question").ToString().Length&gt;6?Eval("Question").ToString().Substring(0,6)+"..":Eval("Question").ToString()%&gt;&lt;/span&gt;
+&lt;/asp:LinkButton&gt;
+&lt;br /&gt;
+&lt;/itemtemplate&gt;  </pre>
+                    </div>
+                </div>
+                 <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">5.hr设置方法</h3>
+                    </div>
+                    <div class="panel-body">
+                        &lt;      hr style="border: 1px solid;  color: #003366; margin-top: 0;" /&gt;
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">6.输入框只能输入小数点数字</h3>
+                    </div>
+                    <div class="panel-body">
+                        &lt; onkeyup="value=value.replace(/[^\d.]/g,'')" /&gt;
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">7.后台判断Email是否有效</h3>
+                    </div>
+                    <div class="panel-body">
+                        bool IsValidEmail(string strIn)<br />
+                        {<br />
+                        // Return true if strIn is in valid e-mail format.
+                        <br />   return Regex.IsMatch(strIn, @"^([/w-/.]+)@((/[[0-9]{1,3}/.[0-9]{1,3}/.[0-9]{1,3}/.)|(([/w-]+/.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(/]?)$");
+                        <br />  }
+                    </div>
+                </div>
+            </div>
+            <!--实现功能-->
+            <div class="tab-pane" id="tab4">
+                <br/>
+                <div class="alert alert-warning" role="alert">
+                    <del>  1.注册框数据不合法div加入has warning类</del>
+                </div>
+                <div class="alert alert-warning" role="alert">
+                    <del> 2.登陆时用户名密码不得为空</del>
+                </div>
+                <div class="alert alert-warning" role="alert">
+                    <del>  3.注册时用户名不得超过12位</del>
+                </div>
+                <div class="alert alert-warning" role="alert">
+                    <del>    4.数据翻页</del>
+                </div>
+                <div class="alert alert-warning" role="alert">
+                    <del> 5.   前台各种数据校验</del>
+                </div>
+                <div class="alert alert-warning" role="alert">
+                    <del>     6.后台管理模块页面以及设计</del>
+                </div><div class="alert alert-warning" role="alert">
+                          <del> 7.数据库存储图品路径以及页面上传文件</del>
+                      </div><div class="alert alert-warning" role="alert">
+                                <del>8.数据库读取文件路径问题</del>
+                            </div><div class="alert alert-warning" role="alert">
+                                      <del>9.用户头像上传以及读取使用问题</del>
+                                  </div><div class="alert alert-warning" role="alert">
+                                            <del>10.用户评论功能数据表</del>
+                                        </div>
+                <div class="alert alert-warning" role="alert">
+                    <del>11.下拉列表每页显示条数，后台管理页面中</del>
+                </div>
+                <div class="alert alert-warning" role="alert">
+                    12.后台管理功能，
+                    其中添加评论管理页面以及物品编辑页面
+                </div>
+                <div class="alert alert-warning" role="alert">
+                    <del>13.翻页整成首页和尾页</del>
+                </div>
+                <div class="alert alert-warning" role="alert">
+                    14.我的收藏页面
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
