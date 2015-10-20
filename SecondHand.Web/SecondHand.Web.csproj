@@ -74,6 +74,7 @@
     <Content Include="Images\GoodsImg\8.png" />
     <Content Include="Images\headkefu.jpg" />
     <Content Include="Images\helped.png" />
+    <Content Include="Images\logo.png" />
     <Content Include="Images\sunset.jpg" />
     <Content Include="Images\Windcar.png" />
     <Content Include="ModalTest.html" />

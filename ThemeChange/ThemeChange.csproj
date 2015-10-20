@@ -66,8 +66,20 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Themes\Admin\admin.css" />
+    <Content Include="App_Themes\Bootstrap\bootstrap-theme.css" />
     <Content Include="App_Themes\Bootstrap\bootstrap.css" />
+    <Content Include="App_Themes\Bootstrap\bootstrap.min.3.32.css" />
+    <Content Include="App_Themes\Bootstrap\bootstrap.min.js" />
+    <Content Include="App_Themes\Bootstrap\jquery-1.11.1.min.js" />
+    <Content Include="App_Themes\Bootstrap\jquery-1.8.2.min.js" />
     <Content Include="Global.asax" />
+    <Content Include="Images\0.jpg" />
+    <Content Include="Images\1.jpg" />
+    <Content Include="Images\2.jpg" />
+    <Content Include="Images\header.png" />
+    <Content Include="Images\icon01.gif" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\ZhongChuang.jpg" />
     <Content Include="ThemeTest.aspx" />
     <Content Include="ThemeUpload.aspx" />
     <Content Include="Web.config" />
