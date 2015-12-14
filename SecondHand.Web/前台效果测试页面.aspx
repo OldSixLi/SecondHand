@@ -1,5 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="前台效果测试页面.aspx.cs" Inherits="SecondHand.Web.前台效果测试页面" %>
- <!DOCTYPE html>
+
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -14,59 +15,61 @@
         a {
             color: #008b8b;
         }
-         .pp {
+
+        .pp {
             margin: 5px 2px;
         }
-         .spanleft {
+
+        .spanleft {
             margin-left: -6px;
         }
-         .thumbnail .caption {
+
+        .thumbnail .caption {
             color: #333;
             padding: 0px;
         }
-         .glyphicon-yen {
+
+        .glyphicon-yen {
             font-size: 17px;
         }
-         .label {
+
+        .label {
             padding: 0 0.2em 0.2em;
         }
-    </style>     
+    </style>
     <script>
         function aclick() {
-            window.location.href = "Images/1.xlsx" ;
+            window.location.href = "Images/1.xlsx";
         }
     </script>
 </head>
 <body>
     <form id="form1" runat="server">
         <div id="myCarousel" class="carousel slide">
-   <!-- 轮播（Carousel）指标 -->
-   <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-   </ol>  
-   <!-- 轮播（Carousel）项目 -->
-   <div class="carousel-inner">
-      <div class="item active">
-          <img src="Images/headkefu.jpg" />
-                
-      </div>
-      <div class="item">
-               <img src="Images/headkefu.jpg" />
-
-      </div>
-      <div class="item">
-                <img src="Images/headkefu.jpg" />
-
-      </div>
-   </div>
-   <!-- 轮播（Carousel）导航 -->
-   <a class="carousel-control left" href="#myCarousel"
-      data-slide="prev">&lsaquo;</a>
-   <a class="carousel-control right" href="#myCarousel"
-      data-slide="next">&rsaquo;</a>
-</div>                          
+            <!-- 轮播（Carousel）指标 -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <!-- 轮播（Carousel）项目 -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="Images/headkefu.jpg" />
+                </div>
+                <div class="item">
+                    <img src="Images/headkefu.jpg" />
+                </div>
+                <div class="item">
+                    <img src="Images/headkefu.jpg" />
+                </div>
+            </div>
+            <!-- 轮播（Carousel）导航 -->
+            <a class="carousel-control left" href="#myCarousel"
+                data-slide="prev">&lsaquo;</a>
+            <a class="carousel-control right" href="#myCarousel"
+                data-slide="next">&rsaquo;</a>
+        </div>
         <div class="hidden">
             <div class="col-lg-3 col-md-4 col-sm-6">
                 <div class="thumbnail">
@@ -192,11 +195,11 @@
         <div class=" col-lg-12 jumbotron ">
             <div class="col-lg-10 col-lg-offset-1">
                 <h1>Test</h1>
-                <a class="btn btn-danger">测试按钮</a>  
-                 <a id="link"onclick="saveImage.document.execCommand('saveAs');">sdfsdfs</a>         
-                 <%--<a id="photo" onclick="aclick()" >图片</a>--%>
-                 <iframe  height="0" width="0" src="Images/1.xlsx" name="saveImage" id="saveImage"></iframe> 
-<a href="###" onclick="saveImage.document.execCommand('saveAs');">Click Me</a> 
+                <a class="btn btn-danger">测试按钮</a>
+                <a id="link" onclick="saveImage.document.execCommand('saveAs');">sdfsdfs</a>
+                <%--<a id="photo" onclick="aclick()" >图片</a>--%>
+                <iframe height="0" width="0" src="Images/1.xlsx" name="saveImage" id="saveImage"></iframe>
+                <a href="###" onclick="saveImage.document.execCommand('saveAs');">Click Me</a>
             </div>
         </div>
         <div class="col-lg-10 col-lg-offset-1 hidden">
@@ -506,6 +509,44 @@
         <h1>ni </h1>
         <h1>ni </h1>
         <h1>ni </h1>
+        <ul id="ewq" class="nav nav-tabs" >
+            <li role="presentation" class="active"><a href="#tab1" data-toggle="tab">工作动态</a></li>
+            <li role="presentation"><a href="#tab2" data-toggle="tab">通知公告</a></li>
+            <li role="presentation"><a href="#tab3" data-toggle="tab">工作简报</a></li>
+        </ul>
+        <div class=" tab-content">
+            <div class="tab-pane  active" id="tab1">1</div>
+            <div class="tab-pane  " id="tab2">2</div>
+            <div class="tab-pane  " id="tab3">6</div>
+        </div>
+        <ul id="myTab" class="nav nav-tabs">
+            <li class="active"><a href="#home" data-toggle="tab">Tutorial Point Home</a>
+            </li>
+            <li><a href="#ios" data-toggle="tab">iOS</a></li>
+
+        </ul>
+        <div id="myTabContent" class="tab-content">
+            <div class="tab-pane fade in active" id="home">
+                <p>
+                    Tutorials Point is a place for beginners in all technical areas. 
+         This website covers most of the latest technoligies and explains 
+         each of the technology with simple examples. You also have a 
+         <b>tryit</b> editor, wherein you can edit your code and 
+         try out different possibilities of the examples.
+                </p>
+            </div>
+            <div class="tab-pane fade" id="ios">
+                <p>
+                    iOS is a mobile operating system developed and distributed by Apple 
+         Inc. Originally released in 2007 for the iPhone, iPod Touch, and 
+         Apple TV. iOS is derived from OS X, with which it shares the 
+         Darwin foundation. iOS is Apple's mobile version of the 
+         OS X operating system used on Apple computers.
+                </p>
+            </div>
+
+
+        </div>
     </form>
 </body>
 </html>

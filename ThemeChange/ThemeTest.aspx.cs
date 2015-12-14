@@ -19,12 +19,12 @@ namespace ThemeChange
             Page.Theme = ThemeStatic.Theme;
         }
 
-     
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
-              
+
             }
         }
 
@@ -48,7 +48,7 @@ namespace ThemeChange
         {
 
         }
-     
-      
+
+
     }
 }

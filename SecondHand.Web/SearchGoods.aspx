@@ -1,24 +1,30 @@
-﻿<%@ Page Title="搜索物品" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="SearchGoods.aspx.cs" Inherits="SecondHand.Web.SearchGoods" %> <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+﻿<%@ Page Title="搜索物品" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="SearchGoods.aspx.cs" Inherits="SecondHand.Web.SearchGoods" %>
+ <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
         html, body, div, header, footer, form, p, input, button, h1, h2, h3, h4, h5, h6, ul, li, img, textarea {
             border: 0 none;
             outline: medium none;
             padding: 0;
-        }         #my_info .infos li {
+        }
+         #my_info .infos li {
             display: inline-block;
             line-height: 30px;
             text-align: left;
             vertical-align: middle;
-        }         .infos {
+        }
+         .infos {
             color: #444444;
             font: 14px "Microsoft YaHei";
             margin: 10px 0 0 20px;
-        }         #my_info li {
+        }
+         #my_info li {
             float: left;
-        }         .infoer {
+        }
+         .infoer {
             width: 60px;
             margin-right: 10px;
-        }         .square {
+        }
+         .square {
             background-color: #f5f5f5;
             border: 1px solid #e3e3e3;
             -ms-border-radius: 4px;
@@ -26,22 +32,27 @@
             -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
             -ms-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
             box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
-        }         .padd {
+        }
+         .padd {
             padding: 5px 20px;
-        }         .imgsquare {
+        }
+         .imgsquare {
             width: 110px;
             height: 110px;
-        }         .backcolor {
+        }
+         .backcolor {
             background-color: #f5f5f5;
             padding: 10px;
             -ms-border-radius: 4px;
             border-radius: 4px;
             -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
             -ms-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
-        }             .backcolor:hover {
+        }
+             .backcolor:hover {
                 background-color: #CCFFFF;
                 padding: 10px;
-            }         .jumbotron {
+            }
+         .jumbotron {
             font-family: Microsoft YaHei;
             background: #f06;
             background: linear-gradient(8deg, #006666, #00CC99);

@@ -1,24 +1,30 @@
-﻿<%@ Page Title="密码修改" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="PersonChangePass.aspx.cs" Inherits="SecondHand.Web.PersonChangePass" %> <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+﻿<%@ Page Title="密码修改" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="PersonChangePass.aspx.cs" Inherits="SecondHand.Web.PersonChangePass" %>
+ <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
         html, body, div, header, footer, form, p, input, button, h1, h2, h3, h4, h5, h6, ul, li, img, textarea {
             border: 0 none;
             outline: medium none;
             padding: 0;
-        }         #my_info .infos li {
+        }
+         #my_info .infos li {
             display: inline-block;
             line-height: 30px;
             text-align: left;
             vertical-align: middle;
-        }         .infos {
+        }
+         .infos {
             color: #444444;
             font: 14px "Microsoft YaHei";
             margin: 10px 0 0 20px;
-        }         #my_info li {
+        }
+         #my_info li {
             float: left;
-        }         .infoer {
+        }
+         .infoer {
             width: 60px;
             margin-right: 10px;
-        }         .square {
+        }
+         .square {
             background-color: #f5f5f5;
             border: 1px solid #e3e3e3;
             -ms-border-radius: 4px;
@@ -26,16 +32,19 @@
             -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
             -ms-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
             box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
-        }         .jumbotron {
+        }
+         .jumbotron {
             font-family: Microsoft YaHei;
             background: #009999;
             background: linear-gradient(8deg, #006666, #00CC99);
             min-height: 100%;
             color: white;   margin-bottom: 10px;
-        }         .img-circle {
+        }
+         .img-circle {
             width: 200px;
             height: 200px;
-        }         .txtpad {
+        }
+         .txtpad {
             margin : 10px;
         }
     </style>
@@ -93,4 +102,5 @@
                 </div>
             </div>
         </div>
-    </div> </asp:Content>
+    </div>
+ </asp:Content>

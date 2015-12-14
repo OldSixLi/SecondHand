@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using SecondHand.BLL;
-using SecondHand.Model; namespace SecondHand.Web
+using SecondHand.Model;
+ namespace SecondHand.Web
 {
     public partial class PersonChangePass : System.Web.UI.Page
     {
@@ -33,7 +29,8 @@ using SecondHand.Model; namespace SecondHand.Web
                 }
             }
         }
-        #endregion         #region 修改操作
+        #endregion
+         #region 修改操作
         protected void btnChange_Click(object sender, EventArgs e)
         {
             string oldpassword = oldpass.Text;
@@ -60,7 +57,8 @@ using SecondHand.Model; namespace SecondHand.Web
                                 Session["userinfo"] = null;
                                 Session.Abandon();
                                 UiHelper.Alert(this, "密码修改成功，请重新登录");
-                                UiHelper.Redirect(this.Page, "UserLogin.aspx");                             }
+                                UiHelper.Redirect(this.Page, "UserLogin.aspx");
+                             }
                             else
                             {
                                 UiHelper.Alert(this, "未知错误，修改失败");
@@ -74,7 +72,8 @@ using SecondHand.Model; namespace SecondHand.Web
                     else
                     {
                         UiHelper.Alert(this, "新密码不能与原密码相同");
-                    }                 }
+                    }
+                 }
                 else
                 {
                     UiHelper.Alert(this, "原密码输入错误，请重新输入");
@@ -83,6 +82,8 @@ using SecondHand.Model; namespace SecondHand.Web
             else
             {
                 UiHelper.AlertAndRedirect(this, "请登录后在进行操作", "UserLogin.aspx");
-            }         }         #endregion
+            }
+         }
+         #endregion
     }
 }
