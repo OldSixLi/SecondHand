@@ -37,7 +37,8 @@ using SecondHand.Model;
                  }
             }//绑定列表
         }
-        #endregion          #region 物品列表绑定
+        #endregion
+          #region 物品列表绑定
         public void NewDatabind(int count)
         {
             int totalpage = 0;
@@ -57,7 +58,8 @@ using SecondHand.Model;
             Repeatergoods.DataSource = dt;
             Repeatergoods.DataBind();
         }
-        #endregion          #region 私有属性
+        #endregion
+          #region 私有属性
         /// <summary>
         /// 当前页
         /// </summary>
@@ -142,7 +144,8 @@ using SecondHand.Model;
                 ViewState["Webpagerecord"] = value;
             }
         }
-        #endregion          #region 删除功能
+        #endregion
+          #region 删除功能
         protected void Delete(object sender, CommandEventArgs e)
         {
             //后边2页
@@ -168,7 +171,8 @@ using SecondHand.Model;
                 UiHelper.Alert(this, "未知错误");
             }
         }
-        #endregion          #region 翻页事件
+        #endregion
+          #region 翻页事件
         //回到上一页
         protected void Goup(object sender, CommandEventArgs e)
         {
@@ -211,24 +215,28 @@ using SecondHand.Model;
             Webpageindex = Webpageindex + 2;
             NewDatabind(count); ;
         }
-        #endregion          #region 选择每页显示数据
+        #endregion
+          #region 选择每页显示数据
         protected void countDDL_SelectedIndexChanged(object sender, EventArgs e)
         {
             int count = Convert.ToInt32(countDDL.SelectedValue);
             NewDatabind(count);
         }
-        #endregion          #region 刷新数据
+        #endregion
+          #region 刷新数据
         protected void btnF5_Click(object sender, EventArgs e)
         {
             int count = Convert.ToInt32(countDDL.SelectedValue);
             NewDatabind(count); ;
         }
-        #endregion         #region 退出登录
+        #endregion
+         #region 退出登录
         protected void btnExit_Click(object sender, EventArgs e)
         {
             Session["userinfo"] = null;
             Session.Abandon();
             UiHelper.Redirect(this.Page, "UserLogin.aspx");
         }
-        #endregion     }
+        #endregion
+     }
 }

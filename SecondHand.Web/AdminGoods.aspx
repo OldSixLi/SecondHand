@@ -60,7 +60,8 @@
                             <span class="glyphicon glyphicon-share-alt"></span>Sub Item 3
                         </a>
                     </li>--%>
-                </ul>             </li>
+                </ul>
+             </li>
             <li class="divider" role="presentation"></li>
             <li><a href="UserLogin.aspx"><span class="glyphicon glyphicon-user"></span>网站主页</a></li>
             <li><a  id="managerexit" style="cursor: pointer" runat="server" onserverclick="btnExit_Click"><span class="glyphicon glyphicon-user"></span>退出登录</a></li>
@@ -144,7 +145,8 @@
                                                 <%--<th class="firstclass"  >一级分类</th>
                                 <th class="secondclass"  >二级分类</th>--%>
                                                 <th class="text-center price">价格</th>
-                                                <%--   <th class="address"  >地址</th>--%>                                                 <th class="text-center phnum">手机号</th>
+                                                <%--   <th class="address"  >地址</th>--%>
+                                                 <th class="text-center phnum">手机号</th>
                                                 <th class="text-center QQnum">QQ号</th>
                                                   <th class="text-center time">发布时间</th>
                                                 <th class="text-center">操作</th>
@@ -168,7 +170,8 @@
                                                         <%--    <td class="text-center ischarge"><%#Eval(" IsCharge") %></td>    <td class="firstclass"><%#Eval(" FirstClass") %></td>
                                                             <td class="secondclass"><%#Eval(" SecondClass") %></td>--%>
                                                         <td class="text-center price"><%#Eval("Price ") %></td>
-                                                        <%--  <td class="address"><%#Eval("Address ") %></td>--%>                                                         <td class="text-center phnum"><%#Eval(" PhoneNum") %></td>
+                                                        <%--  <td class="address"><%#Eval("Address ") %></td>--%>
+                                                         <td class="text-center phnum"><%#Eval(" PhoneNum") %></td>
                                                         <td class="text-center QQnum"><%#Eval("QQNum ") %></td>
                                                            <td class="text-center time"><%#Eval(" PublishTime") %></td>
                                                         <td class="text-center "><a class="no-padding" href="GoodsDetailEdit.aspx?wpad=<%#Eval("GoodsID") %>" title="编辑"><span class="glyphicon glyphicon-pencil"></span></a>
